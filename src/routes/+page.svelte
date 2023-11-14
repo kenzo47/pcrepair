@@ -6,6 +6,6 @@
 	let images = [pc, phone, coding]
 </script>
 
-<div class="flex h-screen">
+<div class="h-[124rem] overflow-hidden">
 	<HeaderSwiper {images} />
 </div>

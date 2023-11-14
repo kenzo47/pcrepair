@@ -19,12 +19,12 @@
 	centered-slides="true"
 	autoplay-delay="2500"
 	autoplay-disable-on-interaction="true"
-	class="mx-auto flex h-[50vh] w-[100vw] overflow-hidden"
+	class="h-[50vh] max-w-[100vw]"
 >
 	{#each images as imgSrc}
 		<swiper-slide class="w-full">
-			<img src={imgSrc} alt="" class="h-full w-full object-cover" />
+			<img src={imgSrc} alt="" class="h-[920px] w-full object-cover" />
 		</swiper-slide>
 	{/each}
-	<div class="swiper-pagination"></div>
+	<div class="swiper-pagination justify-center text-center"></div>
 </swiper-container>
