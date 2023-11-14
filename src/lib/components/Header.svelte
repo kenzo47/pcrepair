@@ -2,7 +2,7 @@
 	import * as config from '$lib/config'
 </script>
 
-<nav class="wrapper flex flex-row justify-between p-4">
+<nav class="wrapper flex w-full flex-row justify-between p-4 align-top text-2xl">
 	<div class="flex">
 		<a href="#">
 			<b>{config.title}</b>

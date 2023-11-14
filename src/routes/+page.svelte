@@ -6,4 +6,6 @@
 	let images = [pc, phone, coding]
 </script>
 
-<HeaderSwiper {images} />
+<div class="flex h-screen">
+	<HeaderSwiper {images} />
+</div>
