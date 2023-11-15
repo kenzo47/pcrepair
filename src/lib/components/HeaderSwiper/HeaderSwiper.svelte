@@ -23,14 +23,15 @@
 >
 	{#each images as { src: imgSrc, text: imgText }}
 		<swiper-slide class="w-full">
-			<img src={imgSrc} alt="" class="h-[920px] w-full object-cover" />
+			<!--TODO: Pass alt tag and href-->
+			<img src={imgSrc} alt="" class="h-[920px] w-full object-cover blur-[2px]" />
 			<h1
-				class="absolute left-[50%] top-[40%] -translate-x-1/2 -translate-y-1/2 transform text-center text-7xl text-white"
+				class="font-suisse absolute left-[50%] top-[40%] -translate-x-1/2 -translate-y-1/2 transform text-center text-7xl text-alice-blue"
 			>
 				{imgText}
 			</h1>
 			<button
-				class="absolute left-[50%] top-[60%] inline-block -translate-x-1/2 -translate-y-1/2 transform rounded-xl border-none bg-gray-800 bg-opacity-60 p-[1rem] text-center text-4xl text-white no-underline"
+				class="font-suisse absolute left-[50%] top-[60%] inline-block -translate-x-1/2 -translate-y-1/2 transform rounded-xl border border-solid border-alice-blue bg-transparent bg-opacity-60 px-[1rem] py-[0.5rem] text-center text-4xl uppercase text-white no-underline"
 				>Klik hier</button
 			>
 		</swiper-slide>

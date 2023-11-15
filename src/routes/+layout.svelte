@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.postcss'
+	import '$lib/assets/css/app.postcss'
 	import { Header, Footer } from '$lib/components'
 </script>
 

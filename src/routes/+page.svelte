@@ -1,8 +1,8 @@
 <script lang="ts">
 	import HeaderSwiper from '$lib/components/HeaderSwiper/HeaderSwiper.svelte'
-	import pc from '$lib/images/pc.jpg'
-	import phone from '$lib/images/phone.jpg'
-	import coding from '$lib/images/coding.jpg'
+	import pc from '$lib/assets/images/pc.jpg'
+	import phone from '$lib/assets/images/phone.jpg'
+	import coding from '$lib/assets/images/coding.jpg'
 
 	let images = [
 		{ src: pc, text: 'Herstelling nodig?' },
