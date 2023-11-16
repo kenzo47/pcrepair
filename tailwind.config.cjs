@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config}*/
+
+import plugin from 'tailwindcss/plugin'
+
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
@@ -32,6 +35,11 @@ const config = {
 			azure: '#3a86ff',
 			transparent: 'transparent'
 		},
+		textShadow: {
+			sm: '0 1px 2px var(--tw-shadow-color)',
+			DEFAULT: '0 2px 4px var(--tw-shadow-color)',
+			lg: '0 8px 16px var(--tw-shadow-color)'
+		},
 		screens: {
 			'2xl': { max: '1535px' },
 			xl: { max: '1279px' },
@@ -42,7 +50,18 @@ const config = {
 			'2xs': { max: '400px' }
 		}
 	},
-	plugins: []
+	plugins: [
+		plugin(function ({ matchUtilities, theme }) {
+			matchUtilities(
+				{
+					'text-shadow': (value) => ({
+						textShadow: value
+					})
+				},
+				{ values: theme('textShadow') }
+			)
+		})
+	]
 }
 
 module.exports = config
