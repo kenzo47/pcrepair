@@ -6,7 +6,19 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {},
+		extend: {
+			backgroundImage: () => ({
+				'gradient-top': 'linear-gradient(0deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-right': 'linear-gradient(90deg, #2a2a72ff, #3a86ffff)',
+				'gradient-bottom': 'linear-gradient(180deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-left': 'linear-gradient(270deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-top-right': 'linear-gradient(45deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-bottom-right': 'linear-gradient(135deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-top-left': 'linear-gradient(225deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-bottom-left': 'linear-gradient(315deg,  #2a2a72ff, #3a86ffff)',
+				'gradient-radial': 'radial-gradient( #2a2a72ff, #3a86ffff)'
+			})
+		},
 		fontSize: {
 			xs: '.6rem',
 			sm: '.8rem',
