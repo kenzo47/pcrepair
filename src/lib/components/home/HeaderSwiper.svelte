@@ -17,7 +17,7 @@
 	pagination={{ clickable: true, el: '.swiper-pagination' }}
 	space-between="30"
 	centered-slides="true"
-	autoplay-delay="2500"
+	autoplay-delay="3500"
 	autoplay-disable-on-interaction="true"
 	class="h-[50vh] max-w-[100vw]"
 >
@@ -26,14 +26,13 @@
 			<!--TODO: Pass alt tag, description and href-->
 			<img src={imgSrc} alt="" class=" h-[920px] w-full object-cover blur-[2px]" />
 			<h1
-				class="text-shadow absolute left-[50%] top-[40%] -translate-x-1/2 -translate-y-1/2 transform text-center font-suisse text-7xl text-alice-blue shadow-raisin-black"
+				class="text-shadow absolute left-[50%] top-[40%] -translate-x-1/2 -translate-y-1/2 transform text-center font-suisse text-7xl text-white shadow-raisin-black"
 			>
 				{imgText}
 			</h1>
 			<button
 				class="bg-gradient-top-right absolute left-[50%] top-[60%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue px-[1rem] py-[0.6rem] text-center"
-				><span class="leading-[1.2 rem] text-[2rem] font-bold text-alice-blue">Klik hier</span
-				></button
+				><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Klik hier</span></button
 			>
 		</swiper-slide>
 	{/each}
