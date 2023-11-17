@@ -1,9 +1,9 @@
 <script lang="ts">
 	import '$lib/assets/css/app.postcss'
-	import { Header, Footer } from '$lib/components'
+	import { Navigation, Footer } from '$lib/components'
 </script>
 
-<Header />
+<Navigation />
 <main>
 	<slot />
 </main>
