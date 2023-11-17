@@ -1,5 +1,5 @@
 <script lang="ts">
-	import HeaderSwiper from '$lib/components/HeaderSwiper/HeaderSwiper.svelte'
+	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
 	import pc from '$lib/assets/images/pc.jpg'
 	import phone from '$lib/assets/images/phone.jpg'
 	import coding from '$lib/assets/images/coding.jpg'
