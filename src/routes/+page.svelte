@@ -9,6 +9,7 @@
 	import webIcon from '$lib/assets/icons/website.svg'
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
 	import ContactForm from '$lib/components/ContactForm.svelte'
+	import InfoItem from '$lib/components/InfoItem.svelte'
 
 	export let data: PageData
 
@@ -67,15 +68,21 @@
 	<HeaderSwiper {images} />
 </header>
 <!--Cards-->
-<section class="wrapper">
+<section class="wrapper mb-[4rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
 		<ActionCard cardData={data1} />
 		<ActionCard cardData={data2} />
 		<ActionCard cardData={data3} />
 	</div>
 </section>
+<!--Services-->
+<section class="wrapper mb-[4rem]">
+	<div class="w-full">
+		<InfoItem infoItemData={'test'} />
+	</div>
+</section>
 <!--Contact Form-->
-<section class="wrapper">
+<section class="wrapper mb-[4rem]">
 	<h2 class="font-suisse text-4xl">Vragen? Contacteer ons!</h2>
 	<ContactForm data={data.form} />
 </section>

@@ -6,7 +6,7 @@
 </script>
 
 <section class="wrapper">
-	<div class="flex flex-col items-center justify-center px-[1.5rem] py-[4rem]">
+	<div class="flex flex-col items-center justify-center">
 		<form
 			method="POST"
 			class="flex w-full flex-col items-center justify-center border border-solid border-subtle-gray"
