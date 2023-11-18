@@ -3,7 +3,7 @@
 	import { register } from 'swiper/element/bundle'
 
 	export let images: { src: string; text: string }[] = []
-
+	console.log(images)
 	onMount(() => {
 		register()
 		setTimeout(() => {
@@ -19,14 +19,17 @@
 	centered-slides="true"
 	autoplay-delay="3500"
 	autoplay-disable-on-interaction="true"
-	class="h-[40vh] max-w-[100vw]"
+	class="h-[50vh] max-w-[100vw]"
 >
 	{#each images as { src: imgSrc, text: imgText }}
 		<swiper-slide class="w-full">
 			<!--TODO: Pass alt tag, description and href-->
-			<img src={imgSrc} alt="" class=" h-[920px] w-full object-cover blur-[2px]" />
+			<div
+				class="relative h-[500px] bg-cover bg-center bg-no-repeat"
+				style="background-image: url({imgSrc})"
+			></div>
 			<h1
-				class="absolute left-[50%] top-[40%] -translate-x-1/2 -translate-y-1/2 transform text-center font-suisse text-7xl text-white shadow-raisin-black text-shadow"
+				class="absolute left-[50%] top-[30%] -translate-x-1/2 -translate-y-1/2 transform text-center font-suisse text-7xl text-white shadow-raisin-black text-shadow"
 			>
 				{imgText}
 			</h1>

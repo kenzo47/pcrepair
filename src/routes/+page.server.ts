@@ -1,4 +1,4 @@
-import { schema } from '$lib/schemas/contactform'
+import { schema } from '$lib/schemas/ContactForm'
 import { superValidate } from 'sveltekit-superforms/server'
 import type { PageServerLoad } from './$types'
 import { fail } from '@sveltejs/kit'

@@ -1,42 +1,28 @@
 <script lang="ts">
-	export let infoItemData
-	import phone from '$lib/assets/images/phone.jpg'
+	import type { InfoItem } from '$lib/types/components/InfoItem/InfoItem'
+	export let infoItemData: InfoItem
 </script>
 
-<div class="flex items-center">
-	<div class="mr-[4rem] flex w-[50%] flex-col">
-		<div class="mb-[6rem]">
-			<h2 class="font-suisse text-4xl font-medium">
-				Experience personalized website design services tailored to your needs.
-			</h2>
-			<p>
-				Our team of experts will create a stunning website that represents your brand and engages
-				your audience.
-			</p>
-		</div>
-		<div class="flex gap-[4rem]">
-			<div class="flex flex-col">
-				<h3>50% off</h3>
-				<p>Get a professional website that stands out from the competition.</p>
-			</div>
-			<div class="flex flex-col">
-				<h3>50% off</h3>
-				<p>Boost your online presence with our expert website design services.</p>
-			</div>
-		</div>
+<div class="mx-[4rem] flex max-w-[50%] flex-col">
+	<div class="mb-[6rem]">
+		<h2 class="font-suisse text-4xl font-medium">
+			{infoItemData.title}
+		</h2>
+		<p>
+			{infoItemData.description}
+		</p>
 	</div>
-
-	<div class="flex w-[50%]">
-		<img src={phone} alt="" class="h-[400px] w-full object-cover" />
+	<div class="flex gap-[4rem]">
+		{#each infoItemData.subInfoItems as subInfoItem}
+			<div class="flex flex-col">
+				<h3 class="font-suisse text-3xl font-medium">{subInfoItem.title}</h3>
+				<p>{subInfoItem.description}</p>
+			</div>
+		{/each}
 	</div>
 </div>
 
 <style lang="postcss">
-	h3 {
-		font-family: 'Suisse Intl', sans-serif;
-		font-weight: 500;
-		font-size: 1.8rem;
-	}
 	p {
 		font-family: 'Suisse Intl', sans-serif;
 		font-weight: 500;

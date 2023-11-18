@@ -1,5 +1,5 @@
-import type { LinkButton } from '../button'
-import type { Image } from '../image'
+import type { LinkButton } from '../Button'
+import type { Image } from '../Image'
 
 export interface ActionCard {
 	title: string

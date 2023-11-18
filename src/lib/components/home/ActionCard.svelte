@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { ActionCard } from '$lib/types/components/actioncard'
+	import type { ActionCard } from '$lib/types/components/ActionCard'
 	export let cardData: ActionCard
 </script>
 
