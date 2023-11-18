@@ -1,4 +1,5 @@
 <script lang="ts">
+	import type { PageData } from './$types'
 	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
 	import pc from '$lib/assets/images/pc.jpg'
 	import phone from '$lib/assets/images/phone.jpg'
@@ -7,6 +8,9 @@
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
+	import ContactForm from '$lib/components/ContactForm.svelte'
+
+	export let data: PageData
 
 	let images = [
 		{ src: pc, text: 'Herstelling nodig?' },
@@ -63,12 +67,15 @@
 	<HeaderSwiper {images} />
 </header>
 <!--Cards-->
-<section>
-	<div
-		class="mx-auto mb-[4rem] grid h-[300px] max-w-[1440px] grid-cols-3 gap-[4rem] bg-transparent"
-	>
+<section class="wrapper">
+	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
 		<ActionCard cardData={data1} />
 		<ActionCard cardData={data2} />
 		<ActionCard cardData={data3} />
 	</div>
+</section>
+<!--Contact Form-->
+<section class="wrapper">
+	<h2 class="font-suisse text-4xl">Vragen? Contacteer ons!</h2>
+	<ContactForm data={data.form} />
 </section>
