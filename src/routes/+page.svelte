@@ -64,36 +64,29 @@
 
 	let infoItemData = [
 		{
-			title: 'Over ons',
+			title: 'Reparaties',
 			description:
-				'Wij zijn een jong en dynamisch bedrijf dat zich specialiseert in het herstellen van computers en smartphones. Daarnaast maken wij ook websites op maat.',
+				'Bij Reboot-IT kan u rekenen op een snelle en professionele herstelling van uw computer of smartphone.',
 			subInfoItems: [
 				{
 					title: 'Computer herstellingen',
-					description:
-						'Wij herstellen uw computer of laptop. Dit kan gaan van een software probleem tot een hardware probleem.'
+					description: 'Wij herstellen computers en laptops, zowel software als hardware problemen.'
 				},
 				{
 					title: 'Smartphone herstellingen',
 					description:
-						'Wij herstellen uw smartphone. Dit kan gaan van een software probleem tot een hardware probleem.'
+						'Gebarsten scherm, versleten batterij of andere problemen? Vraag vrijblijvend een offerte aan.'
 				}
 			]
 		},
 		{
-			title: 'Over ons',
-			description:
-				'Wij zijn een jong en dynamisch bedrijf dat zich specialiseert in het herstellen van computers en smartphones. Daarnaast maken wij ook websites op maat.',
+			title: 'Webdesign',
+			description: 'Flexibele websites op maat. Wij maken uw website volledig naar uw wensen.',
 			subInfoItems: [
 				{
-					title: 'Computer herstellingen',
+					title: 'Voor elk budget',
 					description:
-						'Wij herstellen uw computer of laptop. Dit kan gaan van een software probleem tot een hardware probleem.'
-				},
-				{
-					title: 'Smartphone herstellingen',
-					description:
-						'Wij herstellen uw smartphone. Dit kan gaan van een software probleem tot een hardware probleem.'
+						'Een simpele website of een uitgebreide webapp? Samen kijken wat het beste bij u past.'
 				}
 			]
 		}
@@ -130,7 +123,7 @@
 	</Saos>
 	<Saos once={true} animation={'from-right 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[4rem] flex w-full items-center">
-			<InfoItem infoItemData={infoItemData[0]} />
+			<InfoItem infoItemData={infoItemData[1]} />
 			<div class="mr-[6rem] flex w-[50%]">
 				<img
 					src={coding}
