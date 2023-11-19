@@ -3,7 +3,6 @@
 	import { register } from 'swiper/element/bundle'
 
 	export let images: { src: string; text: string }[] = []
-	console.log(images)
 	onMount(() => {
 		register()
 		setTimeout(() => {
@@ -17,7 +16,7 @@
 	pagination={{ clickable: true, el: '.swiper-pagination' }}
 	space-between="30"
 	centered-slides="true"
-	autoplay-delay="3500"
+	autoplay-delay="4500"
 	autoplay-disable-on-interaction="true"
 	class="h-[50vh] max-w-[100vw]"
 >

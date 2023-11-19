@@ -1,17 +1,29 @@
 <script lang="ts">
-	import * as config from '$lib/config'
+	import logo from '$lib/assets/icons/logo.svg'
+	import { page } from '$app/stores'
 </script>
 
-<nav class="wrapper flex w-full flex-row justify-between p-4 align-top text-2xl">
+<nav class="wrapper flex h-[100px] w-full items-center justify-between p-4 text-2xl">
 	<div class="flex">
-		<a href="#">
-			<b>{config.title}</b>
+		<a href="/">
+			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] max-w-[260px]" />
 		</a>
 	</div>
-	<ul class="flex gap-12">
-		<li>Home</li>
-		<li>Hersteldienst</li>
-		<li>Webdesign</li>
-		<li>Over Ons</li>
-	</ul>
+	<div class="menu-links flex gap-[8rem] text-center text-4xl">
+		<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
+		<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}>Hersteldienst</a
+		>
+		<a href="/webdesign" class:active={$page.url.pathname === '/webdesign'}>Webdesign</a>
+		<a href="/over-ons" class:active={$page.url.pathname === '/over-ons'}>Over Ons</a>
+	</div>
 </nav>
+
+<style lang="postcss">
+	nav a.active {
+		@apply border-b-2 border-solid border-azure text-azure;
+	}
+
+	nav a:hover {
+		@apply scale-110 transform-gpu duration-300 ease-in-out;
+	}
+</style>

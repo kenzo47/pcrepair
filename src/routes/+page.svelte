@@ -116,14 +116,22 @@
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[12rem] flex w-full items-center">
 		<div class="mr-[6rem] flex w-[50%]">
-			<img src={pc} alt="Computer herstellingen" class="h-[350px] w-full object-cover drop-shadow-md rounded-lg" />
+			<img
+				src={pc}
+				alt="Computer herstellingen"
+				class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+			/>
 		</div>
 		<InfoItem infoItemData={infoItemData[0]} />
 	</div>
 	<div class="mb-[4rem] flex w-full items-center">
 		<InfoItem infoItemData={infoItemData[0]} />
 		<div class="mr-[6rem] flex w-[50%]">
-			<img src={coding} alt="Webdesign" class="h-[350px] w-full object-cover drop-shadow-md rounded-lg" />
+			<img
+				src={coding}
+				alt="Webdesign"
+				class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+			/>
 		</div>
 	</div>
 </section>
