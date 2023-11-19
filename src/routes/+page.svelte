@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Saos from 'saos'
 	import type { PageData } from './$types'
 	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
 	import pc from '$lib/assets/images/pc.jpg'
@@ -12,7 +13,6 @@
 	import InfoItem from '$lib/components/InfoItem.svelte'
 
 	export let data: PageData
-
 	let images = [
 		{ src: pc, text: 'Herstelling nodig?' },
 		{ src: phone, text: 'Smartphone reparaties' },
@@ -105,6 +105,7 @@
 	<HeaderSwiper {images} />
 </header>
 <!--Cards-->
+
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
 		{#each ActionCardData as actionCard}
@@ -113,30 +114,59 @@
 	</div>
 </section>
 <!--Services-->
+
 <section class="wrapper mb-[8rem]">
-	<div class="mb-[12rem] flex w-full items-center">
-		<div class="mr-[6rem] flex w-[50%]">
-			<img
-				src={pc}
-				alt="Computer herstellingen"
-				class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
-			/>
+	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
+		<div class="mb-[12rem] flex w-full items-center">
+			<div class="mr-[6rem] flex w-[50%]">
+				<img
+					src={pc}
+					alt="Computer herstellingen"
+					class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+				/>
+			</div>
+			<InfoItem infoItemData={infoItemData[0]} />
 		</div>
-		<InfoItem infoItemData={infoItemData[0]} />
-	</div>
-	<div class="mb-[4rem] flex w-full items-center">
-		<InfoItem infoItemData={infoItemData[0]} />
-		<div class="mr-[6rem] flex w-[50%]">
-			<img
-				src={coding}
-				alt="Webdesign"
-				class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
-			/>
+	</Saos>
+	<Saos once={true} animation={'from-right 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
+		<div class="mb-[4rem] flex w-full items-center">
+			<InfoItem infoItemData={infoItemData[0]} />
+			<div class="mr-[6rem] flex w-[50%]">
+				<img
+					src={coding}
+					alt="Webdesign"
+					class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+				/>
+			</div>
 		</div>
-	</div>
+	</Saos>
 </section>
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
 	<h2 class="font-suisse text-4xl">Vragen? Contacteer ons!</h2>
-	<!-- <ContactForm data={data.form} /> -->
+	<ContactForm data={data.form} />
 </section>
+
+<style lang="postcss">
+	@keyframes -global-from-left {
+		0% {
+			transform: rotateX(50deg) translateX(-200vw) skewX(-50deg);
+			opacity: 1;
+		}
+		100% {
+			transform: rotateX(0deg) translateX(0) skewX(0deg);
+			opacity: 1;
+		}
+	}
+
+	@keyframes -global-from-right {
+		0% {
+			transform: rotateX(50deg) translateX(200vw) skewX(-50deg);
+			opacity: 1;
+		}
+		100% {
+			transform: rotateX(0deg) translateX(0) skewX(0deg);
+			opacity: 1;
+		}
+	}
+</style>
