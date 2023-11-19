@@ -138,5 +138,5 @@
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
 	<h2 class="font-suisse text-4xl">Vragen? Contacteer ons!</h2>
-	<ContactForm data={data.form} />
+	<!-- <ContactForm data={data.form} /> -->
 </section>
