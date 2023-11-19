@@ -11,10 +11,12 @@
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
 	import ContactForm from '$lib/components/ContactForm.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
+	import Modal from '$lib/components/Modal.svelte'
 
 	export let data: PageData
+	let showModal = false
 	let images = [
-		{ src: pc, text: 'Herstelling nodig?' },
+		{ src: pc, text: 'Computer reparaties' },
 		{ src: phone, text: 'Smartphone reparaties' },
 		{ src: coding, text: 'Webdesign' }
 	]
@@ -136,8 +138,17 @@
 </section>
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
-	<h2 class="font-suisse text-4xl">Vragen? Contacteer ons!</h2>
-	<ContactForm data={data.form} />
+	<div class="flex flex-col items-center">
+		<h2 class="mb-[4rem] text-center font-suisse text-4xl">Heeft u vragen? Contacteer ons hier.</h2>
+		<button
+			on:click={() => (showModal = true)}
+			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+			><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Klik hier</span></button
+		>
+		<Modal show={showModal}>
+			<ContactForm {data} />
+		</Modal>
+	</div>
 </section>
 
 <style lang="postcss">

@@ -9,7 +9,7 @@
 			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] max-w-[260px]" />
 		</a>
 	</div>
-	<div class="menu-links flex gap-[8rem] text-center text-4xl">
+	<div class="menu flex gap-[8rem] text-center text-4xl">
 		<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
 		<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}>Hersteldienst</a
 		>
@@ -23,7 +23,7 @@
 		@apply border-b-2 border-solid border-azure text-azure;
 	}
 
-	nav a:hover {
+	nav.menu > a::hover {
 		@apply scale-110 transform-gpu duration-300 ease-in-out;
 	}
 </style>
