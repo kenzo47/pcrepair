@@ -21,10 +21,10 @@
 	class="h-[50vh] max-w-[100vw]"
 >
 	{#each images as { src: imgSrc, text: imgText }}
-		<swiper-slide class="w-full">
+		<swiper-slide class="h-full w-full">
 			<!--TODO: Pass alt tag, description and href-->
 			<div
-				class="relative h-[500px] bg-cover bg-center bg-no-repeat"
+				class="relative h-full bg-cover bg-center bg-no-repeat"
 				style="background-image: url({imgSrc})"
 			></div>
 			<h1
