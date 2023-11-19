@@ -19,11 +19,12 @@
 </nav>
 
 <style lang="postcss">
+	/* dO nOt uSe @aPpLy hUe */
 	nav a.active {
 		@apply border-b-2 border-solid border-azure text-azure;
 	}
 
-	nav.menu > a::hover {
+	.menu a:hover {
 		@apply scale-110 transform-gpu duration-300 ease-in-out;
 	}
 </style>
