@@ -3,8 +3,12 @@
 	import type { PageData } from './$types'
 	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
 	import pc from '$lib/assets/images/pc.jpg'
+	import pcmobo from '$lib/assets/images/pcmobo.jpg'
+	import pchdd from '$lib/assets/images/pchdd.jpg'
 	import phone from '$lib/assets/images/phone.jpg'
 	import coding from '$lib/assets/images/webdesign.jpg'
+	import pcrepair from '$lib/assets/images/pcrepair.jpg'
+	import laptoprepair from '$lib/assets/images/laptoprepair.jpg'
 	import pcIcon from '$lib/assets/icons/desktop.svg'
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
@@ -16,7 +20,7 @@
 	export let data: PageData
 	let showModal = false
 	let images = [
-		{ src: pc, text: 'Computer reparaties' },
+		{ src: pchdd, text: 'Computer reparaties' },
 		{ src: phone, text: 'Smartphone reparaties' },
 		{ src: coding, text: 'Webdesign' }
 	]
@@ -109,15 +113,14 @@
 	</div>
 </section>
 <!--Services-->
-
 <section class="wrapper mb-[8rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[12rem] flex w-full items-center">
-			<div class="mr-[6rem] flex w-[50%]">
+			<div class="mr-[6rem] flex">
 				<img
-					src={pc}
+					src={pcrepair}
 					alt="Computer herstellingen"
-					class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md"
 				/>
 			</div>
 			<InfoItem infoItemData={infoItemData[0]} />
@@ -126,11 +129,11 @@
 	<Saos once={true} animation={'from-right 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[4rem] flex w-full items-center">
 			<InfoItem infoItemData={infoItemData[1]} />
-			<div class="mr-[6rem] flex w-[50%]">
+			<div class="mr-[6rem] flex">
 				<img
 					src={coding}
 					alt="Webdesign"
-					class="h-[350px] w-full rounded-lg object-cover drop-shadow-md"
+					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md"
 				/>
 			</div>
 		</div>
@@ -139,7 +142,8 @@
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col items-center">
-		<h2 class="mb-[4rem] text-center font-suisse text-4xl">Heeft u vragen? Contacteer ons hier.</h2>
+		<h2 class="text-center font-suisse text-5xl">Heeft u vragen?</h2>
+		<p class="font-suise mb-[2rem] text-center text-2xl font-normal">Contacteer ons hier.</p>
 		<button
 			on:click={() => (showModal = true)}
 			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"

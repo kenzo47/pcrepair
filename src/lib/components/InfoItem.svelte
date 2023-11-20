@@ -4,24 +4,24 @@
 	export let infoItemData: InfoItem
 </script>
 
-<div class="mx-[4rem] flex max-w-[50%] flex-col">
+<div class="mx-[4rem] flex flex-1 flex-col">
 	<div class="mb-[6rem]">
 		<h2 class="font-suisse text-4xl font-medium">
 			{infoItemData.title}
 		</h2>
-		<p>
+		<p class="font-suise text-2xl font-normal">
 			{infoItemData.description}
 		</p>
 	</div>
 	<div class="flex gap-[4rem]">
 		{#each infoItemData.subInfoItems as subInfoItem}
 			<Saos
+				once={true}
 				animation={'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both'}
-				animation_out={'slide-out-elliptic-top-bck 0.7s ease-in both'}
 			>
 				<div class="flex flex-col">
 					<h3 class="font-suisse text-3xl font-medium">{subInfoItem.title}</h3>
-					<p>{subInfoItem.description}</p>
+					<p class="font-suise text-2xl font-normal">{subInfoItem.description}</p>
 				</div>
 			</Saos>
 		{/each}
@@ -44,19 +44,6 @@
 		100% {
 			transform: scale(1);
 			filter: blur(0px);
-			opacity: 1;
-		}
-	}
-
-	@keyframes -global-slide-out-elliptic-top-bck {
-		0% {
-			transform: translateY(0) rotateX(0) scale(1);
-			transform-origin: 50% 1400px;
-			opacity: 1;
-		}
-		100% {
-			transform: translateY(-600px) rotateX(-30deg) scale(0);
-			transform-origin: 50% 100%;
 			opacity: 1;
 		}
 	}
