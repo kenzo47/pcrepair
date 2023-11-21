@@ -1,5 +1,4 @@
 <script lang="ts">
-	import { title } from '$lib/config'
 	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
 	import { onMount } from 'svelte'
 	import { register } from 'swiper/element/bundle'

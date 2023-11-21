@@ -6,7 +6,7 @@
 <div
 	class="flex h-full w-full flex-col items-center justify-between border border-solid border-subtle-gray bg-transparent px-[15px] py-[40px]"
 >
-	<div class="mb-[0.5rem] h-[80px] w-[80px]">
+	<div class="mb-[1rem] h-[80px] w-[80px]">
 		<img src={cardData.image.url} alt={cardData.image.alt} />
 	</div>
 	<h2 class="font-suisse text-4xl">{cardData.title}</h2>

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types'
-	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
+	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
 	export let data: PageData
 
