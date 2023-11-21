@@ -12,6 +12,7 @@
 	import pcIcon from '$lib/assets/icons/desktop.svg'
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
+	import pattern from '$lib/assets/icons/pattern.svg'
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
 	import ContactForm from '$lib/components/ContactForm.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
@@ -20,7 +21,7 @@
 	export let data: PageData
 	let showModal = false
 	let images = [
-		{ src: pchdd, text: 'Computer reparaties' },
+		{ src: pcmobo, text: 'Computer reparaties' },
 		{ src: phone, text: 'Smartphone reparaties' },
 		{ src: coding, text: 'Webdesign' }
 	]
@@ -104,7 +105,6 @@
 	<HeaderSwiper {images} />
 </header>
 <!--Cards-->
-
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
 		{#each ActionCardData as actionCard}
@@ -112,6 +112,7 @@
 		{/each}
 	</div>
 </section>
+
 <!--Services-->
 <section class="wrapper mb-[8rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
