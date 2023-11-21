@@ -5,14 +5,16 @@
 </script>
 
 <div class="mx-[4rem] flex flex-1 flex-col">
-	<div class="mb-[6rem]">
-		<h2 class="font-suisse text-4xl font-medium">
-			{infoItemData.title}
-		</h2>
-		<p class="font-suise text-2xl font-normal">
-			{infoItemData.description}
-		</p>
-	</div>
+	<Saos once={true} animation={'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both'}>
+		<div class="mb-[6rem]">
+			<h2 class="font-suisse text-4xl font-medium">
+				{infoItemData.title}
+			</h2>
+			<p class="font-suise text-2xl font-normal">
+				{infoItemData.description}
+			</p>
+		</div>
+	</Saos>
 	<div class="flex gap-[4rem]">
 		{#each infoItemData.subInfoItems as subInfoItem}
 			<Saos
