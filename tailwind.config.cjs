@@ -16,7 +16,11 @@ const config = {
 				'gradient-bottom-right': 'linear-gradient(135deg,  #2a2a72ff, #3a86ffff)',
 				'gradient-top-left': 'linear-gradient(225deg,  #2a2a72ff, #3a86ffff)',
 				'gradient-bottom-left': 'linear-gradient(315deg,  #2a2a72ff, #3a86ffff)',
-				'gradient-radial': 'radial-gradient( #2a2a72ff, #3a86ffff)'
+				'gradient-radial': 'radial-gradient( #2a2a72ff, #3a86ffff)',
+				circuit: "url('/src/lib/assets/icons/pattern.svg')",
+				laptoprepair: "url('/src/lib/assets/images/laptoprepair.jpg')",
+				pcrepair: "url('/src/lib/assets/images/pcrepair.jpg')",
+				pchdd: "url('/src/lib/assets/images/pchdd.jpg')"
 			})
 		},
 		fontSize: {
