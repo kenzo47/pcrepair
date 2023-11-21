@@ -1,13 +1,12 @@
 <script lang="ts">
+	import { title } from '$lib/config'
+	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
 	import { onMount } from 'svelte'
 	import { register } from 'swiper/element/bundle'
 
-	export let images: { src: string; text: string }[] = []
+	export let data: HeaderSwiperData[]
 	onMount(() => {
 		register()
-		setTimeout(() => {
-			images = [...images]
-		}, 0)
 	})
 </script>
 
@@ -20,20 +19,24 @@
 	autoplay-disable-on-interaction="true"
 	class="h-[50vh] max-w-[100vw]"
 >
-	{#each images as { src: imgSrc, text: imgText }}
+	{#each data as item (item.title)}
 		<swiper-slide class="h-full w-full">
-			<!--TODO: Pass alt tag, description and href-->
 			<div
-				class="relative h-full bg-cover bg-center bg-no-repeat"
-				style="background-image: url({imgSrc})"
+				class="relative h-full bg-raisin-black bg-cover bg-center bg-no-repeat bg-blend-overlay"
+				style="background-image: url({item.image.url})"
 			></div>
 			<h1
-				class="absolute left-[50%] top-[30%] -translate-x-1/2 -translate-y-1/2 transform text-center font-suisse text-7xl text-white shadow-raisin-black text-shadow"
+				class="absolute left-[50%] top-[25%] -translate-x-1/2 transform text-center font-suisse text-7xl text-white shadow-black text-shadow"
 			>
-				{imgText}
+				{item.title}
 			</h1>
+			<p
+				class="absolute left-[50%] top-[45%] -translate-x-1/2 transform text-center font-suisse text-3xl font-normal text-white shadow-black text-shadow"
+			>
+				{item.description}
+			</p>
 			<button
-				class="absolute left-[50%] top-[60%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+				class="absolute left-[50%] top-[65%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 				><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Klik hier</span></button
 			>
 		</swiper-slide>

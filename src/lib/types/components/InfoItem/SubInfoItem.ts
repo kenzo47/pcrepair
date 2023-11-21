@@ -1,4 +1,4 @@
-export interface SubInfoItem {
+export interface SubInfoItemData {
 	title: string
 	description: string
 }

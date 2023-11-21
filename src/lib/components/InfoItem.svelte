@@ -1,7 +1,7 @@
 <script lang="ts">
 	import Saos from 'saos'
-	import type { InfoItem } from '$lib/types/components/InfoItem/InfoItem'
-	export let infoItemData: InfoItem
+	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
+	export let infoItemData: InfoItemData
 </script>
 
 <div class="mx-[4rem] flex flex-1 flex-col">

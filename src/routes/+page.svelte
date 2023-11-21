@@ -1,6 +1,9 @@
 <script lang="ts">
 	import Saos from 'saos'
 	import type { PageData } from './$types'
+	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
+	import type { ActionCardData } from '$lib/types/components/ActionCard'
+	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
 	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
 	import pc from '$lib/assets/images/pc.jpg'
 	import pcmobo from '$lib/assets/images/pcmobo.jpg'
@@ -20,13 +23,38 @@
 
 	export let data: PageData
 	let showModal = false
-	let images = [
-		{ src: pcmobo, text: 'Computer reparaties' },
-		{ src: phone, text: 'Smartphone reparaties' },
-		{ src: coding, text: 'Webdesign' }
+
+	let ImageSwiperData: HeaderSwiperData[] = [
+		{
+			image: {
+				url: pcmobo,
+				alt: 'Computer reparaties'
+			},
+			title: 'Computer reparaties',
+			description: 'Computer traag of defect? Bekijk onze reparatie diensten.',
+			url: '#'
+		},
+		{
+			image: {
+				url: phone,
+				alt: 'Smartphone reparaties'
+			},
+			title: 'Smartphone reparaties',
+			description: 'Problemen of schade aan uw smartphone? Wij herstellen het voor u!',
+			url: '#'
+		},
+		{
+			image: {
+				url: coding,
+				alt: 'Webdesign'
+			},
+			title: 'Webdesign',
+			description: 'Website nodig? Lees meer over onze webdesign diensten.',
+			url: '#'
+		}
 	]
 
-	let ActionCardData = [
+	let ActionCardData: ActionCardData[] = [
 		{
 			image: {
 				url: pcIcon,
@@ -69,7 +97,7 @@
 		}
 	]
 
-	let infoItemData = [
+	let infoItemData: InfoItemData[] = [
 		{
 			title: 'Reparaties',
 			description:
@@ -93,7 +121,7 @@
 				{
 					title: 'Voor elk budget',
 					description:
-						'Een simpele website of een uitgebreide webapp? Samen kijken wat het beste bij u past.'
+						'Een simpele website of een uitgebreide web app? Samen kijken we wat het beste bij u past.'
 				}
 			]
 		}
@@ -102,7 +130,7 @@
 
 <!--Swiper-->
 <header class="mb-[8rem] overflow-hidden">
-	<HeaderSwiper {images} />
+	<HeaderSwiper data={ImageSwiperData} />
 </header>
 <!--Cards-->
 <section class="wrapper mb-[8rem]">

@@ -1,7 +1,7 @@
-import type { SubInfoItem } from './SubInfoItem'
+import type { SubInfoItemData } from './SubInfoItem'
 
-export interface InfoItem {
+export interface InfoItemData {
 	title: string
 	description: string
-	subInfoItems: SubInfoItem[]
+	subInfoItems: SubInfoItemData[]
 }
