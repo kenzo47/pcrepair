@@ -13,4 +13,9 @@
 	>
 		{data.title}
 	</h1>
+	<p
+		class="absolute left-[50%] top-[45%] -translate-x-1/2 transform text-center font-suisse text-3xl font-normal text-white shadow-black text-shadow"
+	>
+		{data.description}
+	</p>
 </div>

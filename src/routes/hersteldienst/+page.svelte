@@ -11,6 +11,7 @@
 			alt: 'Herstellingen'
 		},
 		title: 'Herstellingen',
+		description: 'Informatie over onze herstellingen en diensten.',
 		url: '#'
 	}
 </script>
