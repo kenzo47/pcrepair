@@ -24,7 +24,7 @@
 	export let data: PageData
 	let showModal = false
 
-	let ImageSwiperData: HeaderSwiperData[] = [
+	let imageSwiperData: HeaderSwiperData[] = [
 		{
 			image: {
 				url: pcmobo,
@@ -54,7 +54,7 @@
 		}
 	]
 
-	let ActionCardData: ActionCardData[] = [
+	let actionCardData: ActionCardData[] = [
 		{
 			image: {
 				url: pcIcon,
@@ -130,12 +130,12 @@
 
 <!--Swiper-->
 <header class="mb-[4rem] overflow-hidden">
-	<HeaderSwiper data={ImageSwiperData} />
+	<HeaderSwiper data={imageSwiperData} />
 </header>
 <!--Cards-->
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
-		{#each ActionCardData as actionCard (actionCard.title)}
+		{#each actionCardData as actionCard (actionCard.title)}
 			<ActionCard cardData={actionCard} />
 		{/each}
 	</div>
