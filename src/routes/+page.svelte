@@ -129,13 +129,13 @@
 </script>
 
 <!--Swiper-->
-<header class="mb-[8rem] overflow-hidden">
+<header class="mb-[4rem] overflow-hidden">
 	<HeaderSwiper data={ImageSwiperData} />
 </header>
 <!--Cards-->
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
-		{#each ActionCardData as actionCard}
+		{#each ActionCardData as actionCard (actionCard.title)}
 			<ActionCard cardData={actionCard} />
 		{/each}
 	</div>
