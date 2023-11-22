@@ -9,7 +9,7 @@
 		class="absolute h-full w-full bg-raisin-black bg-pcrepair bg-cover bg-center bg-no-repeat bg-blend-overlay"
 	></div>
 	<h1
-		class=" absolute top-[25%] z-10 transform text-center font-suisse text-7xl text-white shadow-black text-shadow"
+		class=" absolute top-[25%] z-10 text-center font-suisse text-7xl text-white shadow-black text-shadow"
 	>
 		{data.title}
 	</h1>
