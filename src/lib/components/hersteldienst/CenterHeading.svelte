@@ -4,7 +4,7 @@
 	export let data: CenterHeadingData
 </script>
 
-<div class="mb-[4rem] flex flex-col items-center">
+<div class="flex flex-col items-center">
 	<h1 class="text-center font-suisse text-[3.4rem] text-black">Computer Herstellingen</h1>
 	{#each data.description as description (description)}
 		<p class="font-suise text-2xl font-normal">

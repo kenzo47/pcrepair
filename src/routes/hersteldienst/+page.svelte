@@ -7,6 +7,7 @@
 	import CenterHeading from '$lib/components/hersteldienst/CenterHeading.svelte'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
+	import LinkButton from '$lib/components/LinkButton.svelte'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -33,7 +34,7 @@
 				url: pcrepair,
 				alt: 'Computer reparaties'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification',
+			title: 'Comprehensive Diagnostics for Accurate Problem Identification1',
 			description:
 				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
 		},
@@ -42,7 +43,7 @@
 				url: pcrepair,
 				alt: 'Computer reparaties'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification',
+			title: 'Comprehensive Diagnostics for Accurate Problem Identification2',
 			description:
 				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
 		},
@@ -51,7 +52,7 @@
 				url: pcrepair,
 				alt: 'Computer reparaties'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification',
+			title: 'Comprehensive Diagnostics for Accurate Problem Identification3',
 			description:
 				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
 		}
@@ -64,10 +65,19 @@
 </header>
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
-	<CenterHeading data={centerHeadingData} />
+	<div class="mb-[2rem]">
+		<CenterHeading data={centerHeadingData} />
+	</div>
+	<div class="mb-[4rem] flex items-center justify-center">
+		<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+	</div>
 	<div class="grid grid-cols-3 gap-[4rem]">
 		{#each centerInfoCardData as centerInfoCard (centerInfoCard.title)}
 			<CenterInfoCard data={centerInfoCard} />
 		{/each}
 	</div>
+</section>
+<!--Smartphone/Tablet Repairs-->
+<section class="wrapper mb-[8rem]">
+	
 </section>
