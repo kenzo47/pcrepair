@@ -2,12 +2,14 @@
 	import type { PageData } from './$types'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { CenterHeadingData } from '$lib/types/components/CenterHeading'
+	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
+	import type { HoverInfoItemData } from '$lib/types/components/HoverInfoItem'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
 	import CenterHeading from '$lib/components/hersteldienst/CenterHeading.svelte'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
-	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
 	import LinkButton from '$lib/components/LinkButton.svelte'
+	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -57,6 +59,24 @@
 				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
 		}
 	]
+
+	let hoverInfoItemData: HoverInfoItemData[] = [
+		{
+			title: 'Screen Repairs',
+			description:
+				'Our expert technicians specialize in smartphone repair services, including screen repairs, battery replacements, and resolving software issues. We provide reliable and efficient solutions to ensure your device is back in optimal condition.'
+		},
+		{
+			title: 'Battery Replacements',
+			description:
+				'We offer professional battery replacement services for smartphones of all brands. Our skilled technicians use high-quality batteries to ensure long-lasting performance and reliability.'
+		},
+		{
+			title: 'Software Issues',
+			description:
+				"If you're experiencing any software issues with your smartphone, our team is here to help. We have the expertise to diagnose and fix various software problems, ensuring smooth and seamless operation."
+		}
+	]
 </script>
 
 <!--Header Image-->
@@ -79,5 +99,7 @@
 </section>
 <!--Smartphone/Tablet Repairs-->
 <section class="wrapper mb-[8rem]">
-	
+	{#each hoverInfoItemData as hoverInfoItem (hoverInfoItem.title)}
+		<HoverInfoItem data={hoverInfoItem} />
+	{/each}
 </section>
