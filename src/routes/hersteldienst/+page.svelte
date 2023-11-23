@@ -94,11 +94,13 @@
 </header>
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
-	<div class="mb-[2rem]">
-		<SectionHeadingDescription data={pcRepairHeading} />
-	</div>
-	<div class="mb-[4rem] flex">
-		<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+	<div class="flex flex-col">
+		<div class="mb-[2rem] flex flex-col items-center">
+			<SectionHeadingDescription data={pcRepairHeading} />
+		</div>
+		<div class="mb-[8rem] flex justify-center">
+			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+		</div>
 	</div>
 	<div class="grid grid-cols-3 gap-[4rem]">
 		{#each centerInfoCardData as centerInfoCard (centerInfoCard.title)}
@@ -108,11 +110,13 @@
 </section>
 <!--Smartphone/Tablet Repairs-->
 <section class="wrapper mb-[8rem]">
-	<div class="mb-[2rem]">
-		<SectionHeadingDescription data={phoneRepairHeading} />
-	</div>
-	<div class="mb-[6rem]">
-		<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+	<div class="flex flex-col">
+		<div class="mb-[2rem] flex flex-col items-center">
+			<SectionHeadingDescription data={phoneRepairHeading} />
+		</div>
+		<div class="mb-[8rem] flex justify-center">
+			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+		</div>
 	</div>
 	<div class="flex">
 		<div class="mr-[6rem] flex h-[400px] flex-1 items-center">
