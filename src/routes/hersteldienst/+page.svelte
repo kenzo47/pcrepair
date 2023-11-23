@@ -1,12 +1,12 @@
 <script lang="ts">
 	import type { PageData } from './$types'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
-	import type { CenterHeadingData } from '$lib/types/components/CenterHeading'
+	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
 	import type { HoverInfoItemData } from '$lib/types/components/HoverInfoItem'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
+	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
-	import CenterHeading from '$lib/components/hersteldienst/CenterHeading.svelte'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
@@ -21,12 +21,21 @@
 		description: 'Informatie over onze herstellingen en diensten.',
 		url: '#'
 	}
-	let centerHeadingData: CenterHeadingData = {
-		title: 'Herstellingen',
+	let pcRepairHeading: SectionHeadingDescriptionData = {
+		title: 'Computer & laptop herstellingen',
 		description: [
 			'U kan terecht bij ons voor herstellingen en onderhoud van alle merken en types van computers, ook als deze niet bij ons zijn aangekocht.',
 			'We voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.',
 			'Na uw goedkeuring voeren we reparaties uit in ons eigen atelier of bij u thuis.'
+		]
+	}
+
+	let phoneRepairHeading: SectionHeadingDescriptionData = {
+		title: 'Smartphone & tablet herstellingen',
+		description: [
+			'Wij repareren (bijna) alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
+			"U kan bij ons terecht voor het vervangen van uw scherm, batterij, oplaadpoort, camera's, speakers, microfoon, ...",
+			'Ook software problemen zoals een traag toestel of een update die niet lukt kunnen wij oplossen.'
 		]
 	}
 
@@ -86,9 +95,9 @@
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="mb-[2rem]">
-		<CenterHeading data={centerHeadingData} />
+		<SectionHeadingDescription data={pcRepairHeading} />
 	</div>
-	<div class="mb-[4rem] flex items-center justify-center">
+	<div class="mb-[4rem] flex">
 		<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 	</div>
 	<div class="grid grid-cols-3 gap-[4rem]">
@@ -99,7 +108,24 @@
 </section>
 <!--Smartphone/Tablet Repairs-->
 <section class="wrapper mb-[8rem]">
-	{#each hoverInfoItemData as hoverInfoItem (hoverInfoItem.title)}
-		<HoverInfoItem data={hoverInfoItem} />
-	{/each}
+	<div class="mb-[2rem]">
+		<SectionHeadingDescription data={phoneRepairHeading} />
+	</div>
+	<div class="mb-[6rem]">
+		<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+	</div>
+	<div class="flex">
+		<div class="mr-[6rem] flex h-[400px] flex-1 items-center">
+			<img
+				src={pcrepair}
+				alt=""
+				class="w-full min-w-[400px] rounded-lg object-contain drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
+			/>
+		</div>
+		<div class="flex flex-1 flex-col items-center justify-center">
+			{#each hoverInfoItemData as hoverInfoItem (hoverInfoItem.title)}
+				<HoverInfoItem data={hoverInfoItem} />
+			{/each}
+		</div>
+	</div>
 </section>
