@@ -4,12 +4,15 @@
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
 	import type { HoverInfoItemData } from '$lib/types/components/HoverInfoItem'
+	import type { PriceItemData } from '$lib/types/components/PriceItem'
+
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
+	import PriceItem from '$lib/components/hersteldienst/PriceItem.svelte'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -36,6 +39,14 @@
 			'Wij repareren (bijna) alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
 			"U kan bij ons terecht voor het vervangen van uw scherm, batterij, oplaadpoort, camera's, speakers, microfoon, ...",
 			'Ook software problemen zoals een traag toestel of een update die niet lukt kunnen wij oplossen.'
+		]
+	}
+
+	let priceHeading: SectionHeadingDescriptionData = {
+		title: 'Prijzen',
+		description: [
+			'Wij hanteren vaste prijzen voor de meest voorkomende herstellingen.',
+			'Voor herstellingen die niet in de lijst staan kan u ons steeds contacteren voor een prijsopgave.'
 		]
 	}
 
@@ -86,6 +97,57 @@
 				"If you're experiencing any software issues with your smartphone, our team is here to help. We have the expertise to diagnose and fix various software problems, ensuring smooth and seamless operation."
 		}
 	]
+
+	let priceCardData: PriceItemData[] = [
+		{
+			title: 'Onderhoud',
+			price: '€ 60',
+			features: [
+				'Verwijderen van virussen en spyware',
+				'Verwijderen van onnodige software',
+				'Verwijderen van stof en vuil',
+				'Volledige controle van de hardware',
+				'Update van Windows en drivers'
+			],
+			button: {
+				url: '#',
+				text: 'Maak afspraak',
+				target: '_self' as '_self'
+			}
+		},
+		{
+			title: 'Herinstallatie',
+			price: '€ 80',
+			features: [
+				'Verwijderen van virussen en spyware',
+				'Verwijderen van onnodige software',
+				'Verwijderen van stof en vuil',
+				'Volledige controle van de hardware',
+				'Update van Windows en drivers'
+			],
+			button: {
+				url: '#',
+				text: 'Maak afspraak',
+				target: '_self' as '_self'
+			}
+		},
+		{
+			title: 'Upgrade',
+			price: '€ 139',
+			features: [
+				'Verwijderen van virussen en spyware',
+				'Verwijderen van onnodige software',
+				'Verwijderen van stof en vuil',
+				'Volledige controle van de hardware',
+				'Update van Windows en drivers'
+			],
+			button: {
+				url: '#',
+				text: 'Maak afspraak',
+				target: '_self' as '_self'
+			}
+		}
+	]
 </script>
 
 <!--Header Image-->
@@ -131,5 +193,16 @@
 				<HoverInfoItem data={hoverInfoItem} />
 			{/each}
 		</div>
+	</div>
+</section>
+<!--Prices-->
+<section class="wrapper mb-[8rem]">
+	<div class="mb-[6rem] flex flex-col items-center">
+		<SectionHeadingDescription data={priceHeading} />
+	</div>
+	<div class="grid grid-cols-3 gap-[4rem]">
+		{#each priceCardData as priceCard (priceCard.title)}
+			<PriceItem data={priceCard} />
+		{/each}
 	</div>
 </section>
