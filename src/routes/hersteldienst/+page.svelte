@@ -124,7 +124,7 @@
 				'Verwijderen van stof en vuil',
 				'Volledige controle van de hardware',
 				'Update van Windows en drivers',
-				'Herinstallatie van Windows',
+				'Herinstallatie van Windows'
 			],
 			button: {
 				url: '#',
@@ -196,7 +196,7 @@
 	</div>
 </section>
 <!--Prices-->
-<section class="wrapper mb-[8rem]">
+<section id="prices" class="wrapper mb-[8rem]">
 	<div class="mb-[6rem] flex flex-col items-center">
 		<SectionHeadingDescription data={priceHeading} />
 	</div>
