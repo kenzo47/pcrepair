@@ -20,7 +20,7 @@
 			<li class="list-disc text-left font-roboto text-[1.6rem]">{features}</li>
 		{/each}
 	</ul>
-	<div class="flex justify-center">
+	<div class="mt-auto flex justify-center">
 		<LinkButton data={data.button}></LinkButton>
 	</div>
 </div>

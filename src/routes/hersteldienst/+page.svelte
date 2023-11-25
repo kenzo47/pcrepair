@@ -123,7 +123,8 @@
 				'Verwijderen van onnodige software',
 				'Verwijderen van stof en vuil',
 				'Volledige controle van de hardware',
-				'Update van Windows en drivers'
+				'Update van Windows en drivers',
+				'Herinstallatie van Windows',
 			],
 			button: {
 				url: '#',
@@ -136,7 +137,6 @@
 			price: '€ 139',
 			features: [
 				'Verwijderen van virussen en spyware',
-				'Verwijderen van onnodige software',
 				'Verwijderen van stof en vuil',
 				'Volledige controle van de hardware',
 				'Update van Windows en drivers'
