@@ -3,13 +3,13 @@
 	import { page } from '$app/stores'
 </script>
 
-<nav class="wrapper flex h-[100px] w-full items-center justify-between p-4 text-2xl">
+<nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
 	<div class="flex">
 		<a href="/">
 			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] max-w-[260px]" />
 		</a>
 	</div>
-	<div class="menu flex gap-[8rem] text-center text-4xl">
+	<div class="menu flex gap-[8rem] text-center text-[2rem]">
 		<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
 		<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}>Hersteldienst</a
 		>

@@ -9,10 +9,10 @@
 		<img src={data.image.url} alt={data.image.alt} />
 	</div>
 	<div>
-		<h2 class="text-center font-suisse text-4xl text-black">
+		<h2 class="text-center font-roboto text-[2.2rem] font-medium text-black">
 			{data.title}
 		</h2>
-		<p class="font-suise text-center text-2xl font-normal">
+		<p class="text-center font-roboto text-[1.6rem] font-normal">
 			{data.description}
 		</p>
 	</div>

@@ -24,22 +24,13 @@ const config = {
 			})
 		},
 		fontSize: {
-			xs: '.6rem',
-			sm: '.8rem',
-			base: '1rem',
-			lg: '1.2rem',
-			xl: '1.4rem',
-			'2xl': '1.6rem',
-			'3xl': '1.8rem',
-			'4xl': '2rem',
-			'5xl': '3rem',
-			'6xl': '4rem',
-			'7xl': '5rem'
+			xs: '.6rem'
 		},
 		fontFamily: {
 			suisse: ['SuisseIntl', 'serif'],
 			mono: ['SuisseIntlMono', 'serif'],
-			works: ['SuisseWorks', 'serif']
+			works: ['SuisseWorks', 'serif'],
+			roboto: ['Roboto', 'sans-serif']
 		},
 		colors: {
 			black: '#000000',

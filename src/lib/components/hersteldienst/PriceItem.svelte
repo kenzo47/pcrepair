@@ -8,15 +8,16 @@
 <div
 	class="flex h-[380px] min-w-[300px] flex-col items-center justify-center border border-subtle-gray py-[2rem]"
 >
-	<h2 class="font-suise mb-[1rem] text-4xl font-medium">
+	<h2 class="mb-[1rem] font-roboto text-[2.2rem] font-medium">
 		{data.title}
 	</h2>
-	<p class="font-suise mb-[3rem] text-5xl font-semibold">
+	<p class="mb-[3rem] font-roboto text-[3rem] font-semibold">
 		{data.price}
+		<!--TODO: € centering -->
 	</p>
 	<ul class="mb-[3rem] flex flex-col items-start">
 		{#each data.features as features (features)}
-			<li class="font-suise list-disc text-left text-2xl">{features}</li>
+			<li class="list-disc text-left font-roboto text-[1.6rem]">{features}</li>
 		{/each}
 	</ul>
 	<div class="flex justify-center">

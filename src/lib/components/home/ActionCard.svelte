@@ -1,6 +1,6 @@
 <script lang="ts">
-	import type { ActionCard } from '$lib/types/components/ActionCard'
-	export let cardData: ActionCard
+	import type { ActionCardData } from '$lib/types/components/ActionCard'
+	export let cardData: ActionCardData
 </script>
 
 <div
@@ -9,9 +9,8 @@
 	<div class="mb-[1rem] h-[80px] w-[80px]">
 		<img src={cardData.image.url} alt={cardData.image.alt} />
 	</div>
-	<h2 class="font-suisse text-4xl">{cardData.title}</h2>
-	<p class="mb-[1rem] text-center text-2xl">{cardData.description}</p>
-
+	<h2 class="font-roboto text-[2.2rem] font-medium">{cardData.title}</h2>
+	<p class="mb-[0.5rem] text-center font-roboto text-[1.6rem]">{cardData.description}</p>
 	<a
 		class="leading-[1.4 rem] text-[2rem] font-bold text-azure hover:cursor-pointer hover:text-orange-web"
 		href={cardData.button.url}

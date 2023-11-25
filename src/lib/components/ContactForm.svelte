@@ -27,7 +27,7 @@
 
 			<div>
 				<button
-					class="flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+					class="flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 					><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Verzend</span></button
 				>
 			</div>
@@ -36,22 +36,9 @@
 </section>
 
 <style lang="postcss">
-	label {
-		font-family: 'Suisse Intl', sans-serif;
-		font-weight: 500;
-		font-size: 1.4rem;
-	}
-
 	input {
 		border: solid 1px black;
 		width: 600px;
 		margin-bottom: 1rem;
-	}
-
-	input,
-	textarea {
-		font-family: 'Suisse Intl', sans-serif;
-		font-weight: 300;
-		font-size: 1.4rem;
 	}
 </style>

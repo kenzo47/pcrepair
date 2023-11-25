@@ -170,12 +170,13 @@
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col items-center">
-		<h2 class="text-center font-suisse text-5xl">Heeft u vragen?</h2>
-		<p class="font-suise mb-[2rem] text-center text-2xl font-normal">Contacteer ons hier.</p>
+		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
+		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">Contacteer ons hier.</p>
 		<button
 			on:click={() => (showModal = true)}
-			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
-			><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Klik hier</span></button
+			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+			><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white">Klik hier</span
+			></button
 		>
 		<Modal show={showModal} on:close={() => (showModal = false)}>
 			<ContactForm {data} />

@@ -7,10 +7,10 @@
 <div class="mx-[4rem] flex flex-1 flex-col">
 	<Saos once={true} animation={'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both'}>
 		<div class="mb-[6rem]">
-			<h2 class="font-suisse text-4xl font-medium">
+			<h2 class="font-roboto text-[3rem] font-medium">
 				{infoItemData.title}
 			</h2>
-			<p class="font-suise text-3xl font-normal tracking-[-0.05rem]">
+			<p class="font-roboto text-[1.6rem] font-normal">
 				{infoItemData.description}
 			</p>
 		</div>
@@ -22,8 +22,8 @@
 				animation={'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both'}
 			>
 				<div class="flex flex-col">
-					<h3 class="font-suisse text-3xl font-medium">{subInfoItem.title}</h3>
-					<p class="font-suise text-2xl font-normal tracking-[-0.05rem]">
+					<h3 class="mb-[0.4rem] font-roboto text-[2.2rem] font-medium">{subInfoItem.title}</h3>
+					<p class="font-roboto text-[1.6rem] font-normal">
 						{subInfoItem.description}
 					</p>
 				</div>

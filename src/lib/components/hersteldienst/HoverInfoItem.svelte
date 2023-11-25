@@ -7,10 +7,10 @@
 <div
 	class="flex min-w-[400px] flex-col border-l-2 border-transparent px-[2rem] hover:border-l-orange-web"
 >
-	<h2 class="mb-[1rem] font-suisse text-4xl font-medium">
+	<h2 class="mb-[1rem] font-roboto text-[2.2rem] font-medium">
 		{data.title}
 	</h2>
-	<p class="font-suise mb-[3rem] text-2xl font-normal">
+	<p class="mb-[3rem] font-roboto text-[1.6rem] font-normal">
 		{data.description}
 	</p>
 </div>
