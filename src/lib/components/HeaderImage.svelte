@@ -10,7 +10,7 @@
 	<div
 		class="absolute h-full w-full bg-raisin-black bg-cover bg-center bg-no-repeat bg-blend-overlay"
 		style="background-image: url({data.image.url})"
-		aria-label={data.image.alt}
+		aria-label={data.image.alt ? data.image.alt : data.title}
 	></div>
 	<h1
 		class="absolute top-[25%] z-10 text-center font-roboto text-[6rem] text-white shadow-black text-shadow"
