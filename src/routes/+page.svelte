@@ -32,7 +32,11 @@
 			},
 			title: 'Computer reparaties',
 			description: 'Computer traag of defect? Bekijk onze reparatie diensten.',
-			url: '#'
+			button: {
+				url: '/hersteldienst',
+				text: 'Klik hier',
+				target: '_self' as '_self'
+			}
 		},
 		{
 			image: {
@@ -41,7 +45,11 @@
 			},
 			title: 'Smartphone reparaties',
 			description: 'Problemen of schade aan uw smartphone? Wij herstellen het voor u!',
-			url: '#'
+			button: {
+				url: '/hersteldienst',
+				text: 'Klik hier',
+				target: '_self' as '_self'
+			}
 		},
 		{
 			image: {
@@ -50,7 +58,11 @@
 			},
 			title: 'Webdesign',
 			description: 'Website nodig? Lees meer over onze webdesign diensten.',
-			url: '#'
+			button: {
+				url: '/webdesign',
+				text: 'Klik hier',
+				target: '_self' as '_self'
+			}
 		}
 	]
 
