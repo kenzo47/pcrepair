@@ -22,7 +22,7 @@
 		},
 		title: 'Herstellingen',
 		description: 'Informatie over onze herstellingen en diensten.',
-		url: '#'
+		section: 'prices'
 	}
 	let pcRepairHeading: SectionHeadingDescriptionData = {
 		title: 'Computer & laptop herstellingen',

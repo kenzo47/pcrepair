@@ -36,7 +36,7 @@
 				{item.description}
 			</p>
 			<button
-				on:click={() => goto(item.button.url)}
+				on:click={() => goto(item.button.url ? item.button.url : '/')}
 				class="absolute left-[50%] top-[65%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 				><span class="font-roboto text-[2.2rem] font-bold text-white">
 					{#if item.button.text}

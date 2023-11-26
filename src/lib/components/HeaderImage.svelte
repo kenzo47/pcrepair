@@ -21,7 +21,7 @@
 		{data.description}
 	</p>
 	<button
-		on:click={() => navigateToSection('prices')}
+		on:click={() => navigateToSection(data.section ? data.section : 'home')}
 		class="absolute left-[50%] top-[65%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 		><span class="text-[2.2rem] font-bold text-white">Prijslijst</span></button
 	>
