@@ -70,9 +70,13 @@
 		@apply pb-[0.2rem] pl-[0.2rem] font-roboto text-[1.6rem] font-normal;
 	}
 
+	input {
+		@apply h-[36px];
+	}
+
 	input,
 	textarea {
-		@apply w-full rounded-2xl border-[2px] border-transparent pb-[0.8rem] text-[1.6rem];
+		@apply w-full rounded-2xl border-[2px] border-transparent px-[0.6rem] text-[1.6rem];
 	}
 
 	input:focus,
