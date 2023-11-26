@@ -20,7 +20,8 @@ const config = {
 				circuit: "url('/src/lib/assets/icons/pattern.svg')",
 				laptoprepair: "url('/src/lib/assets/images/laptoprepair.jpg')",
 				pcrepair: "url('/src/lib/assets/images/pcrepair.jpg')",
-				pchdd: "url('/src/lib/assets/images/pchdd.jpg')"
+				pchdd: "url('/src/lib/assets/images/pchdd.jpg')",
+				contact: "url('/src/lib/assets/images/contact.jpg')"
 			})
 		},
 		fontSize: {
@@ -41,6 +42,7 @@ const config = {
 			'royal-blue-traditional': '#2a2a72',
 			'raisin-black': '#232528',
 			'alice-blue': '#eaf6ff',
+			error: '#ff0033',
 			azure: '#3a86ff',
 			transparent: 'transparent'
 		},

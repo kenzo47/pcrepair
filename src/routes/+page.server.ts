@@ -5,14 +5,12 @@ import { fail } from '@sveltejs/kit'
 
 export const load: PageServerLoad = async () => {
 	const form = await superValidate(schema)
-
 	return { form }
 }
 
 export const actions = {
 	default: async ({ request }) => {
 		const form = await superValidate(request, schema)
-		console.log('POST', form)
 
 		// Convenient validation check:
 		if (!form.valid) {
@@ -21,6 +19,7 @@ export const actions = {
 		}
 
 		// TODO: Do something with the validated form.data
+		console.log(form)
 
 		// Yep, return { form } here too
 		return { form }

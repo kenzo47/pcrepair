@@ -40,11 +40,11 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div
 		use:portal
-		class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/60 p-[2rem]"
+		class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 p-[2rem]"
 		on:click={outsideClick}
 	>
 		<div
-			class="mx-auto h-[540px] w-full max-w-[600px] rounded-2xl bg-off-white"
+			class="mx-auto h-[600px] w-full max-w-[600px] rounded-2xl bg-off-white"
 			on:click={insideClick}
 		>
 			<slot />
