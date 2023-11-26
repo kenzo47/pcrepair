@@ -8,7 +8,8 @@
 
 <div class="relative flex h-[50vh] max-w-[100vw] justify-center">
 	<div
-		class="absolute h-full w-full bg-raisin-black bg-pcrepair bg-cover bg-center bg-no-repeat bg-blend-overlay"
+		class="absolute h-full w-full bg-raisin-black bg-cover bg-center bg-no-repeat bg-blend-overlay"
+		style="background-image: url({data.image.url})"
 	></div>
 	<h1
 		class="absolute top-[25%] z-10 text-center font-roboto text-[6rem] text-white shadow-black text-shadow"
