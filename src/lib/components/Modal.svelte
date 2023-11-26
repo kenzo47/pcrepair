@@ -44,7 +44,7 @@
 		on:click={outsideClick}
 	>
 		<div
-			class="mx-auto h-[600px] w-full max-w-[600px] rounded-3xl bg-off-white"
+			class="mx-auto h-[620px] w-full max-w-[600px] rounded-3xl bg-off-white"
 			on:click={insideClick}
 		>
 			<slot />

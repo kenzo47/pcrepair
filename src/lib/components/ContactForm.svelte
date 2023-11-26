@@ -44,7 +44,7 @@
 			<div class="mb-[2rem] flex h-[260px] w-full flex-col">
 				<label for="message">Bericht</label>
 				<textarea
-					class="mb-[1rem] h-full resize-none"
+					class="h-full resize-none"
 					name="message"
 					aria-invalid={$errors.message ? 'true' : undefined}
 					bind:value={$form.message}
@@ -54,7 +54,7 @@
 		</div>
 		<div>
 			<button
-				class="mb-[2rem] flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+				class="mb-[2rem] mt-[1rem] flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 				><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Verzend</span></button
 			>
 		</div>
@@ -63,7 +63,7 @@
 
 <style lang="postcss">
 	.invalid {
-		@apply pl-[0.2rem] font-roboto text-[1.4rem] text-error;
+		@apply rounded pl-[0.2rem] font-mono text-[1.4rem] font-bold text-orange-web;
 	}
 
 	label {
@@ -72,7 +72,7 @@
 
 	input,
 	textarea {
-		@apply w-full rounded-2xl border-[2px] border-transparent p-[0.8rem] text-[1.6rem];
+		@apply w-full rounded-2xl border-[2px] border-transparent pb-[0.8rem] text-[1.6rem];
 	}
 
 	input:focus,
@@ -84,7 +84,7 @@
 		background-color: #2a2a72;
 		background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 800 400'%3E%3Cdefs%3E%3CradialGradient id='a' cx='396' cy='281' r='514' gradientUnits='userSpaceOnUse'%3E%3Cstop offset='0' stop-color='%233A86FF'/%3E%3Cstop offset='1' stop-color='%232A2A72'/%3E%3C/radialGradient%3E%3ClinearGradient id='b' gradientUnits='userSpaceOnUse' x1='400' y1='148' x2='400' y2='333'%3E%3Cstop offset='0' stop-color='%23FFA400' stop-opacity='0'/%3E%3Cstop offset='1' stop-color='%23FFA400' stop-opacity='0.5'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill='url(%23a)' width='800' height='400'/%3E%3Cg fill-opacity='0.4'%3E%3Ccircle fill='url(%23b)' cx='267.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='532.5' cy='61' r='300'/%3E%3Ccircle fill='url(%23b)' cx='400' cy='30' r='300'/%3E%3C/g%3E%3C/svg%3E");
 		background-attachment: fixed;
-		background-size: 100% 100%; /* Stretch to fill */
+		background-size: 104% 104%; /* Stretch to fill */
 		background-position: center;
 	}
 
