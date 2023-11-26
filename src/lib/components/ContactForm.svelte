@@ -5,7 +5,7 @@
 	const { form, enhance, errors } = superForm(data.form)
 </script>
 
-<div id="contact" class="flex h-full w-full flex-col items-center justify-center">
+<div id="contact" class="flex h-full w-full flex-col items-center justify-center rounded-2xl">
 	<h1 class="my-[2rem] font-roboto text-[2.6rem]">Contactformulier</h1>
 	<form method="POST" class="flex w-[600px] flex-col items-center justify-center" use:enhance>
 		<div>
