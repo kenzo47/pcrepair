@@ -4,13 +4,14 @@
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
 	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
-
+	import Feature from '$lib/components/webdesign/Feature.svelte'
 	import websiteIcon from '$lib/assets/icons/website.svg'
 	import ServiceItem from '$lib/components/webdesign/ServiceItem.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import webdesign from '$lib/assets/images/webdesign.jpg'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
+	import type { FeatureData } from '$lib/types/components/Feature'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -98,9 +99,35 @@
 				{
 					title: 'Uitbreidbaar',
 					description:
-						'Wij maken websites die uitbreidbaar zijn. Zo kan u in de toekomst uw website uitbreiden met extra functionaliteiten.  '
+						'Wij maken websites die uitbreidbaar zijn. Zo kan u in de toekomst uw website uitbreiden met extra functionaliteiten.'
 				}
 			]
+		}
+	]
+	let featureData: FeatureData[] = [
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Key Features',
+			description: 'Custom design, responsive layout, and SEO optimization included.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Key Features',
+			description: 'E-commerce integration, blog setup, and social media integration included.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Key Features',
+			description: 'Advanced analytics, SSL certificate, and unlimited revisions included.'
 		}
 	]
 </script>
@@ -131,4 +158,22 @@
 			<InfoItem infoItemData={infoItemData[0]} />
 		</div>
 	</Saos>
+</section>
+<!--Pricing/Features-->
+<section class="wrapper mb-[8rem]">
+	<div class="mb-[8rem] flex flex-col text-left">
+		<h2 class="mb-[0.5rem] font-roboto text-[3rem] font-medium">Mogelijkheden</h2>
+		<p class="font-roboto text-[1.6rem]">
+			Om u een idee te geven van de prijs, hebben we enkele pakketten samengesteld.
+		</p>
+		<p class="font-roboto text-[1.6rem]">Onderstaande prijzen zijn slechts een indicatie.</p>
+		<p class="font-roboto text-[1.6rem]">De prijs kan variëren afhankelijk van uw wensen.</p>
+	</div>
+	<div class="flex">
+		<div class="flex flex-col">
+			{#each featureData as featureData (featureData.title)}
+				<Feature data={featureData} />
+			{/each}
+		</div>
+	</div>
 </section>
