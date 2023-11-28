@@ -4,7 +4,7 @@
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
 	import type { HoverInfoItemData } from '$lib/types/components/HoverInfoItem'
-	import type { PriceItemData } from '$lib/types/components/PriceItem'
+	import type { PriceCardData } from '$lib/types/components/PriceCard'
 
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
@@ -12,7 +12,7 @@
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
-	import PriceItem from '$lib/components/hersteldienst/PriceItem.svelte'
+	import PriceCard from '$lib/components/hersteldienst/PriceCard.svelte'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -98,7 +98,7 @@
 		}
 	]
 
-	let priceCardData: PriceItemData[] = [
+	let priceCardData: PriceCardData[] = [
 		{
 			title: 'Onderhoud',
 			price: '€ 60',
@@ -202,7 +202,7 @@
 	</div>
 	<div class="grid grid-cols-3 gap-[4rem]">
 		{#each priceCardData as priceCard (priceCard.title)}
-			<PriceItem data={priceCard} />
+			<PriceCard data={priceCard} />
 		{/each}
 	</div>
 </section>

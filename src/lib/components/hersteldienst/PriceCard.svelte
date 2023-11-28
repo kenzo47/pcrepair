@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { PriceItemData } from '$lib/types/components/PriceItem'
+	import type { PriceCardData } from '$lib/types/components/PriceCard'
 	import LinkButton from '../LinkButton.svelte'
 
-	export let data: PriceItemData
+	export let data: PriceCardData
 </script>
 
 <div

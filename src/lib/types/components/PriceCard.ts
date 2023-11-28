@@ -1,6 +1,6 @@
 import type { LinkButtonData } from './Button'
 
-export interface PriceItemData {
+export interface PriceCardData {
 	title: string
 	price: string
 	features: string[]
