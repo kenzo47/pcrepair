@@ -142,6 +142,11 @@
 			'Contactformulier',
 			'Zoekmachinevriendelijk',
 			'1 jaar hosting',
+			'1 jaar domeinnaam',
+			'1-5 pagina’s',
+			'Contactformulier',
+			'Zoekmachinevriendelijk',
+			'1 jaar hosting',
 			'1 jaar domeinnaam'
 		],
 		button: {

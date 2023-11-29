@@ -18,9 +18,11 @@
 	<hr class="mb-[2rem]" />
 	<div class="mb-[2rem] flex flex-grow flex-col">
 		<p class="mb-[2rem] font-roboto text-[1.6rem]">Bevat:</p>
-		<div class="flex flex-grow flex-wrap items-center">
+		<div class="ml-[8rem] flex flex-grow flex-wrap">
 			{#each data.features as feature (feature)}
-				<div class="flex w-1/2 font-roboto text-[1.6rem]">{feature}</div>
+				<div class="flex w-1/2 text-left font-roboto text-[1.6rem]">
+					&#10003; {feature}
+				</div>
 			{/each}
 		</div>
 	</div>
