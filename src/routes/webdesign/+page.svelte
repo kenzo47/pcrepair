@@ -12,6 +12,8 @@
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
 	import type { FeatureData } from '$lib/types/components/Feature'
+	import PriceFeatureCard from '$lib/components/webdesign/PriceFeatureCard.svelte'
+	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -130,6 +132,24 @@
 			description: 'Advanced analytics, SSL certificate, and unlimited revisions included.'
 		}
 	]
+
+	let priceCardData: PriceFeatureCardData = {
+		title: 'Statische website',
+		subtitle: 'Voor kleine/middelgrote bedrijven',
+		price: '€ 900',
+		features: [
+			'1-5 pagina’s',
+			'Contactformulier',
+			'Zoekmachinevriendelijk',
+			'1 jaar hosting',
+			'1 jaar domeinnaam'
+		],
+		button: {
+			url: 'https://google.com',
+			text: 'Dit wil ik',
+			target: '_self' as '_self'
+		}
+	}
 </script>
 
 <!--Header Image-->
@@ -147,12 +167,12 @@
 <!--Info Items-->
 <section class="wrapper mb-[8rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-		<div class="mb-[12rem] flex w-full items-center">
+		<div class="mb-[8rem] flex w-full items-center">
 			<div class="mr-[6rem] flex">
 				<img
 					src={webdesign}
 					alt="Computer herstellingen"
-					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md"
+					class="h-[350px] w-full min-w-[300px] rounded-lg object-contain drop-shadow-md"
 				/>
 			</div>
 			<InfoItem infoItemData={infoItemData[0]} />
@@ -161,7 +181,7 @@
 </section>
 <!--Pricing/Features-->
 <section class="wrapper mb-[8rem]">
-	<div class="mb-[8rem] flex flex-col text-left">
+	<div class="mb-[8rem] flex flex-col items-center">
 		<h2 class="mb-[0.5rem] font-roboto text-[3rem] font-medium">Mogelijkheden</h2>
 		<p class="font-roboto text-[1.6rem]">
 			Om u een idee te geven van de prijs, hebben we enkele pakketten samengesteld.
@@ -170,10 +190,13 @@
 		<p class="font-roboto text-[1.6rem]">De prijs kan variëren afhankelijk van uw wensen.</p>
 	</div>
 	<div class="flex">
-		<div class="flex flex-col">
+		<div class="flex h-[500px] flex-1 flex-col justify-center">
 			{#each featureData as featureData (featureData.title)}
 				<Feature data={featureData} />
 			{/each}
+		</div>
+		<div class="flex h-[600px] max-w-[600px] flex-1">
+			<PriceFeatureCard data={priceCardData} />
 		</div>
 	</div>
 </section>
