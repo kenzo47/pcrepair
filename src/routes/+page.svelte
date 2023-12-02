@@ -139,7 +139,6 @@
 		}
 	]
 </script>
-
 <!--Swiper-->
 <header class="mb-[4rem] overflow-hidden">
 	<HeaderSwiper data={imageSwiperData} />
@@ -195,7 +194,6 @@
 		</Modal>
 	</div>
 </section>
-
 <style lang="postcss">
 	@keyframes -global-from-left {
 		0% {

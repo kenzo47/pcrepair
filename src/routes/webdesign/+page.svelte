@@ -4,17 +4,19 @@
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
 	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
+	import type { FeatureData } from '$lib/types/components/Feature'
+	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
+	import Modal from '$lib/components/Modal.svelte'
+	import ContactForm from '$lib/components/ContactForm.svelte'
 	import Feature from '$lib/components/webdesign/Feature.svelte'
 	import websiteIcon from '$lib/assets/icons/website.svg'
 	import ServiceItem from '$lib/components/webdesign/ServiceItem.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import webdesign from '$lib/assets/images/webdesign.jpg'
-	import LinkButton from '$lib/components/LinkButton.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
-	import type { FeatureData } from '$lib/types/components/Feature'
 	import PriceFeatureCard from '$lib/components/webdesign/PriceFeatureCard.svelte'
-	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
-	// export let data: PageData
+	let showModal = false
+	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -146,7 +148,7 @@
 			'1-5 pagina’s',
 			'Contactformulier',
 			'Zoekmachinevriendelijk',
-			'1 jaar hosting',
+			'1 jaar hosting'
 		],
 		button: {
 			url: 'https://google.com',
@@ -184,8 +186,8 @@
 	</Saos>
 </section>
 <!--Pricing/Features-->
-<section class="wrapper mb-[8rem]">
-	<div class="mb-[8rem] flex flex-col items-center">
+<section class="wrapper">
+	<div class="mb-[4rem] flex flex-col items-center">
 		<h2 class="mb-[0.5rem] font-roboto text-[3rem] font-medium">Mogelijkheden</h2>
 		<p class="font-roboto text-[1.6rem]">
 			Om u een idee te geven van de prijs, hebben we enkele pakketten samengesteld.
@@ -193,15 +195,59 @@
 		<p class="font-roboto text-[1.6rem]">Onderstaande prijzen zijn slechts een indicatie.</p>
 		<p class="font-roboto text-[1.6rem]">De prijs kan variëren afhankelijk van uw wensen.</p>
 	</div>
-	<div class="flex">
-		<div class="flex h-[500px] flex-1 flex-col justify-center">
+	<div class="flex h-full items-center justify-between">
+		<div class="order-1 flex h-[500px] w-[500px] flex-1 flex-col justify-center">
 			<!--No unique key -->
 			{#each featureData as featureData}
 				<Feature data={featureData} />
 			{/each}
 		</div>
-		<div class="flex h-[400px] max-w-[500px] flex-1">
+		<div class="order-2 flex h-[400px] w-[500px] flex-1 justify-end">
 			<PriceFeatureCard data={priceCardData} />
 		</div>
+	</div>
+</section>
+<section class="wrapper">
+	<div class="flex h-full items-center justify-between">
+		<div class="order-2 flex items-end">
+			<div class="flex h-[500px] w-[500px] flex-1 flex-col justify-center">
+				<!--No unique key -->
+				{#each featureData as featureData}
+					<Feature data={featureData} />
+				{/each}
+			</div>
+		</div>
+		<div class="order-1 flex h-[400px] w-[500px] flex-1 justify-start">
+			<PriceFeatureCard data={priceCardData} />
+		</div>
+	</div>
+</section>
+<section class="wrapper mb-[8rem]">
+	<div class="flex h-full items-center justify-between">
+		<div class="order-1 flex h-[500px] w-[500px] flex-1 flex-col justify-center">
+			<!--No unique key -->
+			{#each featureData as featureData}
+				<Feature data={featureData} />
+			{/each}
+		</div>
+		<div class="order-2 flex h-[400px] w-[500px] flex-1 justify-end">
+			<PriceFeatureCard data={priceCardData} />
+		</div>
+	</div>
+</section>
+<!--Contact Form-->
+<section class="wrapper mb-[8rem]">
+	<div class="flex flex-col items-center">
+		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
+		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">Contacteer ons hier.</p>
+		<button
+			on:click={() => (showModal = true)}
+			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+			><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white">Klik hier</span
+			></button
+		>
+		<Modal show={showModal} on:close={() => (showModal = false)}>
+			<ContactForm {data} />
+		</Modal>
 	</div>
 </section>
