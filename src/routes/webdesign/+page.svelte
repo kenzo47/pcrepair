@@ -157,7 +157,6 @@
 		}
 	}
 </script>
-
 <!--Header Image-->
 <header class="mb-[4rem] overflow-hidden">
 	<HeaderImage data={imageSwiperData} />
