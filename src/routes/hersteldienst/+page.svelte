@@ -157,7 +157,7 @@
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
-		<div class="mb-[2rem] flex flex-col items-center">
+		<div class="mb-[4rem] flex flex-col items-start">
 			<SectionHeadingDescription data={pcRepairHeading} />
 		</div>
 		<div class="mb-[8rem] flex justify-center">
@@ -173,7 +173,7 @@
 <!--Smartphone/Tablet Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
-		<div class="mb-[2rem] flex flex-col items-center">
+		<div class="mb-[4rem] flex flex-col items-start">
 			<SectionHeadingDescription data={phoneRepairHeading} />
 		</div>
 		<div class="mb-[8rem] flex justify-center">
