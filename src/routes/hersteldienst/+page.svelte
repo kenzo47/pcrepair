@@ -13,7 +13,7 @@
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
 	import PriceCard from '$lib/components/hersteldienst/PriceCard.svelte'
-	export let data: PageData
+	// export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
 		image: {

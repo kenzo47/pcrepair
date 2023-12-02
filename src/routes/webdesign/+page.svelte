@@ -14,7 +14,7 @@
 	import type { FeatureData } from '$lib/types/components/Feature'
 	import PriceFeatureCard from '$lib/components/webdesign/PriceFeatureCard.svelte'
 	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
-	export let data: PageData
+	// export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -35,11 +35,11 @@
 			title: 'Eenvoudige websites',
 			description:
 				'Een betaalbare website op maat, waar de inhoud van de website niet (vaak) aangepast hoeft te worden.',
-			usps: [
-				'Geschikt voor kleinere websites',
-				'Zoekmachinevriendelijk',
-				'Voor bedrijven die niet vaak hun website willen aanpassen.'
-			],
+			// usps: [
+			// 	'Geschikt voor kleinere websites',
+			// 	'Zoekmachinevriendelijk',
+			// 	'Voor bedrijven die niet vaak hun website willen aanpassen.'
+			// ],
 			button: {
 				url: 'https://google.com',
 				text: 'Lees meer',
@@ -54,12 +54,12 @@
 			title: 'Wordpress',
 			description:
 				'Professionele uitstraling met veel designmogelijkheden op het vertrouwde WordPress-platform.',
-			usps: [
-				'Geschikt voor kleine en grote websites',
-				'Gebruiksvriendelijk',
-				'Zoekmachinevriendelijk',
-				'Voor bedrijven die regelmatig hun website willen aanpassen.'
-			],
+			// usps: [
+			// 	'Geschikt voor kleine en grote websites',
+			// 	'Gebruiksvriendelijk',
+			// 	'Zoekmachinevriendelijk',
+			// 	'Voor bedrijven die regelmatig hun website willen aanpassen.'
+			// ],
 			button: {
 				url: '#',
 				text: 'Lees meer',
@@ -73,13 +73,13 @@
 			},
 			title: 'Maatwerk & Webapplicaties',
 			description: 'Volledig op maat gemaakte websites en webapplicaties.',
-			usps: [
-				'Performant',
-				'Zoekmachinevriendelijk',
-				'Design op maat',
-				'Eindeloze mogelijkheden',
-				'Voor bedrijven die het beste willen.'
-			],
+			// usps: [
+			// 	'Performant',
+			// 	'Zoekmachinevriendelijk',
+			// 	'Design op maat',
+			// 	'Eindeloze mogelijkheden',
+			// 	'Voor bedrijven die het beste willen.'
+			// ],
 			button: {
 				url: 'https://google.com',
 				text: 'Lees meer',
@@ -196,7 +196,8 @@
 	</div>
 	<div class="flex">
 		<div class="flex h-[500px] flex-1 flex-col justify-center">
-			{#each featureData as featureData (featureData.title)}
+			<!--No unique key -->
+			{#each featureData as featureData}
 				<Feature data={featureData} />
 			{/each}
 		</div>
