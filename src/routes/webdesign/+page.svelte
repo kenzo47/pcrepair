@@ -94,7 +94,7 @@
 				'Bij Reboot-IT kan u terecht voor een professionele website op maat. Wij maken websites voor zowel particulieren als bedrijven. Onze service eindigt niet na het opleveren van de website. Wij zorgen ervoor dat uw website up-to-date blijft en dat u ondersteuning krijgt.',
 			subInfoItems: [
 				{
-					title: 'Welke soort website past bij mij?',
+					title: 'Welke soort website past bij jou?',
 					description:
 						'Wij maken verschillende soorten websites, elk met hun eigen voor- en nadelen. Samen kijken we welke soort website het beste bij u past.'
 				},
@@ -147,7 +147,6 @@
 			'Contactformulier',
 			'Zoekmachinevriendelijk',
 			'1 jaar hosting',
-			'1 jaar domeinnaam'
 		],
 		button: {
 			url: 'https://google.com',
@@ -201,7 +200,7 @@
 				<Feature data={featureData} />
 			{/each}
 		</div>
-		<div class="flex h-[600px] max-w-[600px] flex-1">
+		<div class="flex h-[400px] max-w-[500px] flex-1">
 			<PriceFeatureCard data={priceCardData} />
 		</div>
 	</div>
