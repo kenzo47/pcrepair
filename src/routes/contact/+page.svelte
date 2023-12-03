@@ -75,10 +75,12 @@
 	</div>
 </section>
 <!--Contact Form-->
-<section class="w-full mb-[8rem]">
+<section class="wrapper mb-[8rem] w-full">
 	<div class="mb-[4rem] flex flex-col items-center">
 		<h2 class="font-roboto text-[2.2rem] font-medium">Stuur ons een bericht.</h2>
 		<p class="font-roboto text-[1.6rem]">Wij antwoorden doorgaans binnen de 24 uur.</p>
 	</div>
-	<ContactForm {data} />
+	<div class="flex justify-center">
+		<ContactForm {data} />
+	</div>
 </section>

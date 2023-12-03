@@ -10,7 +10,7 @@
 
 <div
 	id="contact"
-	class="flex h-full w-full flex-col items-center justify-between border border-orange-web bg-off-white"
+	class="flex h-full max-w-[600px] flex-col items-center justify-between bg-off-white"
 >
 	<div
 		class="mb-[1rem] flex h-[80px] w-full justify-center border-b-[1px] border-raisin-black bg-subtle-gray py-[2rem]"
