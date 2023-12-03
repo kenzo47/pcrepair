@@ -40,13 +40,10 @@
 	<!-- svelte-ignore a11y-no-static-element-interactions -->
 	<div
 		use:portal
-		class="fixed inset-0 z-50 flex flex-col items-center justify-center rounded-2xl bg-black/80 p-[2rem]"
+		class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 p-[2rem]"
 		on:click={outsideClick}
 	>
-		<div
-			class="mx-auto h-[620px] w-full max-w-[600px] rounded-3xl bg-off-white"
-			on:click={insideClick}
-		>
+		<div class="mx-auto h-[620px] w-full max-w-[600px]" on:click={insideClick}>
 			<slot />
 			<button
 				on:click|stopPropagation={closeModal}

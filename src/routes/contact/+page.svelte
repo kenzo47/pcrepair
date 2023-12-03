@@ -2,7 +2,7 @@
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
 	import type { PageData } from './$types'
-	import ContactForm from '$lib/components/ContactForm.svelte'
+	import ContactForm from '$lib/components/ContactFormModal.svelte'
 	import contact from '$lib/assets/images/contact.jpg'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import emailIcon from '$lib/assets/icons/email.svg'

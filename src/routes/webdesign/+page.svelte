@@ -7,7 +7,7 @@
 	import type { FeatureData } from '$lib/types/components/Feature'
 	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
 	import Modal from '$lib/components/Modal.svelte'
-	import ContactForm from '$lib/components/ContactForm.svelte'
+	import ContactForm from '$lib/components/ContactFormModal.svelte'
 	import Feature from '$lib/components/webdesign/Feature.svelte'
 	import websiteIcon from '$lib/assets/icons/website.svg'
 	import ServiceItem from '$lib/components/ServiceItem.svelte'

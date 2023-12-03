@@ -13,7 +13,7 @@
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
-	import ContactForm from '$lib/components/ContactForm.svelte'
+	import ContactFormModal from '$lib/components/ContactFormModal.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
 	import Modal from '$lib/components/Modal.svelte'
 
@@ -197,7 +197,7 @@
 			></button
 		>
 		<Modal show={showModal} on:close={() => (showModal = false)}>
-			<ContactForm {data} />
+			<ContactFormModal {data} />
 		</Modal>
 	</div>
 </section>
