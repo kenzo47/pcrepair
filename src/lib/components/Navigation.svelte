@@ -6,7 +6,7 @@
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
 	<div class="flex">
 		<a href="/">
-			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] max-w-[260px]" />
+			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] w-[240px]" />
 		</a>
 	</div>
 	<div class="menu flex gap-[8rem] text-center text-[2rem]">
