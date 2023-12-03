@@ -1,0 +1,32 @@
+<script lang="ts">
+	import type { EmployeeData } from '$lib/types/components/Employee'
+
+	export let data: EmployeeData
+</script>
+
+<div class="flex h-[500px] flex-col border border-subtle-gray p-[4rem]">
+	<div class="flex flex-col">
+		<div class="mb-[1rem] flex justify-center">
+			<img
+				class="h-[220px] max-w-[220px] rounded-[50%]"
+				src={data.image.url}
+				alt={data.image.alt}
+			/>
+		</div>
+		<div class="mb-[1rem] flex flex-col items-center">
+			<h2 class="font-roboto text-[2.2rem] font-medium">{data.name}</h2>
+			<h3 class="font-roboto text-[2rem]">{data.function}</h3>
+		</div>
+	</div>
+	<div class="flex text-center">
+		<p class="font-roboto text-[1.6rem]">{data.intro}</p>
+	</div>
+	<div class="mt-[2rem] flex flex-col">
+		<h3 class="font-roboto text-[1.8rem] font-medium">Specialiteiten</h3>
+		<ul class="flex flex-wrap">
+			{#each data.skills as skill}
+				<li class="mr-[1rem] font-roboto text-[1.6rem]">{skill}</li>
+			{/each}
+		</ul>
+	</div>
+</div>
