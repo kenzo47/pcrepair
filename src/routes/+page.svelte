@@ -5,17 +5,13 @@
 	import type { ActionCardData } from '$lib/types/components/ActionCard'
 	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
 	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
-	import pc from '$lib/assets/images/pc.jpg'
 	import pcmobo from '$lib/assets/images/pcmobo.jpg'
-	import pchdd from '$lib/assets/images/pchdd.jpg'
 	import phone from '$lib/assets/images/phone.jpg'
 	import coding from '$lib/assets/images/webdesign.jpg'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
-	import laptoprepair from '$lib/assets/images/laptoprepair.jpg'
 	import pcIcon from '$lib/assets/icons/desktop.svg'
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
-	import pattern from '$lib/assets/icons/pattern.svg'
 	import ActionCard from '$lib/components/home/ActionCard.svelte'
 	import ContactForm from '$lib/components/ContactForm.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
@@ -75,7 +71,7 @@
 			title: 'Computer herstellingen',
 			description: 'Werkt uw computer niet meer zoals het hoort? Wij helpen u graag verder!',
 			button: {
-				url: '#',
+				url: '/hersteldienst',
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -88,7 +84,7 @@
 			title: 'Smartphone herstellingen',
 			description: 'Problemen met uw smartphone? Gebarsten scherm? Wij herstellen het voor u!',
 			button: {
-				url: 'https://google.com',
+				url: '/hersteldienst',
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -102,7 +98,7 @@
 			description:
 				'Wij maken uw website op maat! Van eenvoudige websites tot uitgebreide web applicaties.',
 			button: {
-				url: 'https://google.com',
+				url: '/webdesign',
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}

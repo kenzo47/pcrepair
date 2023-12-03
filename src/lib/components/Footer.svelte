@@ -3,11 +3,6 @@
 	import type { LinkButtonData } from '$lib/types/components/Button'
 	import linkedInLogo from '$lib/assets/icons/socials/linkedin.svg'
 	import facebookLogo from '$lib/assets/icons/socials/facebook.svg'
-	let linkButtonData: LinkButtonData = {
-		href: 'https://download.teamviewer.com/download/TeamViewerQS.exe',
-		text: 'Hulp op afstand',
-		target: '_self'
-	}
 </script>
 
 <footer class="flex w-full justify-center bg-subtle-gray p-8">
