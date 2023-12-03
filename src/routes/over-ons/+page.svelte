@@ -54,9 +54,10 @@
 				alt: 'Alicia'
 			},
 			name: 'Alicia',
-			function: 'Manager',
-			intro: '',
-			skills: ['Reparaties', 'Webdesign', '']
+			function: 'Administratief en Technisch Specialist',
+			intro:
+				'Alicia beheert de administratie en is mede-verantwoordelijk voor reparaties en webdesign.',
+			skills: ['Administratie', 'Reparaties', 'Webdesign']
 		},
 		{
 			image: {
