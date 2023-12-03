@@ -15,6 +15,7 @@
 		>
 		<a href="/webdesign" class:active={$page.url.pathname === '/webdesign'}>Webdesign</a>
 		<a href="/over-ons" class:active={$page.url.pathname === '/over-ons'}>Over Ons</a>
+		<a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
 	</div>
 </nav>
 

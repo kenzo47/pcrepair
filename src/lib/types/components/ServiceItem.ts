@@ -4,6 +4,6 @@ import type { LinkButtonData } from './Button'
 export interface ServiceItemData {
 	icon: Image
 	title: string
-	description: string
-	button: LinkButtonData
+	description: string | string[]
+	button?: LinkButtonData
 }

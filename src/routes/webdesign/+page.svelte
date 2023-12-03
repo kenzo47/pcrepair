@@ -10,7 +10,7 @@
 	import ContactForm from '$lib/components/ContactForm.svelte'
 	import Feature from '$lib/components/webdesign/Feature.svelte'
 	import websiteIcon from '$lib/assets/icons/website.svg'
-	import ServiceItem from '$lib/components/webdesign/ServiceItem.svelte'
+	import ServiceItem from '$lib/components/ServiceItem.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import webdesign from '$lib/assets/images/webdesign.jpg'
 	import InfoItem from '$lib/components/InfoItem.svelte'
@@ -37,11 +37,6 @@
 			title: 'Eenvoudige websites',
 			description:
 				'Een betaalbare website op maat, waar de inhoud van de website niet (vaak) aangepast hoeft te worden.',
-			// usps: [
-			// 	'Geschikt voor kleinere websites',
-			// 	'Zoekmachinevriendelijk',
-			// 	'Voor bedrijven die niet vaak hun website willen aanpassen.'
-			// ],
 			button: {
 				url: 'https://google.com',
 				text: 'Lees meer',
@@ -56,12 +51,6 @@
 			title: 'Wordpress',
 			description:
 				'Professionele uitstraling met veel designmogelijkheden op het vertrouwde WordPress-platform.',
-			// usps: [
-			// 	'Geschikt voor kleine en grote websites',
-			// 	'Gebruiksvriendelijk',
-			// 	'Zoekmachinevriendelijk',
-			// 	'Voor bedrijven die regelmatig hun website willen aanpassen.'
-			// ],
 			button: {
 				url: '#',
 				text: 'Lees meer',
@@ -75,13 +64,6 @@
 			},
 			title: 'Maatwerk & Webapplicaties',
 			description: 'Volledig op maat gemaakte websites en webapplicaties.',
-			// usps: [
-			// 	'Performant',
-			// 	'Zoekmachinevriendelijk',
-			// 	'Design op maat',
-			// 	'Eindeloze mogelijkheden',
-			// 	'Voor bedrijven die het beste willen.'
-			// ],
 			button: {
 				url: 'https://google.com',
 				text: 'Lees meer',

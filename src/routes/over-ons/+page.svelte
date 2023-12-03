@@ -9,7 +9,7 @@
 	import TextItem from '$lib/components/over-ons/TextItem.svelte'
 	import Employee from '$lib/components/over-ons/Employee.svelte'
 	import kenzo from '$lib/assets/images/team/Kenzo.jpeg'
-	import anon from '$lib/assets/images/team/anon.jpeg'
+	import anon from '$lib/assets/images/team/Anon.jpeg'
 	import alicia from '$lib/assets/images/team/Alicia.jpeg'
 
 	export let data: PageData
@@ -28,12 +28,12 @@
 			{
 				title: 'Expert in herstellingen en webontwikkeling',
 				paragraph:
-					'Reboot-IT, een jong bedrijf gevestigd in Scherpenheuvel-Zichem, is gespecialiseerd in het herstellen van computers, laptops, smartphones en tablets. Onze gloednieuwe onderneming, bestaande uit twee kernleden en een externe medewerker, onderscheidt zich door klanttevredenheid en service. Met expertise in webontwikkeling bieden wij een breed scala aan webgerelateerde diensten in de regio Vlaams-Brabant en Limburg.'
+					'Reboot-IT, een jong bedrijf gevestigd in Scherpenheuvel-Zichem, is gespecialiseerd in het herstellen van computers, laptops, smartphones en tablets. Onze gloednieuwe onderneming, bestaande uit twee kernleden en een externe medewerker, onderscheidt zich door klanttevredenheid en service. Met expertise in webontwikkeling bieden wij een breed scala aan webgerelateerde diensten aan.'
 			},
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
 				paragraph:
-					'Of het nu gaat om reparaties bij u thuis of in ons eigen atelier, wij passen onze dienstverlening aan de aard van het probleem aan. Voor extra gemak bieden wij een ophaal- en bezorgservice tegen een kleine meerprijs. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen. Bij Reboot-IT staat uw tevredenheid voorop, en wij verwelkomen de kans om u te ondersteunen met al uw technologische behoeften.'
+					'Of het nu gaat om reparaties bij u thuis of in ons eigen atelier, wij passen onze dienstverlening aan de aard van het probleem aan. Voor extra gemak bieden wij een ophaal- en bezorgservice tegen een kleine meerprijs. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen. Bij Reboot-IT staat uw tevredenheid voorop, en wij verwelkomen de kans om u te ondersteunen met al uw IT-gerelateerde problemen.'
 			}
 		]
 	}
@@ -78,7 +78,7 @@
 <header class="mb-[4rem] overflow-hidden">
 	<HeaderImage data={imageSwiperData} />
 </header>
-<!--Header-->
+<!--Information-->
 <section class="wrapper mb-[4rem]">
 	<div class="flex flex-col">
 		<div class="mb-[4rem] flex flex-col items-start">
