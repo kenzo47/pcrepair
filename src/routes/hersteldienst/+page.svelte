@@ -9,6 +9,9 @@
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
+	import pcbrands from '$lib/assets/images/pcbrands.jpeg'
+	import radius from '$lib/assets/images/radius.png'
+	import bsod from '$lib/assets/images/bsod.webp'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
@@ -53,48 +56,48 @@
 	let centerInfoCardData: CenterInfoCardData[] = [
 		{
 			image: {
-				url: pcrepair,
-				alt: 'Computer reparaties'
+				url: pcbrands,
+				alt: 'Computer merken'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification1',
+			title: 'Alle merken en types',
 			description:
-				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
+				'Met meer dan 10 jaar ervaring in het herstellen van computers en laptops kan u bij ons terecht voor alle merken en types, ongeacht waar u deze heeft aangekocht.'
 		},
 		{
 			image: {
-				url: pcrepair,
-				alt: 'Computer reparaties'
+				url: bsod,
+				alt: 'Gratis diagnose'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification2',
+			title: 'Gratis diagnose',
 			description:
-				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
+				'Bent u niet zeker wat er aan de hand is met uw toestel? Wij voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.'
 		},
 		{
 			image: {
-				url: pcrepair,
-				alt: 'Computer reparaties'
+				url: radius,
+				alt: 'Ophaal- en leverdienst'
 			},
-			title: 'Comprehensive Diagnostics for Accurate Problem Identification3',
+			title: 'Ophaal- en leverdienst',
 			description:
-				'Our skilled technicians use advanced tools and techniques to accurately identify and diagnose issues with your PC.'
+				'Wij bieden een ophaal- en leverdienst aan voor herstellingen die niet ter plaatse kunnen worden uitgevoerd. Dit is zonder meerprijs in een straal van 10km rond Scherpenheuvel.'
 		}
 	]
 
 	let hoverInfoItemData: HoverInfoItemData[] = [
 		{
-			title: 'Screen Repairs',
+			title: 'Originele onderdelen',
 			description:
-				'Our expert technicians specialize in smartphone repair services, including screen repairs, battery replacements, and resolving software issues. We provide reliable and efficient solutions to ensure your device is back in optimal condition.'
+				'Wij gebruiken enkel originele OEM onderdelen voor de herstelling van uw smartphone of tablet. Hierdoor kunnen wij een kwalitatieve herstelling garanderen. Helaas zijn niet alle onderdelen voor alle toestellen beschikbaar.'
 		},
 		{
-			title: 'Battery Replacements',
+			title: 'Schermen, batterijen, knopjes..',
 			description:
-				'We offer professional battery replacement services for smartphones of all brands. Our skilled technicians use high-quality batteries to ensure long-lasting performance and reliability.'
+				'Wij vervangen elk onderdeel van uw smartphone of tablet als we originele onderdelen kunne verkrijgen. Van schermen tot batterijen, knopjes, camera’s, speakers, microfoons, oplaadpoorten, ...'
 		},
 		{
-			title: 'Software Issues',
+			title: 'Software problemen',
 			description:
-				"If you're experiencing any software issues with your smartphone, our team is here to help. We have the expertise to diagnose and fix various software problems, ensuring smooth and seamless operation."
+				'Software-problemen zoals een update die vast loopt kunnen wij ook oplossen. Ook voor het overzetten van gegevens van uw oude naar uw nieuwe toestel kan u bij ons terecht.'
 		}
 	]
 
@@ -107,7 +110,8 @@
 				'Verwijderen van onnodige software',
 				'Verwijderen van stof en vuil',
 				'Volledige controle van de hardware',
-				'Update van Windows en drivers'
+				'Update van Windows en drivers',
+				'Gebruiksklaar afgeleverd'
 			],
 			button: {
 				url: '#',
@@ -119,12 +123,12 @@
 			title: 'Herinstallatie',
 			price: '€ 80',
 			features: [
-				'Verwijderen van virussen en spyware',
-				'Verwijderen van onnodige software',
-				'Verwijderen van stof en vuil',
+				'Volledige backup van uw gegevens',
+				'Herinstallatie van Windows',
+				'Installatie Windows updates/drivers',
 				'Volledige controle van de hardware',
-				'Update van Windows en drivers',
-				'Herinstallatie van Windows'
+				'Herinstallatie gewenste programma’s',
+				'Gebruiksklaar afgeleverd'
 			],
 			button: {
 				url: '#',
@@ -136,10 +140,12 @@
 			title: 'Upgrade',
 			price: '€ 139',
 			features: [
-				'Verwijderen van virussen en spyware',
-				'Verwijderen van stof en vuil',
-				'Volledige controle van de hardware',
-				'Update van Windows en drivers'
+				'Back-up van uw gegevens',
+				'Vervangen van harde schijf door SSD',
+				'Herinstallatie van Windows op SSD',
+				'Installatie Windows updates/drivers',
+				'Installatie van gewenste programma’s',
+				'Gebruiksklaar afgeleverd'
 			],
 			button: {
 				url: '#',
@@ -160,7 +166,7 @@
 		<div class="mb-[4rem] flex flex-col items-start">
 			<SectionHeadingDescription data={pcRepairHeading} />
 		</div>
-		<div class="mb-[8rem] flex justify-center">
+		<div class="mb-[8rem] flex justify-start">
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
@@ -176,16 +182,16 @@
 		<div class="mb-[4rem] flex flex-col items-start">
 			<SectionHeadingDescription data={phoneRepairHeading} />
 		</div>
-		<div class="mb-[8rem] flex justify-center">
+		<div class="mb-[8rem] flex justify-start">
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
 	<div class="flex">
-		<div class="mr-[6rem] flex h-[400px] flex-1 items-center">
+		<div class="mr-[6rem] flex h-[500px] flex-1 items-center">
 			<img
 				src={pcrepair}
 				alt=""
-				class="w-full min-w-[400px] rounded-lg object-contain drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
+				class="w-full min-w-[500px] rounded-lg object-contain drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
 			/>
 		</div>
 		<div class="flex flex-1 flex-col items-center justify-center">
