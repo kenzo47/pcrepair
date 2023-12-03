@@ -1,6 +1,5 @@
 <script lang="ts">
 	import * as config from '$lib/config'
-	import type { LinkButtonData } from '$lib/types/components/Button'
 	import linkedInLogo from '$lib/assets/icons/socials/linkedin.svg'
 	import facebookLogo from '$lib/assets/icons/socials/facebook.svg'
 </script>

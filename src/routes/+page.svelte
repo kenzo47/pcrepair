@@ -120,7 +120,12 @@
 					description:
 						'Gebarsten scherm, versleten batterij of andere problemen? Vraag vrijblijvend een offerte aan.'
 				}
-			]
+			],
+			button: {
+				url: '/hersteldienst',
+				text: 'Lees meer',
+				target: '_self' as '_self'
+			}
 		},
 		{
 			title: 'Webdesign',
@@ -131,10 +136,16 @@
 					description:
 						'Een simpele website of een uitgebreide web app? Samen kijken we wat het beste bij u past.'
 				}
-			]
+			],
+			button: {
+				url: '/webdesign',
+				text: 'Lees meer',
+				target: '_self' as '_self'
+			}
 		}
 	]
 </script>
+
 <!--Swiper-->
 <header class="mb-[4rem] overflow-hidden">
 	<HeaderSwiper data={imageSwiperData} />
@@ -190,6 +201,7 @@
 		</Modal>
 	</div>
 </section>
+
 <style lang="postcss">
 	@keyframes -global-from-left {
 		0% {

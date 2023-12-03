@@ -15,7 +15,7 @@
 			</p>
 		</div>
 	</Saos>
-	<div class="flex flex-col gap-[2rem]">
+	<div class="mb-[2rem] flex flex-col gap-[2rem]">
 		{#each infoItemData.subInfoItems as subInfoItem (subInfoItem.title)}
 			<Saos
 				once={true}
@@ -30,6 +30,20 @@
 			</Saos>
 		{/each}
 	</div>
+	{#if infoItemData.button}
+		<div class="flex items-center justify-start">
+			<Saos
+				once={true}
+				animation={'puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) both'}
+			>
+				<a
+					class="leading-[1.4 rem] text-[2rem] font-bold text-azure hover:cursor-pointer hover:text-orange-web"
+					href={infoItemData.button.url}
+					target={infoItemData.button.target}>{infoItemData.button.text}</a
+				>
+			</Saos>
+		</div>
+	{/if}
 </div>
 
 <style lang="postcss">
