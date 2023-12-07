@@ -10,6 +10,7 @@
 	import ContactForm from '$lib/components/ContactFormModal.svelte'
 	import Feature from '$lib/components/webdesign/Feature.svelte'
 	import websiteIcon from '$lib/assets/icons/website.svg'
+	import timeIcon from '$lib/assets/icons/clock.svg'
 	import ServiceItem from '$lib/components/ServiceItem.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import webdesign from '$lib/assets/images/webdesign.jpg'
@@ -90,47 +91,164 @@
 			]
 		}
 	]
-	let featureData: FeatureData[] = [
+	let featureData1: FeatureData[] = [
 		{
 			icon: {
-				url: websiteIcon,
-				alt: 'Alt'
+				url: timeIcon,
+				alt: 'Time'
 			},
-			title: 'Key Features',
-			description: 'Custom design, responsive layout, and SEO optimization included.'
+			title: 'Oplevertijd',
+			description: 'Website wordt opgeleverd binnen 4 weken na goedkeuring van ontwerp.'
 		},
 		{
 			icon: {
 				url: websiteIcon,
-				alt: 'Alt'
+				alt: 'Feature'
 			},
-			title: 'Key Features',
-			description: 'E-commerce integration, blog setup, and social media integration included.'
+			title: 'Features',
+			description: 'Eigen ontwerp, geschikt voor alle apparaten + zoekmachinevriendelijk.'
 		},
 		{
 			icon: {
 				url: websiteIcon,
-				alt: 'Alt'
+				alt: 'Feature'
 			},
-			title: 'Key Features',
-			description: 'Advanced analytics, SSL certificate, and unlimited revisions included.'
+			title: 'Features',
+			description: 'Hosting, domeinnaam en e-mailadressen.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Feature'
+			},
+			title: 'Features',
+			description: 'Contactformulier en social media integratie.'
 		}
 	]
 
-	let priceCardData: PriceFeatureCardData = {
+	let featureData2: FeatureData[] = [
+		{
+			icon: {
+				url: timeIcon,
+				alt: 'Time'
+			},
+			title: 'Oplevertijd',
+			description: 'Website wordt opgeleverd binnen 6 weken na goedkeuring van ontwerp.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Feature'
+			},
+			title: 'Features',
+			description: 'Bevat alle mogelijkheden van een statische website + extra functionaliteiten.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Feature'
+			},
+			title: 'Features',
+			description:
+				'Eenvoudig zelf aan te passen d.m.v Wordpress en uitbreidbaar met extra functionaliteiten.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Feature'
+			},
+			title: 'Features',
+			description: 'Opleiding en ondersteuning zodat u zelf uw website kan aanpassen.'
+		}
+	]
+
+	let featureData3: FeatureData[] = [
+		{
+			icon: {
+				url: timeIcon,
+				alt: 'Time'
+			},
+			title: 'Oplevertijd',
+			description: 'Varieert afhankelijk van de complexiteit van de website/applicatie.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Features',
+			description: 'Volledig op maat gemaakt en uitbreidbaar met extra functionaliteiten.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Features',
+			description: 'Kies zelf welke functionaliteiten u nodig heeft. Wij zorgen voor de rest.'
+		},
+		{
+			icon: {
+				url: websiteIcon,
+				alt: 'Alt'
+			},
+			title: 'Features',
+			description: 'Integratie met andere systemen en uitgebreide ondersteuning na oplevering.'
+		}
+	]
+
+	let priceCardData1: PriceFeatureCardData = {
 		title: 'Statische website',
 		subtitle: 'Voor kleine/middelgrote bedrijven',
-		price: '€ 900',
+		price: '€ 900 - ',
 		features: [
 			'1-5 pagina’s',
 			'Contactformulier',
 			'Zoekmachinevriendelijk',
+			'Email adressen',
+			'1 jaar hosting',
+			'1 jaar domeinnaam'
+		],
+		button: {
+			url: 'https://google.com',
+			text: 'Dit wil ik',
+			target: '_self' as '_self'
+		}
+	}
+
+	let priceCardData2: PriceFeatureCardData = {
+		title: 'Wordpress website',
+		subtitle: 'Voor kleine/middelgrote bedrijven',
+		price: '€ 1200 -',
+		features: [
+			'1-10 pagina’s',
+			'Zelf aanpasbaar',
+			'Contactformulieren',
+			'Zoekmachinevriendelijk',
+			'Email adressen',
 			'1 jaar hosting',
 			'1 jaar domeinnaam',
-			'1-5 pagina’s',
-			'Contactformulier',
-			'Zoekmachinevriendelijk',
-			'1 jaar hosting'
+			'1 jaar ondersteuning'
+		],
+		button: {
+			url: 'https://google.com',
+			text: 'Dit wil ik',
+			target: '_self' as '_self'
+		}
+	}
+	let priceCardData3: PriceFeatureCardData = {
+		title: 'Custom',
+		subtitle: 'Complexe projecten',
+		price: '€ -',
+		features: [
+			'Volledig op maat',
+			'Integraties ERP/CRM',
+			'Beheerbaar via CMS',
+			'SEO optimalisatie',
+			'1 jaar hosting',
+			'1 jaar domeinnaam',
+			'1 jaar 7/7 support',
+			'1 jaar updates'
 		],
 		button: {
 			url: 'https://google.com',
@@ -171,49 +289,52 @@
 <section class="wrapper">
 	<div class="mb-[4rem] flex flex-col items-center">
 		<h2 class="mb-[0.5rem] font-roboto text-[3rem] font-medium">Mogelijkheden</h2>
-		<p class="font-roboto text-[1.6rem]">
-			Om u een idee te geven van de prijs, hebben we enkele pakketten samengesteld.
-		</p>
 		<p class="font-roboto text-[1.6rem]">Onderstaande prijzen zijn slechts een indicatie.</p>
 		<p class="font-roboto text-[1.6rem]">De prijs kan variëren afhankelijk van uw wensen.</p>
 	</div>
+</section>
+<section class="wrapper">
 	<div class="flex h-full items-center justify-between">
-		<div class="order-1 flex h-[500px] w-[500px] flex-1 flex-col justify-center">
-			<!--No unique key -->
-			{#each featureData as featureData}
-				<Feature data={featureData} />
-			{/each}
+		<div class="order-1 flex h-[500px] w-[500px] justify-start">
+			<div class="flex h-full w-full flex-col justify-center">
+				<!--No unique key -->
+				{#each featureData1 as featureData}
+					<Feature data={featureData} />
+				{/each}
+			</div>
 		</div>
-		<div class="order-2 flex h-[400px] w-[500px] flex-1 justify-end">
-			<PriceFeatureCard data={priceCardData} />
+		<div class="order-2 flex h-[400px] w-[500px] justify-end">
+			<PriceFeatureCard data={priceCardData1} />
 		</div>
 	</div>
 </section>
 <section class="wrapper">
 	<div class="flex h-full items-center justify-between">
-		<div class="order-2 flex items-end">
-			<div class="flex h-[500px] w-[500px] flex-1 flex-col justify-center">
+		<div class="order-2 flex h-[500px] w-[500px] justify-end">
+			<div class="flex h-full w-full flex-col justify-center">
 				<!--No unique key -->
-				{#each featureData as featureData}
+				{#each featureData2 as featureData}
 					<Feature data={featureData} />
 				{/each}
 			</div>
 		</div>
-		<div class="order-1 flex h-[400px] w-[500px] flex-1 justify-start">
-			<PriceFeatureCard data={priceCardData} />
+		<div class="order-1 flex h-[400px] w-[500px] justify-start">
+			<PriceFeatureCard data={priceCardData2} />
 		</div>
 	</div>
 </section>
 <section class="wrapper mb-[8rem]">
 	<div class="flex h-full items-center justify-between">
-		<div class="order-1 flex h-[500px] w-[500px] flex-1 flex-col justify-center">
-			<!--No unique key -->
-			{#each featureData as featureData}
-				<Feature data={featureData} />
-			{/each}
+		<div class="order-1 flex h-[500px] w-[500px] justify-start">
+			<div class="flex h-full w-full flex-col justify-center">
+				<!--No unique key -->
+				{#each featureData3 as featureData}
+					<Feature data={featureData} />
+				{/each}
+			</div>
 		</div>
-		<div class="order-2 flex h-[400px] w-[500px] flex-1 justify-end">
-			<PriceFeatureCard data={priceCardData} />
+		<div class="order-2 flex h-[400px] w-[500px] justify-end">
+			<PriceFeatureCard data={priceCardData3} />
 		</div>
 	</div>
 </section>

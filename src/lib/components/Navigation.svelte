@@ -20,7 +20,6 @@
 </nav>
 
 <style lang="postcss">
-	/* dO nOt uSe @aPpLy hUe */
 	nav a.active {
 		@apply border-b-2 border-solid border-azure text-azure;
 	}
