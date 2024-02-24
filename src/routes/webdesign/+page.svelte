@@ -1,21 +1,19 @@
 <script lang="ts">
+	import timeIcon from '$lib/assets/icons/clock.svg'
+	import websiteIcon from '$lib/assets/icons/website.svg'
+	import webdesign from '$lib/assets/images/webdesign.jpg'
+	import ContactForm from '$lib/components/ContactFormModal.svelte'
+	import HeaderImage from '$lib/components/HeaderImage.svelte'
+	import InfoItem from '$lib/components/InfoItem.svelte'
+	import Modal from '$lib/components/Modal.svelte'
+	import ServiceItem from '$lib/components/ServiceItem.svelte'
+	import type { FeatureData } from '$lib/types/components/Feature'
+	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
+	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
+	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
+	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
 	import Saos from 'saos'
 	import type { PageData } from './$types'
-	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
-	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
-	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
-	import type { FeatureData } from '$lib/types/components/Feature'
-	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
-	import Modal from '$lib/components/Modal.svelte'
-	import ContactForm from '$lib/components/ContactFormModal.svelte'
-	import Feature from '$lib/components/webdesign/Feature.svelte'
-	import websiteIcon from '$lib/assets/icons/website.svg'
-	import timeIcon from '$lib/assets/icons/clock.svg'
-	import ServiceItem from '$lib/components/ServiceItem.svelte'
-	import HeaderImage from '$lib/components/HeaderImage.svelte'
-	import webdesign from '$lib/assets/images/webdesign.jpg'
-	import InfoItem from '$lib/components/InfoItem.svelte'
-	import PriceFeatureCard from '$lib/components/webdesign/PriceFeatureCard.svelte'
 	let showModal = false
 	export let data: PageData
 
@@ -285,7 +283,7 @@
 		</div>
 	</Saos>
 </section>
-<!--Pricing/Features-->
+<!-- 
 <section class="wrapper">
 	<div class="mb-[4rem] flex flex-col items-center">
 		<h2 class="mb-[0.5rem] font-roboto text-[3rem] font-medium">Mogelijkheden</h2>
@@ -293,12 +291,12 @@
 		<p class="font-roboto text-[1.6rem]">De prijs kan variëren afhankelijk van uw wensen.</p>
 	</div>
 </section>
-<section class="wrapper">
+
+	<section class="wrapper">
 	<div class="flex h-full items-center justify-between">
 		<div class="order-1 flex h-[500px] w-[500px] justify-start">
 			<div class="flex h-full w-full flex-col justify-center">
-				<!--No unique key -->
-				{#each featureData1 as featureData}
+				{#each featureData1 as featureData}  -> no unique key
 					<Feature data={featureData} />
 				{/each}
 			</div>
@@ -312,8 +310,7 @@
 	<div class="flex h-full items-center justify-between">
 		<div class="order-2 flex h-[500px] w-[500px] justify-end">
 			<div class="flex h-full w-full flex-col justify-center">
-				<!--No unique key -->
-				{#each featureData2 as featureData}
+				{#each featureData2 as featureData} -> no unique key
 					<Feature data={featureData} />
 				{/each}
 			</div>
@@ -327,8 +324,7 @@
 	<div class="flex h-full items-center justify-between">
 		<div class="order-1 flex h-[500px] w-[500px] justify-start">
 			<div class="flex h-full w-full flex-col justify-center">
-				<!--No unique key -->
-				{#each featureData3 as featureData}
+				{#each featureData3 as featureData}  -> no unique key
 					<Feature data={featureData} />
 				{/each}
 			</div>
@@ -338,6 +334,7 @@
 		</div>
 	</div>
 </section>
+-->
 <!--Contact Form-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col items-center">
