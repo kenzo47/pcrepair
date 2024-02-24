@@ -39,6 +39,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@vercel/speed-insights": "^1.0.10",
 		"swiper": "^11.0.6"
 	}
 }
