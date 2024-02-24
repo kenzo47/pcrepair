@@ -1,16 +1,15 @@
 <script lang="ts">
-	import type { PageData } from './$types'
+	import type { EmployeeData } from '$lib/types/components/Employee'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { TextItemData } from '$lib/types/components/TextItem/TextItem'
-	import type { EmployeeData } from '$lib/types/components/Employee'
+	import type { PageData } from './$types'
 
 	import about from '$lib/assets/images/about.jpg'
-	import HeaderImage from '$lib/components/HeaderImage.svelte'
-	import TextItem from '$lib/components/over-ons/TextItem.svelte'
-	import Employee from '$lib/components/over-ons/Employee.svelte'
-	import kenzo from '$lib/assets/images/team/Kenzo.jpeg'
-	import anon from '$lib/assets/images/team/Anon.jpeg'
 	import alicia from '$lib/assets/images/team/Alicia.jpeg'
+	import kenzo from '$lib/assets/images/team/Kenzo.jpeg'
+	import HeaderImage from '$lib/components/HeaderImage.svelte'
+	import Employee from '$lib/components/over-ons/Employee.svelte'
+	import TextItem from '$lib/components/over-ons/TextItem.svelte'
 
 	export let data: PageData
 
@@ -28,7 +27,7 @@
 			{
 				title: 'Expert in herstellingen en webontwikkeling',
 				paragraph:
-					'Reboot-IT, een jong bedrijf gevestigd in Scherpenheuvel-Zichem, is gespecialiseerd in het herstellen van computers, laptops, smartphones en tablets. Onze gloednieuwe onderneming, bestaande uit twee kernleden en een externe medewerker, onderscheidt zich door klanttevredenheid en service. Met expertise in webontwikkeling bieden wij een breed scala aan webgerelateerde diensten aan.'
+					'Reboot-IT, een jong bedrijf gevestigd in Scherpenheuvel-Zichem, is gespecialiseerd in het herstellen van computers, laptops, smartphones en tablets. Onze jonge onderneming, momenteel bestaande uit twee kernleden onderscheidt zich door klanttevredenheid en service. Met expertise in webontwikkeling bieden wij een breed scala aan webgerelateerde diensten aan.'
 			},
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
@@ -58,19 +57,19 @@
 			intro:
 				'Alicia beheert de administratie en is mede-verantwoordelijk voor reparaties en webdesign.',
 			skills: ['Administratie', 'Reparaties', 'Webdesign']
-		},
-		{
-			image: {
-				url: anon,
-				alt: 'anon'
-			},
-			name: 'Colin',
-			function: 'System Engineer',
-			intro:
-				'Colin is verantwoordelijk voor het uitrollen van server infrastructuur voor complexe projecten.',
-
-			skills: ['Kubernetes', 'Cloud', 'AWS']
 		}
+		// {
+		// 	image: {
+		// 		url: anon,
+		// 		alt: 'anon'
+		// 	},
+		// 	name: 'Colin',
+		// 	function: 'System Engineer',
+		// 	intro:
+		// 		'Colin is verantwoordelijk voor het uitrollen van server infrastructuur voor complexe projecten.',
+
+		// 	skills: ['Kubernetes', 'Cloud', 'AWS']
+		// }
 	]
 </script>
 
