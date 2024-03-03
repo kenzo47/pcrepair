@@ -1,7 +1,7 @@
 import { schema } from '$lib/schemas/ContactForm'
+import { fail } from '@sveltejs/kit'
 import { superValidate } from 'sveltekit-superforms/server'
 import type { PageServerLoad } from './$types'
-import { fail } from '@sveltejs/kit'
 
 export const load: PageServerLoad = async () => {
 	const form = await superValidate(schema)
@@ -25,3 +25,4 @@ export const actions = {
 		return { form }
 	}
 }
+
