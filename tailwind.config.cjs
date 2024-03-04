@@ -37,7 +37,7 @@ const config = {
 			black: '#000000',
 			white: '#ffffff',
 			'off-white': '#f7f7f7',
-			'subtle-gray': '#CDCDCD',
+			'subtle-gray': '#ecedec',
 			'orange-web': '#ffa400',
 			'royal-blue-traditional': '#2a2a72',
 			'raisin-black': '#232528',

@@ -1,21 +1,21 @@
 <script lang="ts">
-	import Saos from 'saos'
-	import type { PageData } from './$types'
-	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
-	import type { ActionCardData } from '$lib/types/components/ActionCard'
-	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
-	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
-	import pcmobo from '$lib/assets/images/pcmobo.jpg'
-	import phone from '$lib/assets/images/phone.jpg'
-	import coding from '$lib/assets/images/webdesign.jpg'
-	import pcrepair from '$lib/assets/images/pcrepair.jpg'
 	import pcIcon from '$lib/assets/icons/desktop.svg'
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
-	import ActionCard from '$lib/components/home/ActionCard.svelte'
+	import pcmobo from '$lib/assets/images/pcmobo.jpg'
+	import pcrepair from '$lib/assets/images/pcrepair.jpg'
+	import phone from '$lib/assets/images/phone.jpg'
+	import coding from '$lib/assets/images/webdesign.jpg'
 	import ContactFormModal from '$lib/components/ContactFormModal.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
 	import Modal from '$lib/components/Modal.svelte'
+	import ActionCard from '$lib/components/home/ActionCard.svelte'
+	import HeaderSwiper from '$lib/components/home/HeaderSwiper.svelte'
+	import type { ActionCardData } from '$lib/types/components/ActionCard'
+	import type { HeaderSwiperData } from '$lib/types/components/HeaderSwiper'
+	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
+	import Saos from 'saos'
+	import type { PageData } from './$types'
 
 	export let data: PageData
 	let showModal = false
@@ -152,7 +152,9 @@
 </header>
 <!--Cards-->
 <section class="wrapper mb-[8rem]">
-	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent">
+	<div
+		class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent md:grid-cols-2 sm:grid-cols-1"
+	>
 		{#each actionCardData as actionCard (actionCard.title)}
 			<ActionCard cardData={actionCard} />
 		{/each}
@@ -166,7 +168,7 @@
 				<img
 					src={pcrepair}
 					alt="Computer herstellingen"
-					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md"
+					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"
 				/>
 			</div>
 			<InfoItem infoItemData={infoItemData[0]} />
@@ -179,7 +181,7 @@
 				<img
 					src={coding}
 					alt="Webdesign"
-					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md"
+					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"
 				/>
 			</div>
 		</div>
