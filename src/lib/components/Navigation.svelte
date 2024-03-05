@@ -9,7 +9,7 @@
 
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
 	<div class="flex">
-		<a href="/">
+		<a href="/</div>">
 			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] w-[240px]" />
 		</a>
 	</div>
