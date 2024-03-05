@@ -22,7 +22,7 @@
 		<a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
 	</div>
 	<Modal show={showModal} on:close={() => (showModal = false)}>
-		<div class="flex flex-col gap-4 overflow-hidden text-center text-[5rem] text-white">
+		<div class="mobile-menu flex flex-col gap-4 overflow-hidden text-center text-[5rem] text-white">
 			<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
 			<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}
 				>Hersteldienst</a
@@ -46,7 +46,7 @@
 		@apply scale-110 transform-gpu duration-300 ease-in-out;
 	}
 
-	.modal a {
-		@apply my-[4rem];
+	.mobile-menu a {
+		@apply my-[2rem];
 	}
 </style>
