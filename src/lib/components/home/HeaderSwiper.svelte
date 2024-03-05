@@ -26,7 +26,7 @@
 				style="background-image: url({item.image.url})"
 			></div>
 			<h1
-				class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.8rem] text-white shadow-black text-shadow md:top-[30%] md:text-[4rem]"
+				class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[4rem]"
 			>
 				{item.title}
 			</h1>
