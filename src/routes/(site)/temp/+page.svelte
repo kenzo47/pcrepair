@@ -151,7 +151,7 @@
 	<HeaderSwiper data={imageSwiperData} />
 </header>
 <!--Cards-->
-<section class="wrapper mb-[8rem] md:mb-[64rem]">
+<section class="wrapper mb-[8rem] md:mb-[64rem] sm:mb-[68rem]">
 	<div class="mb-[4rem] grid h-[300px] grid-cols-3 gap-[4rem] bg-transparent sm:grid-cols-1">
 		{#each actionCardData as actionCard (actionCard.title)}
 			<ActionCard cardData={actionCard} />
