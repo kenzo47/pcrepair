@@ -8,12 +8,14 @@
 </script>
 
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
-	<div class="flex">
+	<div class="mr-[6rem] flex">
 		<a href="/</div>">
-			<img src={logo} alt="Reboot-IT Logo" class="h-[60px] w-[240px]" />
+			<img src={logo} alt="Reboot-IT Logo" class="max-h-[60px] max-w-[240px]" />
 		</a>
 	</div>
-	<div class="menu flex gap-[8rem] text-center text-[2rem] md:hidden">
+	<div
+		class="menu flex gap-[7rem] whitespace-nowrap text-center text-[2rem] lg:gap-[4rem] lg:text-[1.6rem] md:hidden"
+	>
 		<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
 		<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}>Hersteldienst</a
 		>
