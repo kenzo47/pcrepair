@@ -1,21 +1,20 @@
 <script lang="ts">
-	import type { PageData } from './$types'
-	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
-	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 	import type { CenterInfoCardData } from '$lib/types/components/CenterInfoCard'
+	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { HoverInfoItemData } from '$lib/types/components/HoverInfoItem'
 	import type { PriceCardData } from '$lib/types/components/PriceCard'
+	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 
-	import HeaderImage from '$lib/components/HeaderImage.svelte'
-	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
-	import pcrepair from '$lib/assets/images/pcrepair.jpg'
-	import pcbrands from '$lib/assets/images/pcbrands.jpeg'
-	import radius from '$lib/assets/images/radius.png'
 	import bsod from '$lib/assets/images/bsod.webp'
-	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
+	import pcbrands from '$lib/assets/images/pcbrands.jpeg'
+	import pcrepair from '$lib/assets/images/pcrepair.jpg'
+	import radius from '$lib/assets/images/radius.png'
+	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
+	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
 	import PriceCard from '$lib/components/hersteldienst/PriceCard.svelte'
+	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
 	// export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -55,6 +54,7 @@
 
 	let centerInfoCardData: CenterInfoCardData[] = [
 		{
+			index: 1,
 			image: {
 				url: pcbrands,
 				alt: 'Computer merken'
@@ -64,6 +64,7 @@
 				'Met meer dan 10 jaar ervaring in het herstellen van computers en laptops kan u bij ons terecht voor alle merken en types, ongeacht waar u deze heeft aangekocht.'
 		},
 		{
+			index: 2,
 			image: {
 				url: bsod,
 				alt: 'Gratis diagnose'
@@ -73,6 +74,7 @@
 				'Bent u niet zeker wat er aan de hand is met uw toestel? Wij voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.'
 		},
 		{
+			index: 3,
 			image: {
 				url: radius,
 				alt: 'Ophaal- en leverdienst'
@@ -170,10 +172,14 @@
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
-	<div class="grid grid-cols-3 gap-[4rem]">
-		{#each centerInfoCardData as centerInfoCard (centerInfoCard.title)}
-			<CenterInfoCard data={centerInfoCard} />
-		{/each}
+	<div class="flex flex-wrap justify-center space-x-0 md:flex-col">
+		<div class="flex justify-evenly space-x-4 lg:flex lg:flex-wrap lg:justify-center lg:space-x-0">
+			{#each centerInfoCardData as centerInfoCard, index (centerInfoCard.index)}
+				<div class={`mb-[4rem] w-1/3 lg:w-1/2 md:w-full ${index % 2 !== 0 ? 'lg:mx-auto' : ''}`}>
+					<CenterInfoCard data={centerInfoCard} />
+				</div>
+			{/each}
+		</div>
 	</div>
 </section>
 <!--Smartphone/Tablet Repairs-->
