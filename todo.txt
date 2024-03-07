@@ -1,4 +1,5 @@
 Fix responsiveness of forms
+Fix mobile hamburger
 Add functionality to forms (mailto/mailserver)
 Fix hamburger modal exit button (inverted/blue hamburger)
 Create socials
