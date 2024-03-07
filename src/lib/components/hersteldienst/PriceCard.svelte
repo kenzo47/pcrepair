@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex h-[380px] min-w-[300px] flex-col items-center justify-center border border-subtle-gray py-[2rem]"
+	class="flex h-[380px] min-w-[300px] flex-col items-center justify-center border border-black py-[2rem]"
 >
 	<h2 class="mb-[1rem] font-roboto text-[2.2rem] font-medium">
 		{data.title}

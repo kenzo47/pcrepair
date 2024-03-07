@@ -105,6 +105,7 @@
 
 	let priceCardData: PriceCardData[] = [
 		{
+			index: 1,
 			title: 'Onderhoud',
 			price: '€ 60',
 			features: [
@@ -122,6 +123,7 @@
 			}
 		},
 		{
+			index: 2,
 			title: 'Herinstallatie',
 			price: '€ 80',
 			features: [
@@ -139,6 +141,7 @@
 			}
 		},
 		{
+			index: 3,
 			title: 'Upgrade',
 			price: '€ 139',
 			features: [
@@ -214,9 +217,11 @@
 	<div class="mb-[6rem] flex flex-col items-center">
 		<SectionHeadingDescription data={priceHeading} />
 	</div>
-	<div class="grid grid-cols-3 gap-[4rem]">
-		{#each priceCardData as priceCard (priceCard.title)}
-			<PriceCard data={priceCard} />
+	<div class="flex justify-evenly space-x-4 lg:flex lg:flex-wrap lg:justify-center lg:space-x-4">
+		{#each priceCardData as priceCard, index (priceCard.index)}
+			<div class={`mb-[4rem] w-1/3 lg:w-[400px] ${index % 2 !== 0 ? 'lg:mx-auto' : ''}`}>
+				<PriceCard data={priceCard} />
+			</div>
 		{/each}
 	</div>
 </section>
