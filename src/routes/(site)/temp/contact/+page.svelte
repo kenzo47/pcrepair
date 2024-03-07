@@ -1,15 +1,15 @@
 <script lang="ts">
+	import clockIcon from '$lib/assets/icons/clock.svg'
+	import emailIcon from '$lib/assets/icons/email.svg'
+	import locationIcon from '$lib/assets/icons/location.svg'
+	import supportIcon from '$lib/assets/icons/support.svg'
+	import contact from '$lib/assets/images/contact.jpg'
+	import ContactForm from '$lib/components/ContactFormModal.svelte'
+	import HeaderImage from '$lib/components/HeaderImage.svelte'
+	import ServiceItem from '$lib/components/ServiceItem.svelte'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
 	import type { PageData } from './$types'
-	import ContactForm from '$lib/components/ContactFormModal.svelte'
-	import contact from '$lib/assets/images/contact.jpg'
-	import HeaderImage from '$lib/components/HeaderImage.svelte'
-	import emailIcon from '$lib/assets/icons/email.svg'
-	import clockIcon from '$lib/assets/icons/clock.svg'
-	import locationIcon from '$lib/assets/icons/location.svg'
-	import supportIcon from '$lib/assets/icons/support.svg'
-	import ServiceItem from '$lib/components/ServiceItem.svelte'
 	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
@@ -22,6 +22,7 @@
 	}
 	let contactItemData: ServiceItemData[] = [
 		{
+			index: 1,
 			icon: {
 				url: locationIcon,
 				alt: 'Locatie'
@@ -30,6 +31,7 @@
 			description: ['Galissenstraat 1 bus 8', '3270 Scherpenheuvel-Zichem', 'België']
 		},
 		{
+			index: 2,
 			icon: {
 				url: emailIcon,
 				alt: 'Contact'
@@ -38,6 +40,7 @@
 			description: ['email: info@reboot-it.be', 'tel: +32494356021']
 		},
 		{
+			index: 3,
 			icon: {
 				url: clockIcon,
 				alt: 'Openingsuren'
@@ -46,6 +49,7 @@
 			description: 'Elke dag van 10u tot 22u behalve woensdag.'
 		},
 		{
+			index: 4,
 			icon: {
 				url: supportIcon,
 				alt: 'Hulp op afstand'
@@ -68,7 +72,7 @@
 </header>
 <!--Information-->
 <section class="wrapper mb-[8rem]">
-	<div class="grid grid-cols-4 gap-[2rem]">
+	<div class="grid grid-cols-4 gap-[2rem] lg:grid-cols-2 md:grid-cols-1">
 		{#each contactItemData as contactItemData (contactItemData.title)}
 			<ServiceItem data={contactItemData} />
 		{/each}
