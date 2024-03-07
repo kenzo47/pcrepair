@@ -6,7 +6,7 @@
 
 <div class="flex min-w-[400px] flex-col">
 	<div
-		class="mb-[3rem] flex flex-col border-l-2 border-transparent px-[2rem] hover:border-orange-web"
+		class="mb-[3rem] flex flex-col border-l-2 border-transparent px-[2rem] hover:border-orange-web lg:border-none"
 	>
 		<h2 class="mb-[1rem] font-roboto text-[2.2rem] font-medium">
 			{data.title}

@@ -192,15 +192,17 @@
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
-	<div class="flex">
-		<div class="mr-[6rem] flex h-[500px] flex-1 items-center">
+	<div class="flex lg:flex-col lg:items-center lg:justify-center">
+		<div
+			class="mr-[6rem] flex h-[500px] flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-2/3 md:w-1/3"
+		>
 			<img
 				src={pcrepair}
 				alt=""
 				class="w-full min-w-[500px] rounded-lg object-contain drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
 			/>
 		</div>
-		<div class="flex flex-1 flex-col items-center justify-center">
+		<div class="flex flex-1 flex-col items-center justify-center lg:w-full">
 			{#each hoverInfoItemData as hoverInfoItem (hoverInfoItem.title)}
 				<HoverInfoItem data={hoverInfoItem} />
 			{/each}
