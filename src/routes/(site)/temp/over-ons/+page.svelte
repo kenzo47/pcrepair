@@ -88,7 +88,7 @@
 <!--Team-->
 <section class="wrapper mb-[8rem]">
 	<h2 class="mb-[4rem] text-center font-roboto text-[3.2rem] font-medium">Ons team</h2>
-	<div class="grid w-full grid-cols-2 gap-[4rem]">
+	<div class="grid w-full grid-cols-2 gap-[4rem] md:grid-cols-1">
 		{#each employeeData as employee}
 			<div class="col-span-1 w-full">
 				<Employee data={employee} />
