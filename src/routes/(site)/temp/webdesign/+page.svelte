@@ -29,6 +29,7 @@
 
 	let serviceItemData: ServiceItemData[] = [
 		{
+			index: 1,
 			icon: {
 				url: websiteIcon,
 				alt: 'Statische websites'
@@ -43,6 +44,7 @@
 			}
 		},
 		{
+			index: 2,
 			icon: {
 				url: websiteIcon,
 				alt: 'Wordpress websites'
@@ -57,6 +59,7 @@
 			}
 		},
 		{
+			index: 3,
 			icon: {
 				url: websiteIcon,
 				alt: 'Maatwerk'
@@ -262,17 +265,19 @@
 </header>
 <!--Choices-->
 <section class="wrapper mb-[8rem]">
-	<div class="grid grid-cols-3 gap-[4rem]">
-		{#each serviceItemData as serviceItemData (serviceItemData.title)}
-			<ServiceItem data={serviceItemData} />
+	<div class="flex justify-evenly space-x-4 lg:flex lg:flex-wrap lg:justify-center lg:space-x-4">
+		{#each serviceItemData as serviceItemData, index (serviceItemData.index)}
+			<div class={`mb-[4rem] w-1/3 lg:w-[400px] ${index % 2 !== 0 ? 'lg:mx-auto' : ''}`}>
+				<ServiceItem data={serviceItemData} />
+			</div>
 		{/each}
 	</div>
 </section>
 <!--Info Items-->
-<section class="wrapper mb-[8rem]">
+<section class="wrapper mb-[8rem] lg:mb-[4rem] md:mb-[4rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-		<div class="mb-[8rem] flex w-full items-center">
-			<div class="mr-[6rem] flex">
+		<div class="mb-[8rem] flex w-full items-center lg:flex-col lg:justify-center">
+			<div class="mr-[6rem] flex lg:mx-auto lg:mb-[4rem] lg:w-2/3 md:w-1/3">
 				<img
 					src={webdesign}
 					alt="Computer herstellingen"
