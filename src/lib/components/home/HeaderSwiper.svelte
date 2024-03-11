@@ -26,12 +26,12 @@
 				style="background-image: url({item.image.url})"
 			></div>
 			<h1
-				class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[4rem]"
+				class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[3.8rem]"
 			>
 				{item.title}
 			</h1>
 			<p
-				class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2rem] font-medium text-white shadow-black text-shadow md:w-[40rem]"
+				class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2.8rem] font-medium text-white shadow-black text-shadow md:w-[40rem] md:text-[1.8rem] sm:text-[1.6rem]"
 			>
 				{item.description}
 			</p>
