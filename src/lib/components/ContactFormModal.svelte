@@ -1,8 +1,8 @@
 <script lang="ts">
-	import { superForm } from 'sveltekit-superforms/client'
+	import phoneIcon from '$lib/assets/icons/contact-phone.svg'
 	import emailIcon from '$lib/assets/icons/email.svg'
 	import userIcon from '$lib/assets/icons/user.svg'
-	import phoneIcon from '$lib/assets/icons/contact-phone.svg'
+	import { superForm } from 'sveltekit-superforms/client'
 	export let data
 
 	const { form, enhance, errors } = superForm(data.form)
@@ -13,14 +13,14 @@
 	class="flex h-full max-w-[600px] flex-col items-center justify-between bg-off-white"
 >
 	<div
-		class="mb-[1rem] flex h-[80px] w-full justify-center border-b-[1px] border-raisin-black bg-subtle-gray py-[2rem]"
+		class="mb-[1rem] flex h-[80px] w-full justify-center border-b-[1px] border-raisin-black bg-subtle-gray"
 	>
 		<h1 class="font-roboto text-[2.6rem]">Contactformulier</h1>
 	</div>
-	<form method="POST" class="flex w-[600px] flex-col items-center justify-between" use:enhance>
-		<div>
-			<div class="flex sm:flex-col">
-				<div class="rounded-2x mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col">
+	<form method="POST" class="flex w-full flex-col items-center justify-between" use:enhance>
+		<div class="w-full px-[4rem]">
+			<div class="flex w-full md:flex-col">
+				<div class="rounded-2x mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col md:w-full">
 					<label for="name">Naam</label>
 					<div class="flex w-full rounded-2xl bg-subtle-gray">
 						<img class="h-[36px] w-[36px] p-[1rem]" src={userIcon} alt="Naam" />
@@ -34,7 +34,7 @@
 					</div>
 					{#if $errors.name}<span class="invalid">{$errors.name}</span>{/if}
 				</div>
-				<div class="mb-[2rem] flex w-[250px] flex-1 flex-col">
+				<div class="mb-[2rem] flex w-[250px] flex-1 flex-col md:w-full">
 					<label for="phone">Tel/GSM</label>
 					<div class="flex w-full rounded-2xl bg-subtle-gray">
 						<img class="h-[36px] w-[36px] p-[1rem]" src={phoneIcon} alt="Naam" />
@@ -63,7 +63,7 @@
 				</div>
 				{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 			</div>
-			<div class="mb-[2rem] flex h-[260px] w-full flex-col">
+			<div class="mb-[2rem] flex h-[260px] w-full flex-col md:h-[220px]">
 				<label for="message">Bericht</label>
 				<textarea
 					class="h-full resize-none rounded-2xl"
