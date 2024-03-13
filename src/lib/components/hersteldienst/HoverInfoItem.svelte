@@ -4,7 +4,7 @@
 	export let data: HoverInfoItemData
 </script>
 
-<div class="flex min-w-[400px] flex-col">
+<div class="flex min-w-[400px] flex-col sm:min-w-[300px]">
 	<div
 		class="mb-[3rem] flex flex-col border-l-2 border-transparent px-[2rem] hover:border-orange-web lg:border-none"
 	>
