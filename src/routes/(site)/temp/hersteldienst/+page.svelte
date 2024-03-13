@@ -168,10 +168,10 @@
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
-		<div class="mb-[4rem] flex flex-col items-start">
+		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
 			<SectionHeadingDescription data={pcRepairHeading} />
 		</div>
-		<div class="mb-[8rem] flex justify-start">
+		<div class="mb-[8rem] flex justify-start md:justify-center">
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
