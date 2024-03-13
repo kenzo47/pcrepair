@@ -27,7 +27,7 @@
 		section: 'prices'
 	}
 	let pcRepairHeading: SectionHeadingDescriptionData = {
-		title: 'Computer & laptop herstellingen',
+		title: 'PC herstellingen',
 		description: [
 			'U kan terecht bij ons voor herstellingen en onderhoud van alle merken en types van computers, ook als deze niet bij ons zijn aangekocht.',
 			'We voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.',
@@ -36,7 +36,7 @@
 	}
 
 	let phoneRepairHeading: SectionHeadingDescriptionData = {
-		title: 'Smartphone & tablet herstellingen',
+		title: 'GSM/Tablet herstellingen',
 		description: [
 			'Wij repareren (bijna) alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
 			"U kan bij ons terecht voor het vervangen van uw scherm, batterij, oplaadpoort, camera's, speakers, microfoon, ...",
@@ -188,21 +188,21 @@
 <!--Smartphone/Tablet Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
-		<div class="mb-[4rem] flex flex-col items-start">
+		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
 			<SectionHeadingDescription data={phoneRepairHeading} />
 		</div>
-		<div class="mb-[8rem] flex justify-start">
+		<div class="mb-[8rem] flex justify-start md:justify-center">
 			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
 		</div>
 	</div>
 	<div class="flex lg:flex-col lg:items-center lg:justify-center">
 		<div
-			class="mr-[6rem] flex h-[500px] flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-2/3 md:w-1/3"
+			class="mr-[6rem] flex w-full flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-[600px] md:w-[500px] sm:w-[400px] xs:hidden"
 		>
 			<img
 				src={pcrepair}
 				alt=""
-				class="w-full min-w-[500px] rounded-lg object-contain drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
+				class="h-auto w-full rounded-lg object-cover drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
 			/>
 		</div>
 		<div class="flex flex-1 flex-col items-center justify-center lg:w-full">
@@ -214,7 +214,7 @@
 </section>
 <!--Prices-->
 <section id="prices" class="wrapper mb-[8rem]">
-	<div class="mb-[6rem] flex flex-col items-center">
+	<div class="mb-[6rem] flex flex-col items-start md:items-center md:text-center">
 		<SectionHeadingDescription data={priceHeading} />
 	</div>
 	<div class="flex justify-evenly space-x-4 lg:flex lg:flex-wrap lg:justify-center lg:space-x-4">

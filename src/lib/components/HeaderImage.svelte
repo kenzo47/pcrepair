@@ -13,19 +13,19 @@
 		aria-label={data.image.alt ? data.image.alt : data.title}
 	></div>
 	<h1
-		class="absolute top-[25%] z-10 text-center font-roboto text-[6rem] text-white shadow-black text-shadow"
+		class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[3.8rem]"
 	>
 		{data.title}
 	</h1>
 	<p
-		class="absolute left-[50%] top-[45%] -translate-x-1/2 transform text-center font-roboto text-[2rem] font-normal text-white shadow-black text-shadow"
+		class="absolute left-[50%] top-[48%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[2.2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.6rem]"
 	>
 		{data.description}
 	</p>
 	{#if data.section}
 		<button
-			on:click={() => navigateToSection(data.section)}
-			class="absolute left-[50%] top-[65%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+			on:click={() => navigateToSection(data.section ?? '')}
+			class="absolute left-[50%] top-[72%] flex h-[45px] w-[120px] -translate-x-1/2 -translate-y-1/2 transform cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 			><span class="text-[2.2rem] font-bold text-white">Prijslijst</span></button
 		>
 	{/if}
