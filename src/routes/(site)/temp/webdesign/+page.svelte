@@ -276,12 +276,14 @@
 <!--Info Items-->
 <section class="wrapper mb-[8rem] lg:mb-[4rem] md:mb-[4rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-		<div class="mb-[8rem] flex w-full items-center lg:flex-col lg:justify-center">
-			<div class="mr-[6rem] flex lg:mx-auto lg:mb-[4rem] lg:w-2/3 md:w-1/3">
+		<div class="mb-[8rem] flex lg:flex-col lg:items-center lg:justify-center">
+			<div
+				class="mr-[6rem] flex w-full flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-[600px] md:w-[500px] sm:w-[400px] xs:hidden"
+			>
 				<img
 					src={webdesign}
 					alt="Computer herstellingen"
-					class="h-[350px] w-full min-w-[300px] rounded-lg object-contain drop-shadow-md"
+					class="h-auto w-full rounded-lg object-cover drop-shadow-md"
 				/>
 			</div>
 			<InfoItem infoItemData={infoItemData[0]} />
