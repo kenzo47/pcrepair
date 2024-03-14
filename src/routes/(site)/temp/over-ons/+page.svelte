@@ -2,16 +2,13 @@
 	import type { EmployeeData } from '$lib/types/components/Employee'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { TextItemData } from '$lib/types/components/TextItem/TextItem'
-	import type { PageData } from './$types'
 
 	import about from '$lib/assets/images/about.jpg'
 	import alicia from '$lib/assets/images/team/Alicia.jpeg'
-	import kenzo from '$lib/assets/images/team/Kenzo.jpeg'
+	import kenzo from '$lib/assets/images/team/kenzo.jpg'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import Employee from '$lib/components/over-ons/Employee.svelte'
 	import TextItem from '$lib/components/over-ons/TextItem.svelte'
-
-	export let data: PageData
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -27,7 +24,7 @@
 			{
 				title: 'Expert in herstellingen en webontwikkeling',
 				paragraph:
-					'Reboot-IT, een jong bedrijf gevestigd in Scherpenheuvel-Zichem, is gespecialiseerd in het herstellen van computers, laptops, smartphones en tablets. Onze jonge onderneming, momenteel bestaande uit twee kernleden onderscheidt zich door klanttevredenheid en service. Met expertise in webontwikkeling bieden wij een breed scala aan webgerelateerde diensten aan.'
+					'Reboot-IT is een jong bedrijf gevestigd in Scherpenheuvel-Zichem dat gespecialiseerd is in het herstellen van computers, laptops, smartphones en tablets. Onze hersteldienst die momenteel uit twee leden bestaat onderscheidt zich door klanttevredenheid en service. Wij bieden ook een breed scala aan webgerelateerde diensten aan, van simpelere websites tot klantportalen en ERP systemen op maat.'
 			},
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
@@ -43,8 +40,9 @@
 				alt: 'Kenzo'
 			},
 			name: 'Kenzo',
-			function: 'Zaakvoerder',
-			intro: 'Kenzo is een gepassioneerde IT-consultant met een passie voor nieuwe technologieën.',
+			function: 'Herstellingen & Webontwikkeling',
+			intro:
+				"Kenzo is een gepassioneerde IT'er met een passie voor nieuwe technologieën. Klantgerichtheid en kwaliteit staan bij hem centraal.",
 			skills: ['Consultatie', 'Reparaties', 'Web- & softwareontwikkeling']
 		},
 		{
@@ -53,9 +51,9 @@
 				alt: 'Alicia'
 			},
 			name: 'Alicia',
-			function: 'Administratief en Technisch Specialist',
+			function: 'Administratie & Herstellingen',
 			intro:
-				'Alicia beheert de administratie en is mede-verantwoordelijk voor reparaties en webdesign.',
+				'Alicia beheert de administratie en is mede-verantwoordelijk voor reparaties en webdesign. Er is geen enkele uitdaging die ze uit de weg gaat.',
 			skills: ['Administratie', 'Reparaties', 'Webdesign']
 		}
 		// {
