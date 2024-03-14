@@ -46,7 +46,7 @@
 				alt: 'Openingsuren'
 			},
 			title: 'Bereikbaarheid',
-			description: 'Elke dag van 10u tot 22u behalve woensdag.'
+			description: 'Elke dag van 10u tot 22u.'
 		},
 		{
 			index: 4,
