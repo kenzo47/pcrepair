@@ -13,7 +13,7 @@
 	class="flex h-full max-w-[600px] flex-col items-center justify-between bg-off-white"
 >
 	<div
-		class="mb-[1rem] flex h-[80px] w-full justify-center border-b-[1px] border-raisin-black bg-subtle-gray"
+		class="flex h-[80px] w-full justify-center border-b-[1px] border-raisin-black bg-subtle-gray py-[2.4rem]"
 	>
 		<h1 class="font-roboto text-[2.6rem]">Contactformulier</h1>
 	</div>
