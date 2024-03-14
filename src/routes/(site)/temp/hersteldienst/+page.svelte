@@ -8,6 +8,7 @@
 	import bsod from '$lib/assets/images/bsod.webp'
 	import pcbrands from '$lib/assets/images/pcbrands.jpeg'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg'
+	import phonerepair from '$lib/assets/images/phonerepair.jpg'
 	import radius from '$lib/assets/images/radius.png'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
@@ -29,7 +30,7 @@
 	let pcRepairHeading: SectionHeadingDescriptionData = {
 		title: 'PC herstellingen',
 		description: [
-			'U kan terecht bij ons voor herstellingen en onderhoud van alle merken en types van computers, ook als deze niet bij ons zijn aangekocht.',
+			'U kan terecht bij ons voor herstellingen en onderhoud van uw PC ook als deze niet bij ons is aangekocht.',
 			'We voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.',
 			'Na uw goedkeuring voeren we reparaties uit in ons eigen atelier of bij u thuis.'
 		]
@@ -38,9 +39,9 @@
 	let phoneRepairHeading: SectionHeadingDescriptionData = {
 		title: 'GSM/Tablet herstellingen',
 		description: [
-			'Wij repareren (bijna) alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
+			'Wij repareren alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
 			"U kan bij ons terecht voor het vervangen van uw scherm, batterij, oplaadpoort, camera's, speakers, microfoon, ...",
-			'Ook software problemen zoals een traag toestel of een update die niet lukt kunnen wij oplossen.'
+			'Ook software problemen zoals een traag toestel of een update die vast loopt kunnen wij oplossen.'
 		]
 	}
 
@@ -107,7 +108,7 @@
 		{
 			index: 1,
 			title: 'Onderhoud',
-			price: '€ 60',
+			price: '€ 50',
 			features: [
 				'Verwijderen van virussen en spyware',
 				'Verwijderen van onnodige software',
@@ -125,11 +126,12 @@
 		{
 			index: 2,
 			title: 'Herinstallatie',
-			price: '€ 80',
+			price: '€ 70',
 			features: [
 				'Volledige backup van uw gegevens',
 				'Herinstallatie van Windows',
 				'Installatie Windows updates/drivers',
+				'Instellen e-mail en printer',
 				'Volledige controle van de hardware',
 				'Herinstallatie gewenste programma’s',
 				'Gebruiksklaar afgeleverd'
@@ -143,7 +145,7 @@
 		{
 			index: 3,
 			title: 'Upgrade',
-			price: '€ 139',
+			price: '€ 125',
 			features: [
 				'Back-up van uw gegevens',
 				'Vervangen van harde schijf door SSD',
@@ -168,7 +170,7 @@
 <!--PC Repairs-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
-		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
+		<div class="mb-[1.6rem] flex flex-col items-start md:items-center md:text-center">
 			<SectionHeadingDescription data={pcRepairHeading} />
 		</div>
 		<div class="mb-[8rem] flex justify-start md:justify-center">
@@ -200,7 +202,7 @@
 			class="mr-[6rem] flex w-full flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-[600px] md:w-[500px] sm:w-[400px] xs:hidden"
 		>
 			<img
-				src={pcrepair}
+				src={phonerepair}
 				alt=""
 				class="h-auto w-full rounded-lg object-cover drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"
 			/>
