@@ -29,7 +29,7 @@
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
 				paragraph:
-					'Of het nu gaat om reparaties bij u thuis of in ons eigen atelier, wij passen onze dienstverlening aan de aard van het probleem aan. Voor extra gemak bieden wij een ophaal- en bezorgservice tegen een kleine meerprijs. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen. Bij Reboot-IT staat uw tevredenheid voorop, en wij verwelkomen de kans om u te ondersteunen met al uw IT-gerelateerde problemen.'
+					'Voor extra gemak bieden wij een ophaal- en bezorgservice tegen een kleine meerprijs. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen. Bij Reboot-IT staat uw tevredenheid voorop. Wij zijn pas tevreden als u dat ook bent.'
 			}
 		]
 	}
