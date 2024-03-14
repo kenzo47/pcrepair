@@ -80,11 +80,13 @@
 </section>
 <!--Contact Form-->
 <section class="wrapper mb-[8rem] w-full">
-	<div class="mb-[4rem] flex flex-col items-center">
-		<h2 class="font-roboto text-[2.2rem] font-medium">Stuur ons een bericht.</h2>
-		<p class="font-roboto text-[1.6rem]">Wij antwoorden doorgaans binnen de 24 uur.</p>
-	</div>
-	<div class="flex justify-center">
-		<ContactForm {data} />
+	<div>
+		<div class="mb-[4rem] flex flex-col items-center">
+			<h2 class="font-roboto text-[2.2rem] font-medium">Stuur ons een bericht.</h2>
+			<p class="font-roboto text-[1.6rem]">Wij antwoorden doorgaans binnen de 24 uur.</p>
+		</div>
+		<div class="mx-auto flex w-[620px] flex-col items-center">
+			<ContactForm {data} />
+		</div>
 	</div>
 </section>
