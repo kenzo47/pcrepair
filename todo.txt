@@ -5,4 +5,4 @@ Add functionality to forms (mailto/mailserver)
 Fix hamburger modal exit button (inverted/blue hamburger)
 Create socials
 Add svelte compressed images package
-Replace some images (team/brands/etc)
+Replace some images (brands/etc)
