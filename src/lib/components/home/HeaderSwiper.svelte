@@ -31,7 +31,7 @@
 				{item.title}
 			</h1>
 			<p
-				class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2.8rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.6rem]"
+				class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.6rem]"
 			>
 				{item.description}
 			</p>
