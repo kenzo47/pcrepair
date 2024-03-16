@@ -58,7 +58,7 @@
 				</div>
 				{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 			</div>
-			<div class="mb-[2rem] flex h-[260px] w-full flex-col md:h-[220px]">
+			<div class="mb-[2rem] flex h-[260px] w-full flex-col md:h-[200px]">
 				<label for="message">Bericht</label>
 				<textarea
 					class="h-full resize-none rounded-2xl"
@@ -80,7 +80,7 @@
 
 <style lang="postcss">
 	.invalid {
-		@apply rounded pl-[0.2rem] font-roboto text-[1.4rem] font-bold text-error;
+		@apply h-[5px] rounded pl-[0.2rem] font-roboto text-[1.4rem] font-bold text-error;
 	}
 
 	label {
