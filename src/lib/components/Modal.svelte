@@ -2,7 +2,7 @@
 	export let show = false
 
 	import { portal } from '$lib/portal'
-	import { onMount, createEventDispatcher } from 'svelte'
+	import { createEventDispatcher, onMount } from 'svelte'
 
 	let keydownHandler: (event: { key: string }) => void
 	// Create event dispatcher
@@ -43,11 +43,11 @@
 		class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/80 p-[2rem]"
 		on:click={outsideClick}
 	>
-		<div class="mx-auto h-[620px] w-full max-w-[600px]" on:click={insideClick}>
+		<div class="relative mx-auto h-[620px] w-full max-w-[600px]" on:click={insideClick}>
 			<slot />
 			<button
 				on:click|stopPropagation={closeModal}
-				class="absolute right-10 top-0 text-[4rem] font-semibold text-azure hover:cursor-pointer hover:text-orange-web"
+				class="absolute right-[14px] top-[-5px] text-[4rem] font-semibold text-azure hover:cursor-pointer hover:text-orange-web"
 				>&times;</button
 			>
 		</div>
