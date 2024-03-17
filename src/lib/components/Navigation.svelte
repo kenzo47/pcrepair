@@ -2,15 +2,20 @@
 	import { page } from '$app/stores'
 	import hamburger from '$lib/assets/icons/hamburger.svg'
 	import logo from '$lib/assets/icons/logo.svg'
-	import Modal from './Modal.svelte'
+	import NavModal from './NavModal.svelte'
 
 	let showModal = false
+	let showHamburger = true
+
+	function handleClose() {
+		showHamburger = true
+	}
 </script>
 
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
-	<div class="mr-[6rem] flex">
-		<a href="/</div>">
-			<img src={logo} alt="Reboot-IT Logo" class="max-h-[60px] max-w-[240px]" />
+	<div class="mr-[6rem] flex h-full">
+		<a href="/" class="h-full">
+			<img src={logo} alt="Reboot-IT Logo" class="max-h-[120px] max-w-[240px]" />
 		</a>
 	</div>
 	<div
@@ -23,7 +28,13 @@
 		<a href="/over-ons" class:active={$page.url.pathname === '/over-ons'}>Over ons</a>
 		<a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
 	</div>
-	<Modal show={showModal} on:close={() => (showModal = false)}>
+	<NavModal
+		show={showModal}
+		on:close={() => {
+			showModal = false
+			handleClose()
+		}}
+	>
 		<div class="mobile-menu flex flex-col gap-4 overflow-hidden text-center text-[5rem] text-white">
 			<a href="/" class:active={$page.url.pathname === '/'}>Home</a>
 			<a href="/hersteldienst" class:active={$page.url.pathname === '/hersteldienst'}
@@ -33,10 +44,18 @@
 			<a href="/over-ons" class:active={$page.url.pathname === '/over-ons'}>Over ons</a>
 			<a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
 		</div>
-	</Modal>
-	<button class="hamburger hidden md:block" on:click={() => (showModal = true)}>
-		<img src={hamburger} alt="Hamburger Icon" class="h-[30px] w-[30px]" />
-	</button>
+	</NavModal>
+	{#if showHamburger}
+		<button
+			class="hamburger hidden md:block"
+			on:click={() => {
+				showModal = true
+				showHamburger = false
+			}}
+		>
+			<img src={hamburger} alt="Hamburger Icon" class="h-[30px] w-[30px]" />
+		</button>
+	{/if}
 </nav>
 
 <style lang="postcss">

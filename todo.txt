@@ -1,8 +1,5 @@
-Fix responsiveness of forms
-Fix mobile hamburger
-Fix mobile animations
+=Fix mobile animations
 Add functionality to forms (mailto/mailserver)
-Fix hamburger modal exit button (inverted/blue hamburger)
 Create socials
 Add svelte compressed images package
 Replace some images (brands/etc)
