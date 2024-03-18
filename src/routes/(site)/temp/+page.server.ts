@@ -1,3 +1,7 @@
+import {
+	AIRTABLE_API_KEY,
+	AIRTABLE_BASE_ID,
+} from '$env/static/private'
 import { schema } from '$lib/schemas/ContactForm'
 import { fail } from '@sveltejs/kit'
 import { superValidate } from 'sveltekit-superforms/server'
@@ -9,8 +13,8 @@ export const load: PageServerLoad = async () => {
 }
 
 export const actions = {
-	default: async ({ request }) => {
-		const form = await superValidate(request, schema)
+	default: async event => {
+		const form = await superValidate(event, schema)
 
 		// Convenient validation check:
 		if (!form.valid) {
@@ -18,11 +22,33 @@ export const actions = {
 			return fail(400, { form })
 		}
 
-		// TODO: Do something with the validated form.data
-		console.log(form)
-
-		// Yep, return { form } here too
-		return { form }
-	}
+    const { name, email, phone, message } = form.data
+    const AIRTABLE_URL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/submissions`
+		
+	
+    const data = {
+      records: [
+        {
+          fields: {
+						'Name': name,
+						'Email': email,
+						'Phone': phone,
+						'Message': message,
+          },
+        },
+      ],
+    }
+    await fetch(AIRTABLE_URL, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${AIRTABLE_API_KEY}`,
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data),
+    })
+    return {
+      form,
+    }
+  },	
 }
 
