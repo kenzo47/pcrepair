@@ -1,10 +1,8 @@
 import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '$env/static/private';
 
-
-
-export async function submitToAirtable(form): Promise<void> {
+export async function submitToAirtable(form: any): Promise<void> {
   const { name, email, phone, message } = form.data;
-  const AIRTABLE_URL = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/submissions`;
+  const AIRTABLE_URL: string = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/submissions`;
 
   const data = {
     records: [
