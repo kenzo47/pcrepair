@@ -1,3 +1,7 @@
-Fix mobile animations
-Create socials
+Fix webdesign price list button action
+Add extra pages (read more) -> Wordpress benefits, static website benefits, etc..
+Add privacy policy + check cookies
+Fix mobile animations/re-add homepage animations
+Create new socials logo + complete FB/LinkedIn
 Replace some images (brands/etc)
+Order business cards.
