@@ -1,7 +1,7 @@
 <script lang="ts">
-	import * as config from '$lib/config'
-	import linkedInLogo from '$lib/assets/icons/socials/linkedin.svg'
 	import facebookLogo from '$lib/assets/icons/socials/facebook.svg'
+	import linkedInLogo from '$lib/assets/icons/socials/linkedin.svg'
+	import * as config from '$lib/config'
 </script>
 
 <footer class="flex w-full justify-center bg-subtle-gray p-8">
@@ -9,7 +9,7 @@
 		<div class="mb-[1rem] flex justify-center">
 			<div class="mr-[1rem]">
 				<a
-					href="https://www.linkedin.com/company/reboot-it"
+					href="https://www.linkedin.com/company/rebootit-be/"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="hover:bg-azure-dark flex items-center justify-center transition-all duration-300 ease-in-out"
@@ -23,7 +23,7 @@
 			</div>
 			<div class="">
 				<a
-					href="https://www.facebook.com/rebootit.be"
+					href="https://www.facebook.com/rebootitbe"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="hover:bg-azure-dark flex items-center justify-center transition-all duration-300 ease-in-out"

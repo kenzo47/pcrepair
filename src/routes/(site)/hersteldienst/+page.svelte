@@ -129,8 +129,7 @@
 			price: '€ 70',
 			features: [
 				'Volledige backup van uw gegevens',
-				'Herinstallatie van Windows',
-				'Installatie Windows updates/drivers',
+				'Herinstallatie van Windows + drivers',
 				'Instellen e-mail en printer',
 				'Volledige controle van de hardware',
 				'Herinstallatie gewenste programma’s',
