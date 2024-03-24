@@ -7,11 +7,13 @@
 	import InfoItem from '$lib/components/InfoItem.svelte'
 	import Modal from '$lib/components/Modal.svelte'
 	import ServiceItem from '$lib/components/ServiceItem.svelte'
+	import { url } from '$lib/config'
 	import type { FeatureData } from '$lib/types/components/Feature'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { InfoItemData } from '$lib/types/components/InfoItem/InfoItem'
 	import type { PriceFeatureCardData } from '$lib/types/components/PriceFeatureCard'
 	import type { ServiceItemData } from '$lib/types/components/ServiceItem'
+
 	import Saos from 'saos'
 	import type { PageData } from './$types'
 	let showModal = false
@@ -36,9 +38,9 @@
 			},
 			title: 'Eenvoudige websites',
 			description:
-				'Een betaalbare website op maat, waar de inhoud van de website niet (vaak) aangepast hoeft te worden.',
+				'Een betaalbare website op maat, waarvan de inhoud niet (vaak) verandert. Ideaal voor starters.',
 			button: {
-				url: 'https://google.com',
+				url: url,
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -53,7 +55,7 @@
 			description:
 				'Professionele uitstraling met veel designmogelijkheden op het vertrouwde WordPress-platform.',
 			button: {
-				url: '#',
+				url: url,
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -67,7 +69,7 @@
 			title: 'Maatwerk & Webapplicaties',
 			description: 'Volledig op maat gemaakte websites en webapplicaties.',
 			button: {
-				url: 'https://google.com',
+				url: url,
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -211,7 +213,7 @@
 			'1 jaar domeinnaam'
 		],
 		button: {
-			url: 'https://google.com',
+			url: url,
 			text: 'Dit wil ik',
 			target: '_self' as '_self'
 		}
@@ -232,7 +234,7 @@
 			'1 jaar ondersteuning'
 		],
 		button: {
-			url: 'https://google.com',
+			url: url,
 			text: 'Dit wil ik',
 			target: '_self' as '_self'
 		}
@@ -252,7 +254,7 @@
 			'1 jaar updates'
 		],
 		button: {
-			url: 'https://google.com',
+			url: url,
 			text: 'Dit wil ik',
 			target: '_self' as '_self'
 		}
