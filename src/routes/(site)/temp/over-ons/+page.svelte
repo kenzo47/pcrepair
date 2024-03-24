@@ -4,7 +4,7 @@
 	import type { TextItemData } from '$lib/types/components/TextItem/TextItem'
 
 	import about from '$lib/assets/images/about.jpg'
-	import alicia from '$lib/assets/images/team/Alicia.jpeg'
+	import anon from '$lib/assets/images/team/anon.png'
 	import kenzo from '$lib/assets/images/team/kenzo.jpg'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import Employee from '$lib/components/over-ons/Employee.svelte'
@@ -47,7 +47,7 @@
 		},
 		{
 			image: {
-				url: alicia,
+				url: anon,
 				alt: 'Alicia'
 			},
 			name: 'Alicia',
