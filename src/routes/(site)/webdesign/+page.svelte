@@ -79,17 +79,17 @@
 		{
 			title: 'Webdesign',
 			description:
-				'Bij Reboot-IT kan u terecht voor een professionele website op maat. Wij maken websites voor zowel particulieren als bedrijven. Onze service eindigt niet na het opleveren van de website. Wij zorgen ervoor dat uw website up-to-date blijft en dat u ondersteuning krijgt.',
+				'Bij Reboot-IT kan u terecht voor een professionele website op maat. Wij maken websites voor zowel particulieren als bedrijven. Onze websites zijn geschikt voor alle apparaten en zoekmachinevriendelijk. Na oplevering bieden wij ook ondersteuning en onderhoud aan.',
 			subInfoItems: [
 				{
 					title: 'Welke soort website past bij jou?',
 					description:
-						'Wij maken verschillende soorten websites, elk met hun eigen voor- en nadelen. Samen kijken we welke soort website het beste bij u past.'
+						'Wij maken verschillende soorten websites, elk met hun eigen sterktes. Samen kijken we welke soort website het beste bij u of uw zaak past.'
 				},
 				{
 					title: 'Uitbreidbaar',
 					description:
-						'Wij maken websites die uitbreidbaar zijn. Zo kan u in de toekomst uw website uitbreiden met extra functionaliteiten.'
+						"Onze websites zijn uitbreidbaar. Groeit uw onderneming? Dan kunnen we uw website uitbreiden met extra pagina's en functionaliteiten."
 				}
 			]
 		}

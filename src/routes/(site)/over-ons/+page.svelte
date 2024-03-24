@@ -29,7 +29,12 @@
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
 				paragraph:
-					'Voor extra gemak bieden wij een ophaal- en bezorgservice tegen een kleine meerprijs. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen. Bij Reboot-IT staat uw tevredenheid voorop. Wij zijn pas tevreden als u dat ook bent.'
+					'Voor extra gemak bieden wij een ophaal- en bezorgservice aan. Momenteel zonder fysieke winkel streven we ernaar om in de toekomst een locatie te openen om u nog beter van dienst te kunnen zijn. '
+			},
+			{
+				title: 'Onze missie',
+				paragraph:
+					'Onze missie is om de beste service te bieden aan onze klanten. Uw tevredenheid staat voorop en wij zijn pas tevreden als u dat ook bent.'
 			}
 		]
 	}
