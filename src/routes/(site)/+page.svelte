@@ -2,7 +2,7 @@
 	import pcIcon from '$lib/assets/icons/desktop.svg'
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
-	import pcmobo from '$lib/assets/images/pcmobo.jpg'
+	import pcmobo from '$lib/assets/images/pcmobo.jpg?enhanced'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
 	import phone from '$lib/assets/images/phone.jpg?enhanced'
 	import coding from '$lib/assets/images/webdesign.jpg?enhanced'
