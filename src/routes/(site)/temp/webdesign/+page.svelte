@@ -1,7 +1,7 @@
 <script lang="ts">
 	import timeIcon from '$lib/assets/icons/clock.svg'
 	import websiteIcon from '$lib/assets/icons/website.svg'
-	import webdesign from '$lib/assets/images/webdesign.jpg'
+	import webdesign from '$lib/assets/images/webdesign.jpg?enhanced'
 	import ContactForm from '$lib/components/ContactFormModal.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
@@ -280,7 +280,7 @@
 			<div
 				class="mr-[6rem] flex w-full flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-[600px] md:w-[500px] sm:w-[400px] xs:hidden"
 			>
-				<img
+				<enhanced:img
 					src={webdesign}
 					alt="Computer herstellingen"
 					class="h-auto w-full rounded-lg object-cover drop-shadow-md"

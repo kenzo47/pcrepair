@@ -3,9 +3,9 @@
 	import phoneIcon from '$lib/assets/icons/phone.svg'
 	import webIcon from '$lib/assets/icons/website.svg'
 	import pcmobo from '$lib/assets/images/pcmobo.jpg'
-	import pcrepair from '$lib/assets/images/pcrepair.jpg'
-	import phone from '$lib/assets/images/phone.jpg'
-	import coding from '$lib/assets/images/webdesign.jpg'
+	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
+	import phone from '$lib/assets/images/phone.jpg?enhanced'
+	import coding from '$lib/assets/images/webdesign.jpg?enhanced'
 	import ContactFormModal from '$lib/components/ContactFormModal.svelte'
 	import InfoItem from '$lib/components/InfoItem.svelte'
 	import Modal from '$lib/components/Modal.svelte'
@@ -163,7 +163,7 @@
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[12rem] flex w-full items-center">
 			<div class="mr-[4rem] flex">
-				<img
+				<enhanced:img
 					src={pcrepair}
 					alt="Computer herstellingen"
 					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"
@@ -176,7 +176,7 @@
 		<div class="mb-[4rem] flex w-full items-center">
 			<InfoItem infoItemData={infoItemData[1]} />
 			<div class="mr-[4rem] flex">
-				<img
+				<enhanced:img
 					src={coding}
 					alt="Webdesign"
 					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"

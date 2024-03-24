@@ -3,9 +3,9 @@
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import type { TextItemData } from '$lib/types/components/TextItem/TextItem'
 
-	import about from '$lib/assets/images/about.jpg'
-	import anon from '$lib/assets/images/team/anon.png'
-	import kenzo from '$lib/assets/images/team/kenzo.jpg'
+	import about from '$lib/assets/images/about.jpg?enhanced'
+	import anon from '$lib/assets/images/team/anon.png?enhanced'
+	import kenzo from '$lib/assets/images/team/kenzo.jpg?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import Employee from '$lib/components/over-ons/Employee.svelte'
 	import TextItem from '$lib/components/over-ons/TextItem.svelte'

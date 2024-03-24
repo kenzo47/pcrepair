@@ -7,11 +7,14 @@
 </script>
 
 <div class="relative flex h-[50vh] max-w-[100vw] justify-center">
-	<div
-		class="absolute h-full w-full bg-raisin-black bg-cover bg-center bg-no-repeat bg-blend-overlay"
-		style="background-image: url({data.image.url})"
-		aria-label={data.image.alt ? data.image.alt : data.title}
-	></div>
+	<div class="absolute h-full w-full">
+		<enhanced:img
+			class="absolute h-full w-full object-cover object-center"
+			src={data.image.url}
+			alt={data.image.alt ? data.image.alt : data.title}
+		/>
+		<div class="absolute h-full w-full bg-raisin-black opacity-50"></div>
+	</div>
 	<h1
 		class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[3.8rem]"
 	>

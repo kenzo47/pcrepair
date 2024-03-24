@@ -1,5 +1,3 @@
-=Fix mobile animations
-Add functionality to forms (mailto/mailserver)
+Fix mobile animations
 Create socials
-Add svelte compressed images package
 Replace some images (brands/etc)

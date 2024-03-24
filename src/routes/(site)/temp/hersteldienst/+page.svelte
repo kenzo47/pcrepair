@@ -5,11 +5,11 @@
 	import type { PriceCardData } from '$lib/types/components/PriceCard'
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 
-	import bsod from '$lib/assets/images/bsod.webp'
-	import pcbrands from '$lib/assets/images/pcbrands.jpeg'
-	import pcrepair from '$lib/assets/images/pcrepair.jpg'
-	import phonerepair from '$lib/assets/images/phonerepair.jpg'
-	import radius from '$lib/assets/images/radius.png'
+	import bsod from '$lib/assets/images/bsod.webp?enhanced'
+	import pcbrands from '$lib/assets/images/pcbrands.jpeg?enhanced'
+	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
+	import phonerepair from '$lib/assets/images/phonerepair.jpg?enhanced'
+	import radius from '$lib/assets/images/radius.png?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import LinkButton from '$lib/components/LinkButton.svelte'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
@@ -90,7 +90,7 @@
 		{
 			title: 'Originele onderdelen',
 			description:
-				'Wij gebruiken enkel originele OEM onderdelen voor de herstelling van uw smartphone of tablet. Hierdoor kunnen wij een kwalitatieve herstelling garanderen. Helaas zijn niet alle onderdelen voor alle toestellen beschikbaar.'
+				'Wij gebruiken enkel originele OEM onderdelen voor de herstelling van uw smartphone of tablet. Hierdoor kunnen wij een kwalitatieve herstelling garanderen. Helaas zijn niet alle onderdelen voor elk merk beschikbaar.'
 		},
 		{
 			title: 'Schermen, batterijen, knopjes..',
@@ -201,7 +201,7 @@
 		<div
 			class="mr-[6rem] flex w-full flex-1 items-center justify-center lg:mx-auto lg:mb-[4rem] lg:w-[600px] md:w-[500px] sm:w-[400px] xs:hidden"
 		>
-			<img
+			<enhanced:img
 				src={phonerepair}
 				alt=""
 				class="h-auto w-full rounded-lg object-cover drop-shadow-md transition-all duration-150 hover:scale-[1.01] hover:cursor-pointer hover:border-2 hover:border-orange-web"

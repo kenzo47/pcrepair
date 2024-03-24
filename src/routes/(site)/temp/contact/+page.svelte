@@ -3,7 +3,7 @@
 	import emailIcon from '$lib/assets/icons/email.svg'
 	import locationIcon from '$lib/assets/icons/location.svg'
 	import supportIcon from '$lib/assets/icons/support.svg'
-	import contact from '$lib/assets/images/contact.jpg'
+	import contact from '$lib/assets/images/contact.jpg?enhanced'
 	import ContactForm from '$lib/components/ContactFormModal.svelte'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import ServiceItem from '$lib/components/ServiceItem.svelte'

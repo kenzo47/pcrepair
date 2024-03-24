@@ -7,7 +7,7 @@
 <div class="flex h-[520px] flex-col justify-center border border-black p-[4rem]">
 	<div class="flex flex-col">
 		<div class="mb-[1rem] flex justify-center">
-			<img
+			<enhanced:img
 				class="h-[220px] max-w-[220px] rounded-[50%]"
 				src={data.image.url}
 				alt={data.image.alt}
