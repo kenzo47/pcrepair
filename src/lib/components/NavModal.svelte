@@ -44,14 +44,13 @@
 		class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-black/90 p-[2rem]"
 		on:click={outsideClick}
 	>
+		<button
+			class="absolute right-[40px] top-[30px] flex h-[30px] w-[30px] items-center justify-center text-[4rem] font-semibold text-azure"
+		>
+			&times;
+		</button>
 		<div class="relative mx-auto h-[620px] w-full max-w-[600px]" on:click={insideClick}>
 			<slot />
-			<button
-				on:click|stopPropagation={closeModal}
-				class="absolute right-[-39px] top-[-14px] text-[4rem] font-semibold"
-			>
-				<img src={hamburger} alt="Hamburger Icon" class="h-[30px] w-[30px] rotate-90 transform" />
-			</button>
 		</div>
 	</div>
 {/if}

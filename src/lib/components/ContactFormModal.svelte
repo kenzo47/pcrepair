@@ -23,13 +23,19 @@
 </script>
 
 {#if submission_status === 'success'}
-	<div id="contact" class="flex h-full w-full flex-col items-center justify-between bg-off-white">
+	<div
+		id="contact"
+		class="flex h-full w-full flex-col items-center justify-between rounded-[1.6rem] bg-off-white"
+	>
 		<div class="flex h-full items-center justify-center">
 			<h2 class="font-roboto text-[2.6rem]">Bericht succesvol verstuurd!</h2>
 		</div>
 	</div>
 {:else}
-	<div id="contact" class="flex h-full w-full flex-col items-center justify-between bg-off-white">
+	<div
+		id="contact"
+		class="flex h-full w-full flex-col items-center justify-between rounded-[1.6rem] bg-off-white"
+	>
 		<div class=" flex h-[80px] w-full justify-center py-[2.4rem]">
 			<h1 class="mb-[1rem] font-roboto text-[2.6rem]">Contactformulier</h1>
 		</div>

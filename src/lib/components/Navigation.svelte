@@ -5,11 +5,6 @@
 	import NavModal from './NavModal.svelte'
 
 	let showModal = false
-	let showHamburger = true
-
-	function handleClose() {
-		showHamburger = true
-	}
 </script>
 
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
@@ -32,7 +27,6 @@
 		show={showModal}
 		on:close={() => {
 			showModal = false
-			handleClose()
 		}}
 	>
 		<div class="mobile-menu flex flex-col gap-4 overflow-hidden text-center text-[5rem] text-white">
@@ -45,17 +39,15 @@
 			<a href="/contact" class:active={$page.url.pathname === '/contact'}>Contact</a>
 		</div>
 	</NavModal>
-	{#if showHamburger}
-		<button
-			class="hamburger hidden md:block"
-			on:click={() => {
-				showModal = true
-				showHamburger = false
-			}}
-		>
-			<img src={hamburger} alt="Hamburger Icon" class="h-[30px] w-[30px]" />
-		</button>
-	{/if}
+	<button
+		class="hamburger hidden md:block"
+		class:open={showModal}
+		on:click={() => {
+			showModal = true
+		}}
+	>
+		<img src={hamburger} alt="Hamburger Icon" class="h-[30px] w-[30px]" />
+	</button>
 </nav>
 
 <style lang="postcss">
@@ -69,5 +61,13 @@
 
 	.mobile-menu a {
 		@apply my-[2rem];
+	}
+
+	.hamburger {
+		@apply transition duration-200;
+	}
+
+	.hamburger.open {
+		@apply rotate-90 transform opacity-0;
 	}
 </style>

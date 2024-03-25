@@ -5,3 +5,5 @@ Fix mobile animations/re-add homepage animations
 Create new socials logo + complete FB/LinkedIn
 Replace some images (brands/etc)
 Order business cards.
+p verminderen en max width
+buttons verbeteren, mss 1px border lightgray

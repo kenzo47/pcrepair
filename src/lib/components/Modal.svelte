@@ -47,7 +47,7 @@
 			<slot />
 			<button
 				on:click|stopPropagation={closeModal}
-				class="absolute right-[14px] top-[-5px] text-[4rem] font-semibold text-azure hover:cursor-pointer hover:text-orange-web"
+				class="absolute right-[14px] top-[-5px] text-[4rem] font-semibold text-azure transition duration-300 hover:cursor-pointer hover:text-orange-web"
 				>&times;</button
 			>
 		</div>

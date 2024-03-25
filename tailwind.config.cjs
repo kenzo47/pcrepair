@@ -24,9 +24,6 @@ const config = {
 				contact: "url('/src/lib/assets/images/contact.jpg')"
 			})
 		},
-		fontSize: {
-			xs: '.6rem'
-		},
 		fontFamily: {
 			suisse: ['SuisseIntl', 'serif'],
 			mono: ['SuisseIntlMono', 'serif'],
