@@ -79,7 +79,7 @@
 	</div>
 </section>
 <!--Contact Form-->
-<section class="wrapper mb-[8rem] w-full">
+<section id="form" class="wrapper mb-[8rem] w-full">
 	<div>
 		<div class="mb-[4rem] flex flex-col items-center">
 			<h2 class="font-roboto text-[2.2rem] font-medium">Stuur ons een bericht.</h2>
