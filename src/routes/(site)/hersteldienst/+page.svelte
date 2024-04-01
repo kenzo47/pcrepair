@@ -25,7 +25,8 @@
 		},
 		title: 'Herstellingen',
 		description: 'Informatie over onze herstellingen en diensten.',
-		section: 'prices'
+		section: 'prices',
+		buttonText: 'Prijzen'
 	}
 	let pcRepairHeading: SectionHeadingDescriptionData = {
 		title: 'PC herstellingen',

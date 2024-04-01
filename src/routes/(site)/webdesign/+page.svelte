@@ -26,7 +26,8 @@
 		},
 		title: 'Webdesign',
 		description: 'Wij maken uw website op maat.',
-		section: 'website'
+		section: 'contact',
+		buttonText: 'Prijzen'
 	}
 
 	let serviceItemData: ServiceItemData[] = [
@@ -345,10 +346,12 @@
 </section>
 -->
 <!--Contact Form-->
-<section class="wrapper mb-[8rem]">
+<section id="contact" class="wrapper mb-[8rem]">
 	<div class="flex flex-col items-center">
 		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
-		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">Contacteer ons hier.</p>
+		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">
+			Contacteer ons voor een prijsopgave.
+		</p>
 		<button
 			on:click={() => (showModal = true)}
 			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"

@@ -4,5 +4,6 @@ export interface HeaderImageData {
 	image: Image
 	title: string
 	description: string
-	section?: string 
+	section?: string ,
+	buttonText?: string
 }
