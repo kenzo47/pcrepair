@@ -85,7 +85,9 @@
 			<h2 class="font-roboto text-[2.2rem] font-medium">Stuur ons een bericht.</h2>
 			<p class="font-roboto text-[1.6rem]">Wij antwoorden doorgaans binnen de 24 uur.</p>
 		</div>
-		<div class="mx-auto flex max-w-[620px] flex-col items-center">
+		<div
+			class="mx-auto flex max-w-[620px] flex-col items-center rounded-2xl border-[2px] border-subtle-gray"
+		>
 			<ContactForm {data} />
 		</div>
 	</div>

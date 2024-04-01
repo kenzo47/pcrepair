@@ -42,7 +42,7 @@
 		<form method="POST" class="flex w-full flex-col items-center justify-between" use:enhance>
 			<div class="w-full px-[4rem]">
 				<div class="flex w-full md:flex-col">
-					<div class="rounded-2x mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col md:w-full">
+					<div class="rounded-2xl mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col md:w-full">
 						<label for="name">Naam</label>
 						<div class="flex w-full rounded-2xl bg-subtle-gray">
 							<img class="h-[36px] w-[36px] p-[1rem]" src={userIcon} alt="Naam" />

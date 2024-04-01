@@ -4,7 +4,7 @@
 </script>
 
 <div
-	class="flex h-full w-full flex-col items-center justify-between border border-solid border-subtle-gray bg-transparent px-[15px] py-[40px]"
+	class="flex h-full w-full flex-col items-center justify-between rounded-2xl border border-solid border-subtle-gray bg-transparent px-[15px] py-[40px]"
 >
 	<div class="mb-[1rem] h-[80px] w-[80px]">
 		<img src={cardData.image.url} alt={cardData.image.alt} />
