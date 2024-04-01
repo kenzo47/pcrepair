@@ -16,6 +16,10 @@
 
 	import Saos from 'saos'
 	import type { PageData } from './$types'
+	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
+	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
+	import LinkButton from '../../../lib/components/LinkButton.svelte'
+	import type { LinkButtonData } from '../../../lib/types/components/Button'
 	let showModal = false
 	export let data: PageData
 
@@ -37,12 +41,11 @@
 				url: websiteIcon,
 				alt: 'Statische websites'
 			},
-			title: 'Eenvoudige websites',
-			description:
-				'Een betaalbare website op maat, waarvan de inhoud niet (vaak) verandert. Ideaal voor starters.',
+			title: 'Statische websites',
+			description: 'Een betaalbare website op maat, waarvan de inhoud niet (vaak) verandert. ',
 			button: {
 				url: url,
-				text: 'Lees meer',
+				text: '',
 				target: '_self' as '_self'
 			}
 		},
@@ -53,11 +56,10 @@
 				alt: 'Wordpress websites'
 			},
 			title: 'Wordpress',
-			description:
-				'Professionele uitstraling met veel designmogelijkheden op het vertrouwde WordPress-platform.',
+			description: 'Professionele uitstraling d.m.v het vertrouwde WordPress-platform.',
 			button: {
 				url: url,
-				text: 'Lees meer',
+				text: '',
 				target: '_self' as '_self'
 			}
 		},
@@ -71,7 +73,7 @@
 			description: 'Volledig op maat gemaakte websites en webapplicaties.',
 			button: {
 				url: url,
-				text: 'Lees meer',
+				text: '',
 				target: '_self' as '_self'
 			}
 		}
@@ -80,7 +82,7 @@
 		{
 			title: 'Webdesign',
 			description:
-				'Bij Reboot-IT kan u terecht voor een professionele website op maat. Wij maken websites voor zowel particulieren als bedrijven. Onze websites zijn geschikt voor alle apparaten en zoekmachinevriendelijk. Na oplevering bieden wij ook ondersteuning en onderhoud aan.',
+				'Bij ons kan u terecht voor een professionele website op maat. Wij maken websites voor zowel particulieren als bedrijven. Onze websites zijn geschikt voor alle apparaten en zoekmachinevriendelijk.',
 			subInfoItems: [
 				{
 					title: 'Welke soort website past bij jou?',
@@ -260,6 +262,22 @@
 			target: '_self' as '_self'
 		}
 	}
+
+	let webDesignHeading: SectionHeadingDescriptionData = {
+		title: 'Webdesign',
+		description: [
+			'Wenst u meer informatie over de verschillende mogelijkheden en prijzen van onze webdesign diensten?',
+			'Neem dan gerust contact met ons op voor een vrijblijvende offerte.',
+			'Klik op de knop hieronder om contact op te nemen via het contactformulier.',
+			'Wij zijn ook telefonisch bereikbaar tussen 10u-22u.'
+		]
+	}
+
+	let linkButtonData: LinkButtonData = {
+		url: '/contact#form',
+		text: 'Contacteer ons',
+		target: '_self' as '_self'
+	}
 </script>
 
 <!--Header Image-->
@@ -274,6 +292,17 @@
 				<ServiceItem data={serviceItemData} />
 			</div>
 		{/each}
+	</div>
+</section>
+<!--Mpre info-->
+<section class="wrapper mb-[8rem]">
+	<div class="flex flex-col">
+		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
+			<SectionHeadingDescription data={webDesignHeading} />
+		</div>
+		<div class="mb-[8rem] flex justify-start md:justify-center">
+			<LinkButton data={linkButtonData}></LinkButton>
+		</div>
 	</div>
 </section>
 <!--Info Items-->
