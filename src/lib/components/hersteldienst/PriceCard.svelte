@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="flex h-[380px] min-w-[300px] flex-col items-center justify-center border border-subtle-gray py-[2rem]"
+	class="flex h-[380px] min-w-[300px] flex-col items-center justify-center rounded-2xl border-[2px] border-subtle-gray py-[2rem]"
 >
 	<h2 class="mb-[1rem] font-roboto text-[2.2rem] font-medium">
 		{data.title}
@@ -15,12 +15,12 @@
 		{data.price}
 		<!--TODO: € centering -->
 	</p>
-	<ul class="mb-[3rem] flex flex-col items-start">
+	<ul class="mb-[1rem] flex flex-col items-start">
 		{#each data.features as features (features)}
 			<li class="list-disc text-left font-roboto text-[1.6rem]">{features}</li>
 		{/each}
 	</ul>
-	<div class="mt-auto flex justify-center">
+	<!-- <div class="mt-auto flex justify-center">
 		<LinkButton data={data.button}></LinkButton>
-	</div>
+	</div> -->
 </div>

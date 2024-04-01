@@ -16,7 +16,12 @@
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
 	import PriceCard from '$lib/components/hersteldienst/PriceCard.svelte'
 	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
-	// export let data: PageData
+	import Modal from '$lib/components/Modal.svelte'
+	import ContactFormModal from '$lib/components/ContactFormModal.svelte'
+	import type { PageData } from './$types'
+	export let data: PageData
+
+	let showModal = false
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -175,7 +180,13 @@
 			<SectionHeadingDescription data={pcRepairHeading} />
 		</div>
 		<div class="mb-[8rem] flex justify-start md:justify-center">
-			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+			<button
+				on:click={() => (showModal = true)}
+				class="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+				><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white"
+					>Maak afspraak</span
+				></button
+			>
 		</div>
 	</div>
 	<div class="flex flex-wrap justify-center space-x-0 md:flex-col">
@@ -195,7 +206,13 @@
 			<SectionHeadingDescription data={phoneRepairHeading} />
 		</div>
 		<div class="mb-[8rem] flex justify-start md:justify-center">
-			<LinkButton data={{ text: 'Maak afspraak', url: '#', target: '_self' }} />
+			<button
+				on:click={() => (showModal = true)}
+				class="flex h-[45px] w-[160px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+				><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white"
+					>Maak afspraak</span
+				></button
+			>
 		</div>
 	</div>
 	<div class="flex lg:flex-col lg:items-center lg:justify-center">
@@ -226,5 +243,21 @@
 				<PriceCard data={priceCard} />
 			</div>
 		{/each}
+	</div>
+	<Modal show={showModal} on:close={() => (showModal = false)}>
+		<ContactFormModal {data} />
+	</Modal>
+</section>
+<!--Contact Form-->
+<section class="wrapper mb-[8rem]">
+	<div class="flex flex-col items-center">
+		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
+		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">Contacteer ons hier.</p>
+		<button
+			on:click={() => (showModal = true)}
+			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+			><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white">Klik hier</span
+			></button
+		>
 	</div>
 </section>

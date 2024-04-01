@@ -1,7 +1,8 @@
+import { submitToAirtable } from '$lib/airtable'
 import { schema } from '$lib/schemas/ContactForm'
+import { fail } from '@sveltejs/kit'
 import { superValidate } from 'sveltekit-superforms/server'
 import type { PageServerLoad } from './$types'
-import { fail } from '@sveltejs/kit'
 
 export const load: PageServerLoad = async () => {
 	const form = await superValidate(schema)
@@ -9,8 +10,8 @@ export const load: PageServerLoad = async () => {
 }
 
 export const actions = {
-	default: async ({ request }) => {
-		const form = await superValidate(request, schema)
+	default: async event => {
+		const form = await superValidate(event, schema)
 
 		// Convenient validation check:
 		if (!form.valid) {
@@ -18,10 +19,11 @@ export const actions = {
 			return fail(400, { form })
 		}
 
-		// TODO: Do something with the validated form.data
-		console.log(form)
-
-		// Yep, return { form } here too
-		return { form }
-	}
+    await submitToAirtable(form)
+  
+    return {
+      form,
+    }
+  },	
 }
+
