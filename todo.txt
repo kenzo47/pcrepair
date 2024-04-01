@@ -1,4 +1,3 @@
-Fix webdesign price list button action
 Add extra pages (read more) -> Wordpress benefits, static website benefits, etc..
 Add privacy policy + check cookies
 Fix mobile animations/re-add homepage animations

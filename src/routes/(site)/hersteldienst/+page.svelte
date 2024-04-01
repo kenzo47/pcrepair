@@ -32,15 +32,16 @@
 		title: 'PC herstellingen',
 		description: [
 			'U kan terecht bij ons voor herstellingen en onderhoud van uw PC ook als deze niet bij ons is aangekocht.',
-			'We voeren een gratis diagnose uit en contacteren u wanneer er kosten aan verbonden zijn.',
-			'Na uw goedkeuring voeren we reparaties uit in ons eigen atelier of bij u thuis.'
+			'We voeren een gratis diagnose uit en contacteren u wanneer er bijkomende kosten zijn.',
+			'Na uw goedkeuring voeren we reparaties uit in ons eigen atelier of bij u thuis indien mogelijk. ',
+			'We houden u steeds op de hoogte van de status van uw herstelling en uw toestel wordt gebruiksklaar afgeleverd.'
 		]
 	}
 
 	let phoneRepairHeading: SectionHeadingDescriptionData = {
 		title: 'GSM/Tablet herstellingen',
 		description: [
-			'Wij repareren alle merken en modellen smartphones en tablets met uitzondering van Apple toestellen.',
+			'Wij repareren alle merken en modellen 	 en tablets met uitzondering van Apple toestellen.',
 			"U kan bij ons terecht voor het vervangen van uw scherm, batterij, oplaadpoort, camera's, speakers, microfoon, ...",
 			'Ook software problemen zoals een traag toestel of een update die vast loopt kunnen wij oplossen.'
 		]
