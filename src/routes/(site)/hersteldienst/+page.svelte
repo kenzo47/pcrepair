@@ -5,7 +5,7 @@
 	import type { PriceCardData } from '$lib/types/components/PriceCard'
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 
-	import bsod from '$lib/assets/images/bsod.webp?enhanced'
+	import laptop from '$lib/assets/images/laptop_repair.jpg?enhanced'
 	import pcbrands from '$lib/assets/images/pcbrands.jpeg?enhanced'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
 	import phonerepair from '$lib/assets/images/phonerepair.jpg?enhanced'
@@ -74,7 +74,7 @@
 		{
 			index: 2,
 			image: {
-				url: bsod,
+				url: laptop,
 				alt: 'Gratis diagnose'
 			},
 			title: 'Gratis diagnose',
