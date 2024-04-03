@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores'
 	import hamburger from '$lib/assets/icons/hamburger.svg'
-	import logo from '$lib/assets/icons/logo.svg'
+	import logo from '$lib/assets/icons/logo3.svg'
 	import NavModal from './NavModal.svelte'
 
 	let showModal = false
