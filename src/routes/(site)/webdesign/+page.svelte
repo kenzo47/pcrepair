@@ -29,9 +29,7 @@
 			alt: 'Webdesign'
 		},
 		title: 'Webdesign',
-		description: 'Wij maken uw website op maat.',
-		section: 'contact',
-		buttonText: 'Prijzen'
+		description: 'Wij maken uw website op maat.'
 	}
 
 	let serviceItemData: ServiceItemData[] = [
