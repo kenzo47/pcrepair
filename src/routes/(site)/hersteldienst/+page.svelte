@@ -6,12 +6,11 @@
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 
 	import laptop from '$lib/assets/images/laptop_repair.jpg?enhanced'
-	import pcbrands from '$lib/assets/images/pcbrands.jpeg?enhanced'
+	import pcbrands from '$lib/assets/images/pcbrands2.jpeg?enhanced'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
 	import phonerepair from '$lib/assets/images/phonerepair.jpg?enhanced'
 	import radius from '$lib/assets/images/radius.png?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
-	import LinkButton from '$lib/components/LinkButton.svelte'
 	import CenterInfoCard from '$lib/components/hersteldienst/CenterInfoCard.svelte'
 	import HoverInfoItem from '$lib/components/hersteldienst/HoverInfoItem.svelte'
 	import PriceCard from '$lib/components/hersteldienst/PriceCard.svelte'
