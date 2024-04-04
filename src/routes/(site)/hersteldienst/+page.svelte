@@ -6,7 +6,7 @@
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
 
 	import laptop from '$lib/assets/images/laptop_repair.jpg?enhanced'
-	import pcbrands from '$lib/assets/images/pcbrands2.jpeg?enhanced'
+	import pcbrands from '$lib/assets/images/pcbrands2.png?enhanced'
 	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
 	import phonerepair from '$lib/assets/images/phonerepair.jpg?enhanced'
 	import radius from '$lib/assets/images/radius.png?enhanced'
