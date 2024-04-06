@@ -159,7 +159,7 @@
 	</div>
 </section>
 <!--Services-->
-<section class="wrapper mb-[8rem]">
+<section class="wrapper mb-[8rem] md:hidden">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[12rem] flex w-full items-center md:flex-col md:items-center md:justify-center">
 			<div class="mr-[4rem] flex md:mb-[4rem] md:mr-0">
