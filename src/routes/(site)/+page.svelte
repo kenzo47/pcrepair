@@ -159,33 +159,37 @@
 	</div>
 </section>
 <!--Services-->
-<section class="wrapper mb-[8rem] md:hidden">
+<section class="wrapper mb-[8rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-		<div class="mb-[12rem] flex w-full items-center">
-			<div class="mr-[4rem] flex">
+		<div class="mb-[12rem] flex w-full items-center md:flex-col md:items-center md:justify-center">
+			<div class="mr-[4rem] flex md:mb-[4rem] md:mr-0">
 				<enhanced:img
 					src={pcrepair}
 					alt="Computer herstellingen"
 					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"
 				/>
 			</div>
-			<InfoItem infoItemData={infoItemData[0]} />
+			<div>
+				<InfoItem infoItemData={infoItemData[0]} />
+			</div>
 		</div>
 	</Saos>
 	<Saos once={true} animation={'from-right 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
-		<div class="mb-[4rem] flex w-full items-center">
-			<InfoItem infoItemData={infoItemData[1]} />
-			<div class="mr-[4rem] flex">
+		<div class="mb-[4rem] flex w-full items-center md:flex-col md:items-center md:justify-center">
+			<div class="mr-[4rem] flex md:order-first md:mb-[4rem] md:mr-0">
 				<enhanced:img
 					src={coding}
 					alt="Webdesign"
 					class="h-[350px] w-full min-w-[400px] rounded-lg object-contain drop-shadow-md sm:h-[250px] sm:min-w-[300px]"
 				/>
 			</div>
+			<div class="order-first">
+				<InfoItem infoItemData={infoItemData[1]} />
+			</div>
 		</div>
 	</Saos>
 </section>
-<!--Contact Form-->
+
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col items-center">
 		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
