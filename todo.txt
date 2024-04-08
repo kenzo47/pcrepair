@@ -1,6 +1,4 @@
-Add privacy policy + check cookies
-Fix mobile animations/re-add homepage animations
-Create new socials logo + complete FB/LinkedIn
-Replace some images (brands/etc)
+Add privacy policy 
 Order business cards.
+complete FB/LinkedIn
 buttons verbeteren, mss 1px border lightgray
