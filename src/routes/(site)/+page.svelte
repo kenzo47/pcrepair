@@ -71,7 +71,7 @@
 			title: 'Computer herstellingen',
 			description: 'Werkt uw computer niet meer zoals het hoort? Wij helpen u graag verder!',
 			button: {
-				url: '/hersteldienst',
+				url: '/hersteldienst#computers',
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}
@@ -84,7 +84,7 @@
 			title: 'Smartphone herstellingen',
 			description: 'Problemen met uw smartphone? Gebarsten scherm? Wij herstellen het voor u!',
 			button: {
-				url: '/hersteldienst',
+				url: '/hersteldienst#mobiel',
 				text: 'Lees meer',
 				target: '_self' as '_self'
 			}

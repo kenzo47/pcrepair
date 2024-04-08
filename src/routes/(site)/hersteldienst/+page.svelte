@@ -173,7 +173,7 @@
 	<HeaderImage data={imageSwiperData} />
 </header>
 <!--PC Repairs-->
-<section class="wrapper mb-[8rem]">
+<section id="computers" class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
 		<div class="mb-[1.6rem] flex flex-col items-start md:items-center md:text-center">
 			<SectionHeadingDescription data={pcRepairHeading} />
@@ -199,7 +199,7 @@
 	</div>
 </section>
 <!--Smartphone/Tablet Repairs-->
-<section class="wrapper mb-[8rem]">
+<section id="mobiel" class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
 		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
 			<SectionHeadingDescription data={phoneRepairHeading} />
