@@ -37,7 +37,7 @@
 			</div>
 		</div>
 		<div class="flex justify-center">
-			<p class="font-roboto text-[1.4rem]"><a href="/privacy-policy">Privacyverklaring</a></p>
+			<p class="font-roboto text-[1.4rem]"><a href="/privacy-verklaring">Privacyverklaring</a></p>
 		</div>
 		<p class="font-roboto text-[2rem]">
 			{config.title} &copy {new Date().getFullYear()} – Design by
