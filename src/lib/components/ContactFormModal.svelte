@@ -32,17 +32,14 @@
 		</div>
 	</div>
 {:else}
-	<div
-		id="contact"
-		class="flex h-full w-full flex-col items-center justify-between rounded-[1.6rem] bg-off-white"
-	>
+	<div id="contact" class="flex h-full w-full flex-col rounded-[1.6rem] bg-off-white">
 		<div class=" flex h-[80px] w-full justify-center py-[2.4rem]">
 			<h1 class="mb-[1rem] font-roboto text-[2.6rem]">Contactformulier</h1>
 		</div>
-		<form method="POST" class="flex w-full flex-col items-center justify-between" use:enhance>
+		<form method="POST" class="flex h-full w-full flex-col items-center" use:enhance>
 			<div class="w-full px-[4rem]">
 				<div class="flex w-full md:flex-col">
-					<div class="rounded-2xl mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col md:w-full">
+					<div class="mb-[2rem] mr-[2rem] flex w-[250px] flex-1 flex-col rounded-2xl md:w-full">
 						<label for="name">Naam</label>
 						<div class="flex w-full rounded-2xl bg-subtle-gray">
 							<img class="h-[36px] w-[36px] p-[1rem]" src={userIcon} alt="Naam" />
@@ -85,7 +82,7 @@
 					</div>
 					{#if $errors.email}<span class="invalid">{$errors.email}</span>{/if}
 				</div>
-				<div class="mb-[2rem] flex h-[260px] w-full flex-col md:h-[200px]">
+				<div class="flex h-[260px] w-full flex-col md:h-[200px]">
 					<label for="message">Bericht</label>
 					<textarea
 						class="h-full resize-none rounded-2xl"
@@ -93,12 +90,30 @@
 						aria-invalid={$errors.message ? 'true' : undefined}
 						bind:value={$form.message}
 					></textarea>
-					{#if $errors.message}<span class="invalid">{$errors.message}</span>{/if}
+					{#if $errors.message}<span class="invalid mb-[2rem]">{$errors.message}</span>{/if}
 				</div>
 			</div>
-			<div>
+			<div class="ml-[1rem] flex w-full items-center px-[4rem]">
+				<div class="flex items-center">
+					<input
+						type="checkbox"
+						id="privacy"
+						name="privacy"
+						class="mr-[1rem] scale-125"
+						bind:checked={$form.privacy}
+					/>
+					<label for="privacy" class="whitespace-nowrap font-roboto text-[1.6rem] font-normal"
+						>Ik heb de <a class="text-azure hover:text-orange-web" href="/privacy-verklaring"
+							>privacy-verklaring</a
+						> gelezen en ga hiermee akkoord</label
+					>
+				</div>
+			</div>
+			{#if $errors.privacy}<span class="invalid">{$errors.privacy}</span>{/if}
+
+			<div class="mt-[2rem] flex w-full justify-center">
 				<button
-					class="mb-[2rem] mt-[1rem] flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
+					class="flex h-[40px] w-[120px] cursor-pointer items-center justify-center rounded-2xl bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
 					><span class="leading-[1.2 rem] text-[2rem] font-bold text-white">Verzend</span></button
 				>
 			</div>

@@ -7,5 +7,7 @@ export const schema = z.object({
 	email: z.string().email().min(1, { message: 'Voer een geldig email adres in.' }),
 	// phone: z.string().optional().refine(phone => phoneRegex.test(phone || ''), { message: 'Voer een geldig telefoonnummer in.' }),
 	phone: z.string().optional(),
-	message: z.string().min(10, { message: 'Voer een geldig bericht in.' })
+	message: z.string().min(10, { message: 'Voer een geldig bericht in.' }),
+	privacy: z.boolean().refine(privacy => privacy, { message: 'Je moet akkoord gaan met de privacyverklaring voor je het formulier kan verzenden.' }),
+
 })
