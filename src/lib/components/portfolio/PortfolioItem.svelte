@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte'
 	import { register } from 'swiper/element/bundle'
-	import type { PortfolioCollectionData } from '../../types/components/PortfolioCollection'
+	import type { PortfolioCollectionData } from '$lib/types/components/PortfolioCollection'
 
 	export let data: PortfolioCollectionData
 	onMount(() => {
@@ -22,7 +22,7 @@
 		<swiper-slide>
 			<div class="group h-[400px] w-[500px]">
 				<enhanced:img
-					class="h-full w-full rounded-2xl object-cover opacity-100 transition-opacity group-hover:opacity-30"
+					class="h-full w-full rounded-2xl object-cover object-top opacity-100 transition-opacity group-hover:opacity-30"
 					src={item.image.url}
 					alt={item.image.alt}
 				/>

@@ -18,8 +18,8 @@
 	import type { PageData } from './$types'
 	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
 	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
-	import LinkButton from '../../../lib/components/LinkButton.svelte'
-	import type { LinkButtonData } from '../../../lib/types/components/Button'
+	import LinkButton from '$lib/components/LinkButton.svelte'
+	import type { LinkButtonData } from '$lib/types/components/Button'
 	let showModal = false
 	export let data: PageData
 
@@ -271,9 +271,21 @@
 		]
 	}
 
+	let webDesignPortfolioHeading: SectionHeadingDescriptionData = {
+		title: 'Realisaties',
+		description: [
+			'Benieuwd naar onze realisaties? Klik op de knop hieronder om enkele van onze projecten te bekijken.'
+		]
+	}
 	let linkButtonData: LinkButtonData = {
 		url: '/contact#form',
 		text: 'Contacteer ons',
+		target: '_self' as '_self'
+	}
+
+	let portfolioLinkButtonData: LinkButtonData = {
+		url: '/portfolio',
+		text: 'Realisaties',
 		target: '_self' as '_self'
 	}
 </script>
@@ -292,7 +304,7 @@
 		{/each}
 	</div>
 </section>
-<!--Mpre info-->
+<!--More info-->
 <section class="wrapper mb-[8rem]">
 	<div class="flex flex-col">
 		<div class="mb-[2rem] flex flex-col items-start md:items-center md:text-center">
@@ -302,9 +314,12 @@
 			<LinkButton data={linkButtonData}></LinkButton>
 		</div>
 	</div>
+	<Modal show={showModal} on:close={() => (showModal = false)}>
+		<ContactForm {data} />
+	</Modal>
 </section>
 <!--Info Items-->
-<section class="wrapper mb-[8rem] lg:mb-[4rem] md:mb-[4rem]">
+<section class="wrapper mb-[4rem] lg:mb-[4rem] md:mb-[4rem]">
 	<Saos once={true} animation={'from-left 1.4s cubic-bezier(0.35, 0.5, 0.65, 0.95) both'}>
 		<div class="mb-[8rem] flex lg:flex-col lg:items-center lg:justify-center">
 			<div
@@ -320,6 +335,7 @@
 		</div>
 	</Saos>
 </section>
+
 <!-- 
 <section class="wrapper">
 	<div class="mb-[4rem] flex flex-col items-center">
@@ -372,21 +388,14 @@
 	</div>
 </section>
 -->
-<!--Contact Form-->
-<section id="contact" class="wrapper mb-[8rem]">
-	<div class="flex flex-col items-center">
-		<h2 class="text-center font-roboto text-[3rem] font-semibold">Heeft u vragen?</h2>
-		<p class="mb-[2rem] text-center font-roboto text-[1.6rem] font-normal">
-			Contacteer ons voor een prijsopgave.
-		</p>
-		<button
-			on:click={() => (showModal = true)}
-			class="flex h-[45px] w-[120px] cursor-pointer items-center justify-center rounded-2xl border border-solid border-alice-blue bg-gradient-top-right px-[1rem] py-[0.6rem] text-center"
-			><span class="leading-[1.2 rem] font-roboto text-[2rem] font-bold text-white">Klik hier</span
-			></button
-		>
-		<Modal show={showModal} on:close={() => (showModal = false)}>
-			<ContactForm {data} />
-		</Modal>
+<!--Realisaties-->
+<section class="wrapper mb-[4rem]">
+	<div class="flex flex-col">
+		<div class="mb-[2rem] flex flex-col items-center">
+			<SectionHeadingDescription data={webDesignPortfolioHeading} />
+		</div>
+		<div class="mb-[8rem] flex justify-center">
+			<LinkButton data={portfolioLinkButtonData}></LinkButton>
+		</div>
 	</div>
 </section>

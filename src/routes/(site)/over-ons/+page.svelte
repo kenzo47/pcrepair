@@ -9,6 +9,10 @@
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import Employee from '$lib/components/over-ons/Employee.svelte'
 	import TextItem from '$lib/components/over-ons/TextItem.svelte'
+	import SectionHeadingDescription from '$lib/components/hersteldienst/SectionHeadingDescription.svelte'
+	import LinkButton from '$lib/components/LinkButton.svelte'
+	import type { SectionHeadingDescriptionData } from '$lib/types/components/SectionHeadingDescription'
+	import type { LinkButtonData } from '$lib/types/components/Button'
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -74,6 +78,18 @@
 		// 	skills: ['Kubernetes', 'Cloud', 'AWS']
 		// }
 	]
+	let webDesignPortfolioHeading: SectionHeadingDescriptionData = {
+		title: 'Realisaties',
+		description: [
+			'Benieuwd naar onze realisaties? Klik op de knop hieronder om enkele van onze projecten te bekijken.'
+		]
+	}
+
+	let portfolioLinkButtonData: LinkButtonData = {
+		url: '/portfolio',
+		text: 'Klik hier',
+		target: '_self' as '_self'
+	}
 </script>
 
 <!--Header Image-->
@@ -99,3 +115,14 @@
 		{/each}
 	</div>
 </section> -->
+<!--Realisaties-->
+<section class="wrapper mb-[4rem]">
+	<div class="flex flex-col">
+		<div class="mb-[2rem] flex flex-col items-center">
+			<SectionHeadingDescription data={webDesignPortfolioHeading} />
+		</div>
+		<div class="mb-[8rem] flex justify-center">
+			<LinkButton data={portfolioLinkButtonData}></LinkButton>
+		</div>
+	</div>
+</section>

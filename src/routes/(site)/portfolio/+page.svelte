@@ -1,16 +1,15 @@
 <script lang="ts">
 	import bulldozerIcon from '$lib/assets/icons/portfolio/bulldozer.svg'
-	import contact from '$lib/assets/images/contact.jpg?enhanced'
+	import rebootIcon from '$lib/assets/icons/portfolio/reboot.svg'
 	import bulldozerExpert from '$lib/assets/images/portfolio/bulldozer-expert.png?enhanced'
+	import rebootIt from '$lib/assets/images/portfolio/reboot-it.png?enhanced'
 	import projects from '$lib/assets/images/projects.jpg?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
-	import TextItem from '../../../lib/components/over-ons/TextItem.svelte'
-	import PortfolioItem from '../../../lib/components/portfolio/PortfolioItem.svelte'
-	import type { TextItemData } from '../../../lib/types/components/TextItem/TextItem'
-	import pcrepair from '$lib/assets/images/pcrepair.jpg?enhanced'
-	import phonerepair from '$lib/assets/images/phonerepair.jpg?enhanced'
-	import type { PortfolioCollectionData } from '../../../lib/types/components/PortfolioCollection'
+	import TextItem from '$lib/components/over-ons/TextItem.svelte'
+	import PortfolioItem from '$lib/components/portfolio/PortfolioItem.svelte'
+	import type { TextItemData } from '$lib/types/components/TextItem/TextItem'
+	import type { PortfolioCollectionData } from '$lib/types/components/PortfolioCollection'
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
@@ -39,31 +38,30 @@
 					alt: 'Bulldozer Expert'
 				},
 				title: 'Bulldozer Expert',
-				description:
-					'Op maat gebouwde wordpress website voor een bedrijf in de regio Antwerpen.',
+				description: 'Op maat gebouwde wordpress website voor een bedrijf in de regio Antwerpen.',
 				icon: {
 					url: bulldozerIcon,
 					alt: 'Bulldozer Expert'
 				},
 				color: '#3a86ff',
 				url: 'https://bulldozer-expert.webpc.be/'
+			},
+			{
+				index: 2,
+				image: {
+					url: rebootIt,
+					alt: 'Reboot-IT'
+				},
+				title: 'Reboot-IT',
+				description:
+					'Onze eigen website voor het aanbieden van computerherstellingen en webdesign. Deze website is gebouwd met SvelteKit.',
+				icon: {
+					url: rebootIcon,
+					alt: 'Reboot-IT'
+				},
+				color: '#ffa400',
+				url: 'https://www.reboot-it.be/'
 			}
-			// {
-			// 	index: 2,
-			// 	image: {
-			// 		url: pcrepair,
-			// 		alt: 'Contact'
-			// 	},
-			// 	title: 'Test2',
-			// 	description:
-			// 		'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-			// 	icon: {
-			// 		url: locationIcon,
-			// 		alt: 'Bulldozer Expert'
-			// 	},
-			// 	color: '#3a86ff',
-			// 	url: 'https://bulldozer-expert.webpc.be/'
-			// },
 			// {
 			// 	index: 3,
 			// 	image: {
@@ -82,10 +80,7 @@
 			// }
 		]
 	}
-	let portfolioCollectionDataCustom: PortfolioCollectionData = {
-		delay: 5000,
-		portfolioItems: []
-	}
+
 	let portfolioCollectionDataWebApp: PortfolioCollectionData = {
 		delay: 5500,
 		portfolioItems: []
@@ -106,14 +101,9 @@
 </section>
 <!--Portfolio Wordpress-->
 <section class="wrapper mb-[8rem] w-full">
-	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Wordpress websites</h2>
+	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Websites</h2>
 	<PortfolioItem data={portfolioCollectionDataWordpress} />
 </section>
-<!--Portfolio Custom-->
-<!-- <section class="wrapper mb-[2rem] w-full">
-	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Custom websites</h2>
-	<PortfolioItem data={portfolioCollectionDataCustom} />
-</section> -->
 <!--Portfolio web apps-->
 <!-- <section class="wrapper mb-[2rem] w-full">
 	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Web applicaties</h2>
