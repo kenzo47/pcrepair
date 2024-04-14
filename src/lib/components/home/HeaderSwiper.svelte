@@ -29,12 +29,12 @@
 				/>
 				<div class="absolute h-full w-full bg-raisin-black opacity-50"></div>
 				<h1
-					class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[3.8rem]"
+					class="absolute left-[50%] top-[25%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[4.6rem] text-white shadow-black text-shadow md:top-[30%] md:text-[3.8rem] sm:text-[2.8rem]"
 				>
 					{item.title}
 				</h1>
 				<p
-					class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.6rem]"
+					class="absolute left-[50%] top-[48%] -translate-x-1/2 transform text-center font-roboto text-[2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.4rem]"
 				>
 					{item.description}
 				</p>
