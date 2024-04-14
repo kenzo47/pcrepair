@@ -267,7 +267,7 @@
 			'Wenst u meer informatie over de verschillende mogelijkheden en prijzen van onze webdesign diensten?',
 			'Neem dan gerust contact met ons op voor een vrijblijvende offerte.',
 			'Klik op de knop hieronder om contact op te nemen via het contactformulier.',
-			'Wij zijn ook telefonisch bereikbaar tussen 10u-22u.'
+			'Wij zijn ook telefonisch bereikbaar.'
 		]
 	}
 

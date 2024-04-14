@@ -52,7 +52,7 @@
 	}
 
 	let priceHeading: SectionHeadingDescriptionData = {
-		title: 'Prijzen',
+		title: 'PC Prijzen',
 		description: [
 			'Wij hanteren vaste prijzen voor de meest voorkomende herstellingen.',
 			'Voor herstellingen die niet in de lijst staan kan u ons steeds contacteren voor een prijsopgave.'

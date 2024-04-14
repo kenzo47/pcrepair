@@ -24,7 +24,7 @@
 			{
 				title: 'Expert in herstellingen en webontwikkeling',
 				paragraph:
-					'Reboot-IT is een jong bedrijf gevestigd in Scherpenheuvel-Zichem dat gespecialiseerd is in het herstellen van computers, laptops, smartphones en tablets. Onze hersteldienst die momenteel uit twee leden bestaat onderscheidt zich door klanttevredenheid en service. Wij bieden ook een breed scala aan webgerelateerde diensten aan, van simpelere websites tot klantportalen en ERP systemen op maat.'
+					'Reboot-IT is een jong bedrijf gevestigd in Scherpenheuvel-Zichem dat gespecialiseerd is in het herstellen van computers, laptops, smartphones en tablets. Wij bieden ook een breed scala aan webgerelateerde diensten aan, van simpelere websites tot klantportalen en ERP systemen op maat.'
 			},
 			{
 				title: 'Servicegericht en flexibel in Vlaams-Brabant en Limburg',
@@ -89,7 +89,7 @@
 	</div>
 </section>
 <!--Team-->
-<section class="wrapper mb-[8rem]">
+<!-- <section class="wrapper mb-[8rem]">
 	<h2 class="mb-[4rem] text-center font-roboto text-[3.2rem] font-medium">Ons team</h2>
 	<div class="grid w-full grid-cols-2 gap-[4rem] md:grid-cols-1">
 		{#each employeeData as employee}
@@ -98,4 +98,4 @@
 			</div>
 		{/each}
 	</div>
-</section>
+</section> -->
