@@ -1,8 +1,8 @@
 <script lang="ts">
-	import clockIcon from '$lib/assets/icons/clock.svg'
-	import emailIcon from '$lib/assets/icons/email.svg'
-	import locationIcon from '$lib/assets/icons/location.svg'
+	import bulldozerIcon from '$lib/assets/icons/portfolio/bulldozer.svg'
 	import contact from '$lib/assets/images/contact.jpg?enhanced'
+	import bulldozerExpert from '$lib/assets/images/portfolio/bulldozer-expert.png?enhanced'
+	import projects from '$lib/assets/images/projects.jpg?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
 	import TextItem from '../../../lib/components/over-ons/TextItem.svelte'
@@ -14,7 +14,7 @@
 
 	let imageSwiperData: HeaderImageData = {
 		image: {
-			url: contact,
+			url: projects,
 			alt: 'Portfolio'
 		},
 		title: 'Portfolio',
@@ -35,158 +35,60 @@
 			{
 				index: 1,
 				image: {
-					url: contact,
-					alt: 'Contact'
+					url: bulldozerExpert,
+					alt: 'Bulldozer Expert'
 				},
 				title: 'Bulldozer Expert',
 				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
+					'Op maat gebouwde wordpress website voor een bedrijf in de regio Antwerpen.',
 				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 2,
-				image: {
-					url: pcrepair,
-					alt: 'Contact'
-				},
-				title: 'Test2',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
+					url: bulldozerIcon,
 					alt: 'Bulldozer Expert'
 				},
 				color: '#3a86ff',
 				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 3,
-				image: {
-					url: phonerepair,
-					alt: 'Contact'
-				},
-				title: 'Test3',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
 			}
+			// {
+			// 	index: 2,
+			// 	image: {
+			// 		url: pcrepair,
+			// 		alt: 'Contact'
+			// 	},
+			// 	title: 'Test2',
+			// 	description:
+			// 		'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
+			// 	icon: {
+			// 		url: locationIcon,
+			// 		alt: 'Bulldozer Expert'
+			// 	},
+			// 	color: '#3a86ff',
+			// 	url: 'https://bulldozer-expert.webpc.be/'
+			// },
+			// {
+			// 	index: 3,
+			// 	image: {
+			// 		url: phonerepair,
+			// 		alt: 'Contact'
+			// 	},
+			// 	title: 'Test3',
+			// 	description:
+			// 		'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
+			// 	icon: {
+			// 		url: locationIcon,
+			// 		alt: 'Bulldozer Expert'
+			// 	},
+			// 	color: '#ffa400',
+			// 	url: 'https://bulldozer-expert.webpc.be/'
+			// }
 		]
 	}
 	let portfolioCollectionDataCustom: PortfolioCollectionData = {
 		delay: 5000,
-		portfolioItems: [
-			{
-				index: 1,
-				image: {
-					url: contact,
-					alt: 'Contact'
-				},
-				title: 'Bulldozer Expert',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 2,
-				image: {
-					url: pcrepair,
-					alt: 'Contact'
-				},
-				title: 'Test2',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#3a86ff',
-				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 3,
-				image: {
-					url: phonerepair,
-					alt: 'Contact'
-				},
-				title: 'Test3',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
-			}
-		]
+		portfolioItems: []
 	}
 	let portfolioCollectionDataWebApp: PortfolioCollectionData = {
 		delay: 5500,
-		portfolioItems: [
-			{
-				index: 1,
-				image: {
-					url: contact,
-					alt: 'Contact'
-				},
-				title: 'Bulldozer Expert',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 2,
-				image: {
-					url: pcrepair,
-					alt: 'Contact'
-				},
-				title: 'Test2',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#3a86ff',
-				url: 'https://bulldozer-expert.webpc.be/'
-			},
-			{
-				index: 3,
-				image: {
-					url: phonerepair,
-					alt: 'Contact'
-				},
-				title: 'Test3',
-				description:
-					'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-				icon: {
-					url: locationIcon,
-					alt: 'Bulldozer Expert'
-				},
-				color: '#ffa400',
-				url: 'https://bulldozer-expert.webpc.be/'
-			}
-		]
+		portfolioItems: []
 	}
 </script>
 
@@ -195,7 +97,7 @@
 	<HeaderImage data={imageSwiperData} />
 </header>
 <!--Information-->
-<section class="wrapper mb-[2rem]">
+<section class="wrapper">
 	<div class="flex flex-col">
 		<div class="flex flex-col items-center">
 			<TextItem data={portfolioHeadingData} />
@@ -203,19 +105,17 @@
 	</div>
 </section>
 <!--Portfolio Wordpress-->
-<section class="wrapper mb-[2rem] w-full">
+<section class="wrapper mb-[8rem] w-full">
 	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Wordpress websites</h2>
 	<PortfolioItem data={portfolioCollectionDataWordpress} />
 </section>
 <!--Portfolio Custom-->
-<section class="wrapper mb-[2rem] w-full">
+<!-- <section class="wrapper mb-[2rem] w-full">
 	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Custom websites</h2>
 	<PortfolioItem data={portfolioCollectionDataCustom} />
-</section>
+</section> -->
 <!--Portfolio web apps-->
-<section class="wrapper mb-[2rem] w-full">
-	<section class="wrapper mb-[2rem] w-full">
-		<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Web applicaties</h2>
-		<PortfolioItem data={portfolioCollectionDataWebApp} />
-	</section>
-</section>
+<!-- <section class="wrapper mb-[2rem] w-full">
+	<h2 class="mb-[2rem] text-center font-roboto text-[2.6rem] text-black">Web applicaties</h2>
+	<PortfolioItem data={portfolioCollectionDataWebApp} />
+</section> -->
