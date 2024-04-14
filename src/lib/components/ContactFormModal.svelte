@@ -90,11 +90,11 @@
 						aria-invalid={$errors.message ? 'true' : undefined}
 						bind:value={$form.message}
 					></textarea>
-					{#if $errors.message}<span class="invalid mb-[2rem]">{$errors.message}</span>{/if}
+					{#if $errors.message}<span class="invalid mb-[1rem]">{$errors.message}</span>{/if}
 				</div>
 			</div>
 			<div class="ml-[1rem] flex w-full items-center px-[4rem]">
-				<div class="flex items-center">
+				<div class="flex items-center justify-center">
 					<input
 						type="checkbox"
 						id="privacy"
@@ -102,14 +102,14 @@
 						class="mr-[1rem] scale-125"
 						bind:checked={$form.privacy}
 					/>
-					<label for="privacy" class="whitespace-nowrap font-roboto text-[1.6rem] font-normal"
+					<label for="privacy" class="mt-[1px] whitespace-nowrap font-roboto font-normal"
 						>Ik heb de <a class="text-azure hover:text-orange-web" href="/privacy-verklaring"
 							>privacy-verklaring</a
 						> gelezen en ga hiermee akkoord</label
 					>
 				</div>
 			</div>
-			{#if $errors.privacy}<span class="invalid">{$errors.privacy}</span>{/if}
+			{#if $errors.privacy}<span class="invalid ml-[1rem]">{$errors.privacy}</span>{/if}
 
 			<div class="mt-[2rem] flex w-full justify-center">
 				<button

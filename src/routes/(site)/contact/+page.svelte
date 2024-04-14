@@ -86,7 +86,7 @@
 			<p class="font-roboto text-[1.6rem]">Wij antwoorden doorgaans binnen de 24 uur.</p>
 		</div>
 		<div
-			class="mx-auto flex h-[660px] max-w-[620px] flex-col items-center rounded-2xl border-[2px] border-subtle-gray"
+			class="mx-auto flex h-[640px] max-w-[620px] flex-col items-center rounded-2xl border-[2px] border-subtle-gray"
 		>
 			<ContactForm {data} />
 		</div>
