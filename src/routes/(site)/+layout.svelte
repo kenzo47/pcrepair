@@ -4,11 +4,21 @@
 	import Navigation from '$lib/components/Navigation.svelte'
 	import { description, title } from '$lib/config'
 
+	import { page } from '$app/stores'
 	// export let data: LayoutData
+	let pageTitle = ''
+	$: {
+		if ($page.url.pathname === '/') {
+			pageTitle = 'Home'
+		} else {
+			pageTitle = $page.url.pathname.slice(1)
+			pageTitle = pageTitle.charAt(0).toUpperCase() + pageTitle.slice(1)
+		}
+	}
 </script>
 
 <svelte:head>
-	<title>{title}</title>
+	<title>{title} - {pageTitle}</title>
 	<meta name="description" content={description} />
 </svelte:head>
 
