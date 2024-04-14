@@ -1,4 +1,4 @@
 export interface SubTextItemData {
-	title: string
+	title?: string
 	paragraph: string
 }
