@@ -13,7 +13,7 @@
 			<img
 				src={logo}
 				alt="Reboot-IT Logo"
-				class="my-auto max-h-[120px] max-w-[240px] sm:max-h-[100px] sm:max-w-[200px]"
+				class="my-auto max-h-[120px] max-w-[240px] sm:max-h-[100px] sm:max-w-[180px]"
 			/>
 		</a>
 	</div>
