@@ -21,7 +21,7 @@
 		{data.title}
 	</h1>
 	<p
-		class="absolute left-[50%] top-[48%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[2.2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:text-[1.4rem]"
+		class="absolute left-[50%] top-[48%] -translate-x-1/2 transform whitespace-nowrap text-center font-roboto text-[2.2rem] font-medium text-white shadow-black text-shadow md:top-[46%] md:w-[40rem] md:text-[1.8rem] sm:top-[47%] sm:w-[80vw] sm:text-[1.4rem]"
 	>
 		{data.description}
 	</p>
