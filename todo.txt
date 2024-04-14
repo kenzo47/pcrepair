@@ -1,3 +1,2 @@
-Order business cards.
 complete FB/LinkedIn
 buttons verbeteren, mss 1px border lightgray
