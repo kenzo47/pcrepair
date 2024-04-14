@@ -9,8 +9,12 @@
 
 <nav class="wrapper flex h-[100px] w-full items-center justify-between p-4">
 	<div class="mr-[6rem] flex h-full">
-		<a href="/" class="h-full">
-			<img src={logo} alt="Reboot-IT Logo" class="max-h-[120px] max-w-[240px]" />
+		<a href="/" class="flex h-full">
+			<img
+				src={logo}
+				alt="Reboot-IT Logo"
+				class="my-auto max-h-[120px] max-w-[240px] sm:max-h-[100px] sm:max-w-[200px]"
+			/>
 		</a>
 	</div>
 	<div
