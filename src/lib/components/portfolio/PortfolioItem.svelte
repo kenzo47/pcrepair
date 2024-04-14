@@ -1,11 +1,23 @@
 <script lang="ts">
-	import { onMount } from 'svelte'
+	import { onMount, onDestroy } from 'svelte'
 	import { register } from 'swiper/element/bundle'
 	import type { PortfolioCollectionData } from '$lib/types/components/PortfolioCollection'
-
 	export let data: PortfolioCollectionData
+
 	onMount(() => {
 		register()
+		if (typeof window !== 'undefined') {
+			if (!sessionStorage.getItem('reloaded')) {
+				sessionStorage.setItem('reloaded', 'true')
+				window.location.reload()
+			}
+		}
+	})
+
+	onDestroy(() => {
+		if (typeof window !== 'undefined') {
+			sessionStorage.removeItem('reloaded')
+		}
 	})
 </script>
 
