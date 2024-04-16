@@ -17,7 +17,7 @@ export async function submitToAirtable(form: any): Promise<void> {
     ],
   };
 
-  const temp = await fetch(AIRTABLE_URL, {
+  await fetch(AIRTABLE_URL, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${AIRTABLE_API_KEY}`,
@@ -25,5 +25,4 @@ export async function submitToAirtable(form: any): Promise<void> {
     },
     body: JSON.stringify(data),
   });
-  console.log(temp);
 }
