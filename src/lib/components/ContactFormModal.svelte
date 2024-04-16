@@ -3,9 +3,11 @@
 	import emailIcon from '$lib/assets/icons/email.svg'
 	import userIcon from '$lib/assets/icons/user.svg'
 	import { schema } from '$lib/schemas/ContactForm'
+	import { onMount } from 'svelte'
 	import { superForm } from 'sveltekit-superforms/client'
 	export let data
 	let submission_status = ''
+	let isSmallScreen = false
 
 	const { form, errors, enhance } = superForm(data.form, {
 		validators: schema,
@@ -19,6 +21,13 @@
 			}
 		},
 		delayMs: 700
+	})
+
+	onMount(() => {
+		isSmallScreen = window.innerWidth < 550
+		window.addEventListener('resize', () => {
+			isSmallScreen = window.innerWidth < 550
+		})
 	})
 </script>
 
@@ -102,11 +111,17 @@
 						class="mr-[1rem] scale-125"
 						bind:checked={$form.privacy}
 					/>
-					<label for="privacy" class="mt-[1px] whitespace-nowrap font-roboto font-normal"
-						>Ik heb de <a class="text-azure hover:text-orange-web" href="/privacy-verklaring"
-							>privacy-verklaring</a
-						> gelezen en ga hiermee akkoord</label
-					>
+					<label for="privacy" class="mt-[2px] whitespace-nowrap font-roboto">
+						{#if isSmallScreen}
+							Ik accepteer de <a class="text-azure hover:text-orange-web" href="/privacy-verklaring"
+								>privacy-verklaring</a
+							>
+						{:else}
+							Ik heb de <a class="text-azure hover:text-orange-web" href="/privacy-verklaring"
+								>privacy-verklaring</a
+							> gelezen en ga hiermee akkoord
+						{/if}
+					</label>
 				</div>
 			</div>
 			{#if $errors.privacy}<span class="invalid ml-[1rem]">{$errors.privacy}</span>{/if}
