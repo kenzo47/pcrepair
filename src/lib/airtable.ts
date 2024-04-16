@@ -2,7 +2,7 @@ import { AIRTABLE_API_KEY, AIRTABLE_BASE_ID } from '$env/static/private';
 
 export async function submitToAirtable(form: any): Promise<void> {
   const { name, email, phone, message } = form.data;
-  const AIRTABLE_URL: string = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/submissions`;
+  const AIRTABLE_URL: string = `https://api.airtable.com/v0/${AIRTABLE_BASE_ID}/Submissions`;
 
   const data = {
     records: [
@@ -17,7 +17,7 @@ export async function submitToAirtable(form: any): Promise<void> {
     ],
   };
 
-  await fetch(AIRTABLE_URL, {
+  const temp = await fetch(AIRTABLE_URL, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${AIRTABLE_API_KEY}`,
@@ -25,4 +25,5 @@ export async function submitToAirtable(form: any): Promise<void> {
     },
     body: JSON.stringify(data),
   });
+  console.log(temp);
 }
