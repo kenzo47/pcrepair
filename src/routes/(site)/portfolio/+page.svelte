@@ -1,8 +1,10 @@
 <script lang="ts">
 	import bulldozerIcon from '$lib/assets/icons/portfolio/bulldozer.svg'
 	import rebootIcon from '$lib/assets/icons/portfolio/reboot.svg'
+	import diamondIcon from '$lib/assets/icons/portfolio/diamond.svg'
 	import bulldozerExpert from '$lib/assets/images/portfolio/bulldozer-expert.png?enhanced'
 	import rebootIt from '$lib/assets/images/portfolio/reboot-it.png?enhanced'
+	import evCreations from '$lib/assets/images/portfolio/evcreations.png?enhanced'
 	import projects from '$lib/assets/images/projects.jpg?enhanced'
 	import HeaderImage from '$lib/components/HeaderImage.svelte'
 	import type { HeaderImageData } from '$lib/types/components/HeaderImage'
@@ -49,6 +51,21 @@
 			{
 				index: 2,
 				image: {
+					url: evCreations,
+					alt: 'EV Creations'
+				},
+				title: 'EV Creations',
+				description: 'Webshop gebouwd met Wordpress en Woocommerce.',
+				icon: {
+					url: diamondIcon,
+					alt: 'EV Creations'
+				},
+				color: '#ffa400',
+				url: 'https://evcreations.nl'
+			},
+			{
+				index: 3,
+				image: {
 					url: rebootIt,
 					alt: 'Reboot-IT'
 				},
@@ -59,25 +76,9 @@
 					url: rebootIcon,
 					alt: 'Reboot-IT'
 				},
-				color: '#ffa400',
+				color: '#3a86ff',
 				url: 'https://www.reboot-it.be/'
-			}
-			// {
-			// 	index: 3,
-			// 	image: {
-			// 		url: phonerepair,
-			// 		alt: 'Contact'
-			// 	},
-			// 	title: 'Test3',
-			// 	description:
-			// 		'Op maat gebouwde wordpress website voor een (anoniem) bedrijf in de regio Antwerpen.',
-			// 	icon: {
-			// 		url: locationIcon,
-			// 		alt: 'Bulldozer Expert'
-			// 	},
-			// 	color: '#ffa400',
-			// 	url: 'https://bulldozer-expert.webpc.be/'
-			// }
+			},
 		]
 	}
 
