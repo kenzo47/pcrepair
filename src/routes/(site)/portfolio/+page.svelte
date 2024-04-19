@@ -61,7 +61,7 @@
 					alt: 'EV Creations'
 				},
 				color: '#ffa400',
-				url: 'https://evcreations.nl'
+				url: 'https://evcreations.bulldozer-expert.webpc.be'
 			},
 			{
 				index: 3,
@@ -78,7 +78,7 @@
 				},
 				color: '#3a86ff',
 				url: 'https://www.reboot-it.be/'
-			},
+			}
 		]
 	}
 
